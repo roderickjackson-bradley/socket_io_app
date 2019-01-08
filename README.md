@@ -1,0 +1,165 @@
+<img src="https://i.imgur.com/XseXU8J.png" width="900">
+
+# Welcome to General Assembly WDI-CC-6
+
+This will be your shared class repo! Guides, in-class labs and code samples, and other resources will live here.
+
+### Contents
+
+- Class Repository Structure
+- WDI GitHub Workflow
+- Contact Information
+- Course Information and Dates
+- Immersive Graduation Requirements
+
+### Repo Structure
+
+```
+/WDI-CC-6
+    /resources
+    /projects
+    /work
+      /w01
+          /d1
+            /01-topic
+            /02-topic
+            /03-topic
+            /04-topic
+            /05-topic
+            /hw-topic
+```
+
+### Becoming Familiar With the WDI GitHub Workflow
+
+#### Forking (copying) the GA Class Repo to Your GitHub Account
+
+You will have read-only access to the GA class repo.  However, you most certainly will want to be able to make changes (e.g., add notes, save code exercises, etc).  These changes will be saved to your own personal copy of GA's Student repo - known as a **fork**. To get this fork do the following:
+
+1. Make sure that you're logged in to your GA **Enterprise** GitHub account. If you have not signed up yet, here's the link to do so: [https://git.generalassemb.ly/join?source=header](https://git.generalassemb.ly/join?source=header)
+2. In another tab, browse to the GA class repo:  [https://git.generalassemb.ly/WDI-CC/WDI-CC-6](https://git.generalassemb.ly/WDI-CC/WDI-CC-6)
+3. In the top-right corner of the page, click the `Fork` button.
+
+Now you will have a copy of the repo in **_your_** Enterprise GitHub account!
+
+#### Cloning Your Copy of the Repository Locally
+
+Now that you have a copy of the class repo in your GitHub account, it's time to bring the contents of that repo onto your computer - this process is known as **cloning**:
+
+1. On your Enterprise GitHub account, browse to your fork of the GitHub class repo and under the repository name click `Clone or download`
+2. In the `Clone with HTTPS` section, click the clipboard to copy the URL for the repository.
+3. Open Terminal and navigate to your `~/code` folder - you may choose a different folder if you wish, however these instructions will assume you clone the repo into a folder named `code`.
+4. In Terminal, type `git clone ` and paste in the copied URL from the clipboard. The command should now look something like this:
+
+```
+$ git clone https://git.generalassemb.ly/YOUR-ENTERPRISE-GITHUB-USERNAME/WDI-CC/WDI-CC-6
+```
+
+You can now `$ cd WDI-CC-6` and check out your local copy of of the GA class repo!
+
+#### Adding a git remote for the original GA class repo
+
+Repos on your computer are called **local repos** ("repos" is short for repositories).
+
+Repos on GitHub are called **remote** repos. Think of them as repos in the cloud.
+
+When you cloned your fork of the repo, a "link" to the git **remote** was automatically created. You can check which remotes exist for a given local repo using this command:
+
+```
+$ git remote -v
+```
+
+Note that by convention, the remote that points to the GitHub repo it was cloned from is called **origin**.
+
+However, nn order to get the updates that the instructors push to the GA class repo, you will need to create another **remote** that points to GA's class repo that you forked:
+
+```
+$ git remote add upstream https://git.generalassemb.ly/WDI-CC/WDI-CC-6
+```
+
+Note that by convention, the remote that points to the *original* GitHub repo that was forked is named **upstream**.
+
+Entering `$ git remote -v` again will show that you now have two remotes: `origin` (your fork of GA's class repo) and `upstream` (GA's class repo).
+
+#### Getting Changes Pushed by Your Instructors
+
+Each day (maybe several times a day), instructional materials may be pushed to the class repo by your instructors. You will want to "pull" these materials into your local repo (on your computer). Doing so will enable you to access "starter code", etc.
+
+First, if you've made any changes **within** the repo locally, i.e., you've modified some starter code, you will need to **commit** those changes first:
+
+```
+$ git add -A
+$ git commit -m "Add amazing work..."
+```
+
+With local changes committed, you can fetch the updates from the Github class repo and merge them into your **local** repo (on your computer):
+
+```
+$ git pull upstream master
+```
+
+From time to time, you will want to synchronize the updates and changes you have locally to your forked GitHub class repo (in the cloud). Doing so is a good idea to ensure your work is backed up to the cloud in case of computer failure:
+
+```
+$ git push origin master
+```
+
+Here is a picture of this Git/GitHub workflow:
+
+<img src="https://i.imgur.com/w871ATo.png">
+
+#### Handling Merge Conflicts
+
+A **merge conflict** occurs when the same line of code in your local repo is different than code you're fetching and merging from a remote repo. These conflicts confuse git and therefore you must manually fix any merge conflicts and commit those changes before the "merge" taking place on your computer is considered complete.
+
+Git will inform you which files have a merge conflict and will *annotate* your code to show you how your local code differs from your remote code. An example of such annotation is below.
+
+```
+<<<<<<< HEAD
+// Local code is here 
+=======
+// Changes you are pulling are here
+>>>>>>> 75c37cea922afc56e7d686adba063b986013ca9f
+```
+
+Once you have resolved these merge conflicts by editing the code and removing the markers, you can `add` and `commit` normally.
+
+#### Important
+
+**"Nested" repos are never permitted**.  Therefore, if you have important code, such as your projects, that belongs in its own repo, **be sure to put that code in folders outside of the class repo**.
+
+### Instructional Team
+
+|Role        | Name            | Slack       | Email |
+|:--         | :--             | :--         | :-- |
+|Instructor  | Jim Clark       | @jim.clark  | jim.clark@ga.co |
+|Instructor Assistant  | Mike Christenson    | @mchristenson5891 | michael.christenson@ga.co |
+
+### Course Information
+
+- Course duration: Monday, December 10th, 2018 - Thursday, March 14th, 2019 (12 weeks, plus extension due to holidays)
+- Class days & time: Monday - Friday 8:30am-4:30pm
+- Holidays:
+	- December 24th, 2018 thru January 1st, 2019  (Winter Holiday)
+	- January 21st, 2019 (MLK Day)
+	- February 18th, 2019 (Presidents Day)
+
+### GA Immersive Graduation Requirements
+
+General Assembly's courses are pass/fail programs. We have certain requirements in order to be considered a graduate of the WDI program:
+
+- No more than 3 days absent from class over the duration of the course (3 tardies equals 1 absence)
+- Successful completion of four assigned projects
+- Successful completion of 3 of 4 project assessment challenges
+- Participating in GA’s mid-course and end-of-course feedback surveys
+- Complete 80% of assigned "homework"
+
+When you complete our program with passing status, you unlock our alumni perks:
+
+- Support from the Outcomes Team, including participation in the Meet & Greet event (with prospective employers).
+- Receive a GA Letter of Completion (via email 1 week after graduation)
+- $250 credit towards GA’s Classes & Workshop for 1 year from your start date (enter code: **laimmersives1** at checkout). Please note once you are enrolled, cancellations are not permitted so please make sure you are able to attend the class or workshop prior to applying your code
+- 30% off Classes and Workshops after your $250 has expired (enter code: back2school-la at checkout)
+- Access to our Alumni Community:
+  - Check out some awesome discounts on our [Alumni Perks Page](https://generalassemb.ly/alumni/perks)
+
+#### Welcome!
