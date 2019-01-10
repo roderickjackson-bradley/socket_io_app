@@ -39,16 +39,16 @@ You will have read-only access to the GA class repo.  However, you most certainl
 2. In another tab, browse to the GA class repo:  [https://git.generalassemb.ly/WDI-CC/WDI-CC-6](https://git.generalassemb.ly/WDI-CC/WDI-CC-6)
 3. In the top-right corner of the page, click the `Fork` button.
 
-Now you will have a copy of the repo in **_your_** Enterprise GitHub account!
+Now you will have a copy of the repo in **your** Enterprise GitHub account!
 
 #### Cloning Your Copy of the Repository Locally
 
-Now that you have a copy of the class repo in your GitHub account, it's time to bring the contents of that repo onto your computer - this process is known as **cloning**:
+Now that you have a copy of the class repo in your GitHub account, it's time to bring the contents of that repo onto your computer - this process is known as **cloning** and it only needs to be done once:
 
 1. On your Enterprise GitHub account, browse to your fork of the GitHub class repo and under the repository name click `Clone or download`
 2. In the `Clone with HTTPS` section, click the clipboard to copy the URL for the repository.
 3. Open Terminal and navigate to your `~/code` folder - you may choose a different folder if you wish, however these instructions will assume you clone the repo into a folder named `code`.
-4. In Terminal, type `git clone ` and paste in the copied URL from the clipboard. The command should now look something like this:
+4. In Terminal, type `git clone ` and follow it by pasting in the copied URL from the clipboard. The command should now look something like this:
 
 ```
 $ git clone https://git.generalassemb.ly/YOUR-ENTERPRISE-GITHUB-USERNAME/WDI-CC/WDI-CC-6
@@ -56,9 +56,9 @@ $ git clone https://git.generalassemb.ly/YOUR-ENTERPRISE-GITHUB-USERNAME/WDI-CC/
 
 You can now `$ cd WDI-CC-6` and check out your local copy of of the GA class repo!
 
-#### Adding a git remote for the original GA class repo
+#### Adding a git _remote_ for the original GA class repo
 
-Repos on your computer are called **local repos** ("repos" is short for repositories).
+A repo on your computer is called a **local repo** ("repo" is short for repository).
 
 Repos on GitHub are called **remote** repos. Think of them as repos in the cloud.
 
@@ -68,9 +68,9 @@ When you cloned your fork of the repo, a "link" to the git **remote** was automa
 $ git remote -v
 ```
 
-Note that by convention, the remote that points to the GitHub repo it was cloned from is called **origin**.
+Note that by convention, the remote that points to the GitHub repo it was cloned from is named **origin**.
 
-However, nn order to get the updates that the instructors push to the GA class repo, you will need to create another **remote** that points to GA's class repo that you forked:
+However, in order to get the updates that the instructors push to the GA class repo, you will need to create another **remote** that points to GA's class repo that you forked:
 
 ```
 $ git remote add upstream https://git.generalassemb.ly/WDI-CC/WDI-CC-6
@@ -82,7 +82,7 @@ Entering `$ git remote -v` again will show that you now have two remotes: `origi
 
 #### Getting Changes Pushed by Your Instructors
 
-Each day (maybe several times a day), instructional materials may be pushed to the class repo by your instructors. You will want to "pull" these materials into your local repo (on your computer). Doing so will enable you to access "starter code", etc.
+Each day (maybe a few times a day), instructional materials may be pushed to the class repo by your instructors. You will want to "pull" these materials into your local repo (on your computer). Doing so will enable you to access "starter code", etc.
 
 First, if you've made any changes **within** the repo locally, i.e., you've modified some starter code, you will need to **commit** those changes first:
 
@@ -91,27 +91,27 @@ $ git add -A
 $ git commit -m "Add amazing work..."
 ```
 
-With local changes committed, you can fetch the updates from the Github class repo and merge them into your **local** repo (on your computer):
+With local changes committed, you can now fetch the updates from the Github class repo and merge them into your **local** repo (on your computer):
 
 ```
 $ git pull upstream master
 ```
 
-From time to time, you will want to synchronize the updates and changes you have locally to your forked GitHub class repo (in the cloud). Doing so is a good idea to ensure your work is backed up to the cloud in case of computer failure:
+From time to time, you will want to "save" the commits you have made locally to your forked GitHub class repo (in the cloud). Doing so is a good idea to ensure your work is backed up to the cloud in case of computer failure:
 
 ```
 $ git push origin master
 ```
 
-Here is a picture of this Git/GitHub workflow:
+The above Git/GitHub workflow is summarized by this diagram:
 
 <img src="https://i.imgur.com/w871ATo.png">
 
 #### Handling Merge Conflicts
 
-A **merge conflict** occurs when the same line of code in your local repo is different than code you're fetching and merging from a remote repo. These conflicts confuse git and therefore you must manually fix any merge conflicts and commit those changes before the "merge" taking place on your computer is considered complete.
+A **merge conflict** occurs when git merges two commits that have modified the same region of code and can't figure out whose code to use. Thus, fixing merge conflicts requires that a developer manually update the code to what it should be and re-commit it to resolve the conflict, which will also finish git's merge process.
 
-Git will inform you which files have a merge conflict and will *annotate* your code to show you how your local code differs from your remote code. An example of such annotation is below.
+Git informs you which files have merge conflicts and will *annotate* your code to show you how your local code differs from the code being merged from the remote. An example of such annotation is below.
 
 ```
 <<<<<<< HEAD
@@ -127,21 +127,25 @@ Once you have resolved these merge conflicts by editing the code and removing th
 
 **"Nested" repos are never permitted**.  Therefore, if you have important code, such as your projects, that belongs in its own repo, **be sure to put that code in folders outside of the class repo**.
 
+### Videos of Lessons
+
+For your convenience, recordings of the lessons will be available to review at 
+ [this link](https://www.youtube.com/playlist?list=PLt-s1HdZuBB0s03vrmt6qaLo-uN7fu2Ug).
+
 ### Instructional Team
 
 |Role        | Name            | Slack       | Email |
 |:--         | :--             | :--         | :-- |
-|Instructor  | Jim Clark       | @jim.clark  | jim.clark@ga.co |
-|Instructor Assistant  | Mike Christenson    | @mchristenson5891 | michael.christenson@ga.co |
+|Global Instructor  | Jim Clark       | @jim.clark  | jim.clark@ga.co |
+|Local Instructor - Austin  |   |  |   |
+|Local Instructor - Dallas  |   |  |   |
+|Local Instructor - Santa Monica  |   |  |   |
 
 ### Course Information
 
-- Course duration: Monday, December 10th, 2018 - Thursday, March 14th, 2019 (12 weeks, plus extension due to holidays)
-- Class days & time: Monday - Friday 8:30am-4:30pm
-- Holidays:
-	- December 24th, 2018 thru January 1st, 2019  (Winter Holiday)
-	- January 21st, 2019 (MLK Day)
-	- February 18th, 2019 (Presidents Day)
+- Course duration: Tuesday, January 22nd, 2019 - Tuesday, April 16th, 2019 (12 weeks, plus one-day extension due to holiday)
+- Holiday:
+	- February 18th, 2019 (Presidents' Day)
 
 ### GA Immersive Graduation Requirements
 
@@ -151,15 +155,13 @@ General Assembly's courses are pass/fail programs. We have certain requirements 
 - Successful completion of four assigned projects
 - Successful completion of 3 of 4 project assessment challenges
 - Participating in GA’s mid-course and end-of-course feedback surveys
-- Complete 80% of assigned "homework"
+- Complete 80% of assigned "homework" and other "deliverables"
 
 When you complete our program with passing status, you unlock our alumni perks:
 
 - Support from the Outcomes Team, including participation in the Meet & Greet event (with prospective employers).
 - Receive a GA Letter of Completion (via email 1 week after graduation)
-- $250 credit towards GA’s Classes & Workshop for 1 year from your start date (enter code: **laimmersives1** at checkout). Please note once you are enrolled, cancellations are not permitted so please make sure you are able to attend the class or workshop prior to applying your code
-- 30% off Classes and Workshops after your $250 has expired (enter code: back2school-la at checkout)
-- Access to our Alumni Community:
-  - Check out some awesome discounts on our [Alumni Perks Page](https://generalassemb.ly/alumni/perks)
+- Credits and discounts for other GA courses (check with Student Services for details).
+- Access to our Alumni Community
 
 #### Welcome!
