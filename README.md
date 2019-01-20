@@ -136,10 +136,10 @@ For your convenience, recordings of the lessons will be available to review at
 
 |Role        | Name            | Slack       | Email |
 |:--         | :--             | :--         | :-- |
-|Global Instructor  | Jim Clark       | @jim.clark  | jim.clark@ga.co |
-|Local Instructor - Austin  |   |  |   |
-|Local Instructor - Dallas  |   |  |   |
-|Local Instructor - Santa Monica  |   |  |   |
+|Global Instructor  | Jim Clark       | @Jim Clark  | jim.clark@generalassemb.ly |
+|Local Instructor - Austin | Daniel Scott | @Daniel Scott | daniel.scott@generalassemb.ly |
+|Local Instructor - Dallas | Shahzad Khan | @Shahzad | shahzad.khan@generalassemb.ly |
+|Local Instructor - Santa Monica | Alex Rowland | @Alexander Rowland | alexander.rowland@generalassemb.ly |
 
 ### Course Information
 
