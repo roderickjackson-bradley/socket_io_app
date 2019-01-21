@@ -60,7 +60,7 @@ Completing the following tasks will result in a working _Guess the Number_ game:
 		- This is a great use case for a `while` loop.
 		- `parseInt` returns `NaN` if the string cannot be parsed into a number.
 
-4. From within the `play` method, invoke the `getGuess` method until the guess matches `secretNum`.
+4. From within the `play` method, invoke the `getGuess` method and add the new guess to the `prevGuesses` array.
 
 5. Add a `render` method to `game` that `play` will call after a guess has been made that alerts:
 	- If the secret has been guessed:<br>
