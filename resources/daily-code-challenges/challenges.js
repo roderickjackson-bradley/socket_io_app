@@ -33,7 +33,9 @@ addOne(1) //=> 2
 addOne(-5) //=> -4
 -----------------------------------------------------------------*/
 // Your solution for 01-addOne here:
-
+function () {
+  return n + 1
+}
 
 
 
