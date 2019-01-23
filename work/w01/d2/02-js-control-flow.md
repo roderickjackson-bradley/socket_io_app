@@ -39,7 +39,11 @@
 ## Lesson Setup
 <br>
 
-- We will use  [repl.it](https://repl.it/) to work with the concepts and complete the exercises in this lesson. Be sure to choose JavaScript as the language.
+- We will use  [repl.it](https://repl.it/) to work with the concepts and complete the exercises in this lesson.
+
+- Create a new Repl and be sure to choose JavaScript as the language.
+
+- Name the Repl something like "JS Control Flow"
 
 ---
 ## What is Control Flow?
