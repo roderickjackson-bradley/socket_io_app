@@ -67,7 +67,7 @@ Students Will Be Able To:
 
 - In OOP, we often model the goal of our application using real-world objects.
 
-- As web developers, you'll be working with objects more than anything else. The following is just an small example of what is modeled using objects:
+- As web developers, you'll be working with objects more than anything else. The following is just a small example of what is modeled using objects:
 	- The browser window and the elements it visualizes are all represented in memory as JS objects.
 	- Every part of those elements, including their styling, is accessed via JS objects.
 	- Data submitted from the browser will be accessed on the server as objects.
@@ -86,7 +86,7 @@ Students Will Be Able To:
 
 - There are three different ways we can create objects:
 	- By using _Object Literal notation_
-	- By invoking a _Class_ (also known as _Constructor Functions_)
+	- By invoking a _Class_ (also known as a_Constructor Function_)
 	- By using the `Object.create` method
 
 - Today, we're going to focus on using _Object Literals_ to create objects.
