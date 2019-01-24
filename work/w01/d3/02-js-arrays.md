@@ -42,7 +42,7 @@ Students will be able to:
 ### The Use Case (What & Why) of Arrays
 <br>
 
-- <p>**What are Arrays?**</p>
+- <strong>What are Arrays?</strong>
 	- Technically, arrays in JS are objects.
 	- Arrays are "list-like" objects with keys of "0", "1", etc.
 	- They contain zero or more items called - **elements** (not to be confused with HTML elements).
@@ -55,7 +55,7 @@ Students will be able to:
 ### The Use Case (What & Why) of Arrays
 <br>
 
-- <p>**Why use Arrays?**</p>
+- <strong>Why use Arrays?</strong>
 	- Arrays are the data structure of choice for holding lists of data.
 	- Without arrays, we'd have to store every piece of element of data in separate variables resulting is lots of messy code.
 
