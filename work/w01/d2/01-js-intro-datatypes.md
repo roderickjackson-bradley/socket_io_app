@@ -112,7 +112,6 @@ Internally, JS represents all numbers as floating-point values.
 
 Whereas strings and numbers can have a virtually unlimited number of different values, the _boolean_ data type only has two possible values: __true__ and __false__.
 
-<hr>
 #### EXERCISE: Data Type Examples
 
 **Strings**, **numbers** and **booleans** are the most common data types used to "model" real-world data in applications.
