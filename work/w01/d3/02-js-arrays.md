@@ -47,7 +47,7 @@ Students will be able to:
 	- Arrays are "list-like" objects with keys of "0", "1", etc.
 	- They contain zero or more items called - **elements** (not to be confused with HTML elements).
 	- Each element in an array can hold any data type including objects, functions, even other arrays.
-	- Unlike objects, their items are considered to be ordered and are indexable using _square bracket notation_ beginning with zero.
+	- Unlike objects, their items are considered to be **ordered**.
 	- It is a best practice to name array variables plurally, e.g.,<br> `let colors = ['red', 'green', 'blue'];`
 
 
@@ -57,7 +57,7 @@ Students will be able to:
 
 - <strong>Why use Arrays?</strong>
 	- Arrays are the data structure of choice for holding lists of data.
-	- Without arrays, we'd have to store every piece of element of data in separate variables resulting is lots of messy code.
+	- Without complex data types such as arrays or objects, we'd have to store every individual piece of data in separate variables resulting is lots of messy code.
 
 ---
 ### Creating Arrays
@@ -221,7 +221,7 @@ The `splice` method always returns an array containing the removed elements.
 ### Copy All or Some of an Array
 <br>
 
-- We use the [Array.prototype.slice](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/slice) method to create copies of any number of elements in an array.
+- We use the [Array.prototype.slice](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/slice) method to create a copy of all, or part, of an array.
 
 - The `slice` method always returns a new array and does not mutate (change) the source array.
 
