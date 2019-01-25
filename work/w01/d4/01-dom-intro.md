@@ -340,7 +340,7 @@ View as a presentation by clicking [here](https://presentations.generalassemb.ly
 ### DOM Selection Summary
 <br>
 
-- <p>In summary, use the following to help you decide which method to use to select DOM elements:</p>
+- In summary, use the following to help you decide which method to use to select DOM elements:
 	- **getElementById**: Use when you need to select a single element that has an `id` assigned to it.
 	- **querySelector**: Use when you need to select a single element that **does not** have an `id`.
 	- **querySelectorAll**: Use when you need to select multiple elements.
