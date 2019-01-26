@@ -29,7 +29,7 @@ This will be your shared class repo! Guides, in-class labs and code samples, and
             /hw-topic
 ```
 
-### Curriculum Schedule
+### Course Curriculum
 
 <table>
   <thead>
@@ -44,11 +44,11 @@ This will be your shared class repo! Guides, in-class labs and code samples, and
     </tr>
     <tr>
       <td style="text-align:center">2</td>
-      <td>CSS: Flexbox, Grid & Responsive Design<br>JS: Callback functions, Classes, jQuery, this Keyword, Array Iterator Methods & Playing Audio<br>Project Deployment</td>
+      <td>CSS: Flexbox, Grid & Responsive Design<br>JS: Callback functions, Classes, jQuery, this Keyword, Array Iterator Methods & Playing Audio</td>
     </tr>
     <tr>
       <td style="text-align:center">3</td>
-      <td>Project Week</td>
+      <td>Project Week<br>Project Deployment to GitHub Pages</td>
     </tr>
     <tr>
       <td rowspan="3">Full-stack Development</td>
@@ -62,7 +62,7 @@ This will be your shared class repo! Guides, in-class labs and code samples, and
     </tr>
     <tr>
       <td style="text-align:center">6</td>
-      <td>Project Week</td>
+      <td>Project Week<br>Project Deployment to Heroku</td>
     </tr>
     <tr>
       <td rowspan="3">Second Language & Web Framework</td>
@@ -76,7 +76,7 @@ This will be your shared class repo! Guides, in-class labs and code samples, and
     </tr>
     <tr>
       <td style="text-align:center">9</td>
-      <td>Project Week</td>
+      <td>Project Week<br>Project Deployment to Heroku</td>
     </tr>
     <tr>
       <td rowspan="3">Developing Single-page Apps</td>
@@ -90,7 +90,7 @@ This will be your shared class repo! Guides, in-class labs and code samples, and
     </tr>
     <tr>
       <td style="text-align:center">12</td>
-      <td>Project Week</td>
+      <td>Project Week<br>Project Deployment to Heroku</td>
     </tr>
   </tbody>
 </table>
