@@ -35,6 +35,19 @@ Please create an HTML, CSS, JS Repl and name it `Responsive Design Lab`.
 
 ## Hints
 
+- Be sure to start with a bit of CSS reset:
+
+	```css
+		* {
+		  box-sizing: border-box;
+		}
+		
+		body {
+		  margin: 0;
+		  font-family: Helvetica;
+		}
+	```
+
 - Use the _Digital Color Meter_ application that comes with the Mac to "pick" the colors from the screen.
 
 - Use the DevTools to inspect the elements and styling to how Smashing Magazine built the site.

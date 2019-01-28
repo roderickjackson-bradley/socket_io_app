@@ -22,6 +22,19 @@ Use either an HTML, CSS, JS Repl, or create a project folder with `index.html` &
 
 ## Hints
 
+- Be sure to start with a bit of CSS reset:
+
+	```css
+		* {
+		  box-sizing: border-box;
+		}
+		
+		body {
+		  margin: 0;
+		  font-family: Helvetica;
+		}
+	```
+
 - Use the _Digital Color Meter_ application that comes with the Mac to "pick" the colors from the screen.
 
 - Elements can be made to appear circular by using `border-radius: 50%;`.
