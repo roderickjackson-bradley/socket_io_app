@@ -101,12 +101,10 @@ To experiment with responsive design, open up a new HTML, CSS, JS Repl in [repl.
 Copy/paste the following HTML inside of the `<body>`:
 
 ```html
-<h1>Media Queries</h1>
-	<header>MEDIA QUERIES</header>
-	<aside>SIDE</aside>
-	<main>CONTENT</main>
-	<footer>FOOTER</footer>
-</section>
+<header>MEDIA QUERIES</header>
+<aside>SIDE</aside>
+<main>CONTENT</main>
+<footer>FOOTER</footer>
 ```
 
 In addition, copy/paste the following CSS into _style.css_:
