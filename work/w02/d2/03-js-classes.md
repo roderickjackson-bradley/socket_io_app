@@ -37,7 +37,7 @@
 
 ---
 ### What Are <em>Classes</em>?
-<br>
+<br>lockheed
 
 <img src="https://i.imgur.com/Pjxlpjs.jpg" width="600">
 
@@ -405,7 +405,7 @@ var car = new Vehicle('A1234', 'Toyota', 'Camry');
 - Now we can create instances of `Plane` like this:
 
 	```js	
-	var spyPlane = new Plane('secret', 'Lockhead', 'SR-71', 'USA');
+	var spyPlane = new Plane('secret', 'Lockheed', 'SR-71', 'USA');
 	```
 
 - Note how the additional arguments used to initialize subclasses are always provided after those intended for the superclass(es).
