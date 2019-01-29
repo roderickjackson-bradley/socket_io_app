@@ -163,7 +163,7 @@ For example:
 ```js
 const colors = ['red', 'green', 'blue'];
 
-console.log('BEFORE the forEach...);
+console.log('BEFORE the forEach...');
 
 colors.forEach(function(color, idx) {
 	console.log(`${idx + 1} - ${color}`);
