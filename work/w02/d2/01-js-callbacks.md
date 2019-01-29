@@ -2,12 +2,6 @@
 
 # JavaScript Callback Functions
 
-
-which one is the callback?
-Notes: use settimeout for asyncronous code demo - countdown timer
-
-
-
 | Learning Objectives - SWBAT: |
 | :--- |
 | Identify 3 Use Cases for Callback Functions |
