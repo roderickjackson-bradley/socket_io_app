@@ -15,7 +15,7 @@ Imperative programming is a more step-by-step way of writing code.
 `for` loops, for example, are imperative: 
 
 ```js
-for (var index = 0; index < array.length; index++) {
+for (let index = 0; index < array.length; index++) {
     // do stuff
 }
 ```
