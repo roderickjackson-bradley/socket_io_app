@@ -4,18 +4,20 @@
 
 ## Intro
 
-In WDI, it's not just about learning languages, libraries and frameworks.
+Getting started and knowing how to structure the code in an application is one of the most difficult things for students to figure out.
 
-It's also about organizing and structuring code to solve problems and implement the features of a web app.
+There might be plenty of sources available to learn about how to use a `forEach` loop, but finding help on how to think like a developer and write code to implement an app's features is difficult at best.
 
-You're about to start coding your first project in WDI - a game.
+Luckily, you've come to the right place!
 
-But getting started and knowing how to structure your code is often difficult to figure out.
+In WDI, it's not just about learning how to use languages, libraries and frameworks.
 
-This guide will help you with both of the above challenges:
+In WDI, it's also about learning how to organize and structure code to implement the features of a web app.
+
+This guide will help you with:
 
 - How to start a project, and
-- How to organize/structure your code ("architect" your app)
+- How to organize/structure your code, in other words, how to "architect" your app.
 
 ## Client-Side MVC Architectural Approach
 
@@ -77,9 +79,18 @@ The following diagram denotes one approach to structuring your code:
 
 #### Key Points & Best Practices
 
-- Use constants instead of literal values to improve code readability and maintenance.
+- **Use constants** instead of literal values to improve code readability and maintenance. For example, let's say you wanted to limit the number of guesses in a game to a certain number.<br>You could write code like this:
 
-- Instead of using several separate variables to hold state, consider using object properties when it makes sense to do so. For example, if you need to track info for two players, instead of using several variables like `player1name`, `player2name`, `player1score`, `player2score`, etc., consider using an object like
+	```js
+	let lose = numGuesses > 5;
+	```
+	However, code like the following which would be more maintainable because you probably will need to use the maximum guesses value in more than one section of code:
+	
+	```js
+	let lose = numGuesses > MAX_GUESSES;
+	```
+
+- **Instead of using several separate variables to hold state**, consider using object properties when it makes sense to do so. For example, if you need to track info for two players, instead of using several variables like `player1name`, `player2name`, `player1score`, `player2score`, etc., consider using an object like:
 
 	```js
 	const players = {
@@ -93,19 +104,24 @@ The following diagram denotes one approach to structuring your code:
 		}
 	};
 	```
+	
 	Following this practice will result in more concise code and make it easier to implement certain features such as persisting the state of a game.
 
-- Don't store state data that can be computed as needed from other data - this avoids the risk of data becoming out of sync or inconsistent. For example, in Tic-Tac-Toe, it's not necessary to track the number of moves to determine if there's a tie game - the variable used to track the state of the board can already provide this info.
+- **Don't store state data that can be computed** as needed from other data - this avoids the risk of data becoming out of sync or inconsistent. For example, in Tic-Tac-Toe, it's not necessary to track the number of moves to determine if there's a tie game - the variable used to track the state of the board can already provide this info.
 
-- If your code needs to access a DOM element more than once during runtime - cache it (save it in a variable).
+- If your code needs to access a DOM element more than once during runtime - **cache** it (save it in a variable).
 
-- The `render()` function's responsibility is to transfer all state to the DOM.  This includes the hiding/showing of parts of the UI based upon the application's state.  For example, when a hand is in play in a game of Blackjack, the `render()` function would show the hit/stand buttons and hide the betting-related buttons. Also, if the `render()` function becomes too large, you can break it up into smaller functions, e.g., `renderScores()`, 
+- **The `render()` function's responsibility is to transfer all state to the DOM**.  This includes the hiding/showing of parts of the UI based upon the application's state.  For example, when a hand is in play in a game of Blackjack, the `render()` function would show the hit/stand buttons and hide the betting-related buttons. Also, if the `render()` function becomes too large, you can break it up into smaller functions, e.g., `renderScores()`, 
 
-- The overreaching principle to keep in mind is, **in response to user interaction, update all impacted state, then call render**.
+- The overreaching principle to keep in mind is...<br>**In response to user interaction**:
+	1. **Update all state impacted by the interaction**, then
+	2. **Update the DOM by calling `render()`**.
 
 ## Suggested Steps to Get Started
 
-The following approach is just a suggested approach - with experience, you will develop an approach that work's best for you.
+The following approach has been proven to help students write complex front-end web apps, such as games.
+
+If you're concerned that using the following approach will result in you and your fellow students having code that is structured similarly - don't be!  **What matters is when prospective employers think when they look at your projects's code structure in GitHub!**
 
 1. **Analyze the app's functionality**
 	- The app's features, from the user's point of view, should be described using _User Stories_.  User stories follow this template: **As a [role], I want [feature] because [reason]**.  Example user story: _As a player, I want to see a list of high-scores so that I know what I have to score to make the list_.
@@ -170,8 +186,8 @@ The following approach is just a suggested approach - with experience, you will 
 	
 	```js
 	function render() {
-		renderBoard();
-		renderScore();
+		renderHands();
+		renderControls();
 		if (winner) {
 			renderWinnerMessage();
 		} else {
@@ -179,11 +195,11 @@ The following approach is just a suggested approach - with experience, you will 
 		}
 	}
 	```
-	- Avoid accessing the DOM from outside render-oriented functions.
-	- Data (state) is the single source of truth of the app - when implementing an app's logic, the DOM is secondary to data manipulation.
+	- Avoid accessing the DOM from outside render-oriented functions. However, "eye candy" animations, a ticking time display, etc. are exceptions to this tip.
+	- **Data (state) is the single source of truth of the app** - when implementing an app's logic, the DOM is secondary to data manipulation. **Get used to thinking about how to your app's data changes vs. the display.**
 	- As the user interacts with the application (or other events such as timers trigger), code the app such that it:
 		- Updates state, then...
-		- Call `render()`
+		- Calls `render()`
 
 11. **Make frequent git commits of working code**
 	- At a minimum, commit each "milestone" or feature implementation.

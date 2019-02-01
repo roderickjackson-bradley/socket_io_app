@@ -29,6 +29,72 @@ This will be your shared class repo! Guides, in-class labs and code samples, and
             /hw-topic
 ```
 
+### Course Curriculum
+
+<table>
+  <thead>
+    <tr><th>Unit</th><th>Week</th><th>Topics</th><th>Project</th></tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td rowspan="3">Fundamentals of Front-end Development</td>
+      <td align="center">1</td>
+      <td>Fundamentals of JavaScript, HTML & CSS<br>DOM Manipulation & Events<br>Structuring a Browser App</td>
+      <td rowspan="3">Browser-based Game</td>
+    </tr>
+    <tr>
+      <td align="center">2</td>
+      <td>CSS: Flexbox, Grid & Responsive Design<br>JS: Callback functions, Classes, jQuery, this Keyword, Array Iterator Methods & Playing Audio</td>
+    </tr>
+    <tr>
+      <td align="center">3</td>
+      <td>Project Week<br>Project Deployment to GitHub Pages</td>
+    </tr>
+    <tr>
+      <td rowspan="3">Full-stack Development</td>
+      <td align="center">4</td>
+      <td>Client-Server: HTTP Communications & REST<br>NodeJS & ExpressJS Framework<br>MongoDB & MongooseJS ODM<br>Data Modeling</td>
+      <td rowspan="3">MEN-stack CRUD Application</td>
+    </tr>
+    <tr>
+      <td align="center">5</td>
+      <td>Consuming & Producing APIs<br>AJAX and Client-side Templating<br>Authentication using OAuth</td>
+    </tr>
+    <tr>
+      <td align="center">6</td>
+      <td>Project Week<br>Project Deployment to Heroku</td>
+    </tr>
+    <tr>
+      <td rowspan="3">Second Language & Web Framework</td>
+      <td align="center">7</td>
+      <td>Fundamentals of Python<br>Relational Databases & SQL<br>Agile Development</td>
+      <td rowspan="3">Group Project: Full-stack Django Application</td>
+    </tr>
+    <tr>
+      <td align="center">8</td>
+      <td>Django Web Framework<br>Amazon S3<br>Regular Expressions<br>Username/Password Authentication</td>
+    </tr>
+    <tr>
+      <td align="center">9</td>
+      <td>Project Week<br>Project Deployment to Heroku</td>
+    </tr>
+    <tr>
+      <td rowspan="3">Developing Single-page Apps</td>
+      <td align="center">10</td>
+      <td>SPA Architecture<br>ReactJS Library</td>
+      <td rowspan="3">MERN-stack Application</td>
+    </tr>
+    <tr>
+      <td align="center">11</td>
+      <td>Client-side Routing<br>Full-stack React<br>Web Sockets<br>Token-based Authentication</td>
+    </tr>
+    <tr>
+      <td align="center">12</td>
+      <td>Project Week<br>Project Deployment to Heroku</td>
+    </tr>
+  </tbody>
+</table>
+
 ### Becoming Familiar With the WDI GitHub Workflow
 
 #### Forking (copying) the GA Class Repo to Your GitHub Account
@@ -137,8 +203,8 @@ For your convenience, recordings of the lessons will be available to review at
 |Role        | Name            | Slack       | Email |
 |:--         | :--             | :--         | :-- |
 |Global Instructor  | Jim Clark       | @Jim Clark  | jim.clark@generalassemb.ly |
-|Local Instructor - Austin | Daniel Scott | @Daniel Scott | daniel.scott@generalassemb.ly |
-|Local Instructor - Dallas | Shahzad Khan | @Shahzad | shahzad.khan@generalassemb.ly |
+|Local Instructor - Austin | Shahzad Khan | @Shahzad | shahzad.khan@generalassemb.ly 
+|Local Instructor - Dallas |Daniel Scott | @Daniel Scott | daniel.scott@generalassemb.ly | |
 |Local Instructor - Santa Monica | Alex Rowland | @Alexander Rowland | alexander.rowland@generalassemb.ly |
 
 ### Course Information

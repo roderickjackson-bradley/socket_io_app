@@ -87,6 +87,25 @@ var sayHello = function(name) {
 
 **What similarities and differences do you see between the two approaches?**
 
+##### Primary Difference Between Function Declarations & Expressions
+
+For all practical purposes, the difference between them is that _function expressions_ cannot be invoked before they are defined; whereas _function declarations_ are **hoisted** to the top of their scope and can therefore be invoked even if they are defined later in the source code. For example:
+
+```js
+fnDeclaration();  // thank you function declarations :)
+fnExpression();  // TypeError: fnExpression is not a function
+
+function fnDeclaration() {
+	console.log("I'm coming from a function declaration");
+}
+
+const fnExpression = function() {
+	console.log("I'm coming from a function expression");
+};
+```
+
+> Note: Attempting to execute a function expression before it's been defined is the source of many an error for JS developers!
+
 ##### 3) Arrow Functions
 
 ES2015 delivered a third approach to defining functions - **Arrow Functions**.
