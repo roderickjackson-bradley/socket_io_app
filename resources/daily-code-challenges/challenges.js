@@ -35,9 +35,8 @@ addOne(-5) //=> -4
 // Your solution for 01-addOne here:
 
 function addOne(n) {
-  return n + 1
+  return n + 1;
 }
-
 
 
 
@@ -61,10 +60,24 @@ addTwoNumbers('Hello', 5) //=> NaN
 -----------------------------------------------------------------*/
 // Your solution for 02-addTwoNumbers here:
 function addTwoNumbers(x,y) {
-  if (x >= 1 && x <= 1)  || (y >= 1 && y <= 1) 
 
-  return x + y
+  if (isNaN(x,y))  {
+    return NaN;
+  } else {
+    return x + y;
+    }
+
+};
+ /*-----------------------------------------------------------------
+ 
+if (isNaN(x,y))  {
+  return NaN;
+} else {
+  return x + y;
+  }
+
 }
+-----------------------------------------------------------------*/
 
 
 
@@ -88,7 +101,7 @@ sumNumbers([]) //=> 0
 -----------------------------------------------------------------*/
 // Your solution for 03-sumNumbers here:
 
-
+``
 
 
 
