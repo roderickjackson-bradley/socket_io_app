@@ -532,7 +532,7 @@
 	    todos: todoDb.getAll()
 	  });
 	});
-```
+	```
 	
 - Again, to pass data to a view, we pass an object as a second argument to `render`.
 
