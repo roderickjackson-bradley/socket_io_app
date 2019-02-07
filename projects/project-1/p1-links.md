@@ -2,10 +2,11 @@
 
 | Student | Game | GitHub | Hosted Site |
 |---|:---:|:---:|:---:|
-| Ali (DAL) | Simon | [link](https://git.generalassemb.ly/fagleyali/Project-One) | [link]() |
+| Ali (DAL) | Simon | [link](https://github.com/fagleyali/Project-One) | [link]() |
 | David (DAL) | Slot Machine | [link](https://github.com/Davidslider/slot_machine_game) | [link]() |
 | Anna (ATX) | Traffic Jam | [link](https://github.com/annaelizabeth2019/traffic-jam-game) | [link]() |
 | Andrey (ATX) | Ping Pong | [link](https://github.com/AndreykaVSR/WDI-Project1-PingPong) | [link]() |
+| D'angelo (ATX) | Chess | [link](https://github.com/dmshakur/chess) | [link]() |
 | Josh (ATX) | Jeopardy | [link](https://github.com/joshjoll/Jeopardy-Game) | [link]() |
 | Kyle A. (ATX) | First Person Shooter | [link](https://github.com/kanderson425/WDI-Game-Project) | [link]() 
 | Kyle S. (ATX) | Minesweeper | [link](https://github.com/kdsmith500/wdi-p1-mineSweeper) | [link]() |
@@ -19,3 +20,4 @@
 | Meisam (LA) | Minesweeper | [link](https://github.com/pmeisam/minesweeper) | [link]() |
 | Mike (LA) | Whack-a-Mole | [link](https://github.com/md1285/project-01-whack-a-mole) | [link]() |
 | Valerie (LA) | Connect Four | [link](https://git.generalassemb.ly/vkomova/connect-four) | [link]() |
+| Weronika (LA) | Checkers | [link](https://github.com/weronikaviola/Checkers---game) | [link]() |
