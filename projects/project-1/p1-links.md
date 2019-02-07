@@ -4,7 +4,6 @@
 |---|:---:|:---:|:---:|
 | Ali (DAL) | Simon | [link](https://git.generalassemb.ly/fagleyali/Project-One) | [link]() |
 | David (DAL) | Slot Machine | [link](https://github.com/Davidslider/slot_machine_game) | [link]() |
-
 | Anna (ATX) | Traffic Jam | [link](https://github.com/annaelizabeth2019/traffic-jam-game) | [link]() |
 | Andrey (ATX) | Ping Pong | [link](https://github.com/AndreykaVSR/WDI-Project1-PingPong) | [link]() |
 | Josh (ATX) | Jeopardy | [link](https://github.com/joshjoll/Jeopardy-Game) | [link]() |
@@ -14,7 +13,6 @@
 | Michelle (ATX) | Guess Animals | [link](https://github.com/themichellemcguire/Guess-Who-Animals-P1) | [link]() |
 | Paul (ATX) | Canvas | [link](https://github.com/TanPOTGS/smol-game) | [link]() |
 | Siara (ATX) | Bouncy Ball | [link](https://github.com/siaraclemente/wdiproject1game) | [link]() |
-
 | Carly (LA) | Connect Four | [link](https://github.com/cjmarsh2/WDI-Project-One) | [link]() |
 | Demetrious (LA) | Word Game | [link](https://github.com/EternalDev1/wdi-project_1_mumbo_jumbo) | [link]() |
 | Eliana (LA) | Animation Game | [link](https://github.com/eliana-michelle/princess-bride-endless-runner) | [link]() |
