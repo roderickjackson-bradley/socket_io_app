@@ -17,7 +17,9 @@
 | Carly (LA) | Connect Four | [link](https://github.com/cjmarsh2/WDI-Project-One) | [link]() |
 | Demetrious (LA) | Word Game | [link](https://github.com/EternalDev1/wdi-project_1_mumbo_jumbo) | [link]() |
 | Eliana (LA) | Animation Game | [link](https://github.com/eliana-michelle/princess-bride-endless-runner) | [link]() |
+| Felicity (LA) | Bounding Balls | [link](https://github.com/felicitysmusings/ball-game) | [link]() |
 | Meisam (LA) | Minesweeper | [link](https://github.com/pmeisam/minesweeper) | [link]() |
 | Mike (LA) | Whack-a-Mole | [link](https://github.com/md1285/project-01-whack-a-mole) | [link]() |
+| Sun (LA) | Yutnori | [link](https://github.com/soobaklee/yutnori) | [link]() |
 | Valerie (LA) | Connect Four | [link](https://git.generalassemb.ly/vkomova/connect-four) | [link]() |
 | Weronika (LA) | Checkers | [link](https://github.com/weronikaviola/Checkers---game) | [link]() |
