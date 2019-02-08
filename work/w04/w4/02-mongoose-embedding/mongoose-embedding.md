@@ -199,16 +199,17 @@
 ---
 #### Adding Movie Reviews - Step 2
 
-- We won't worry about styling during the lesson, so here's the ugly form to add under the current `<table>`:
+- Here's the form to add under the current `</section>`:
 
 	```html
-	</table>
+	</section>
 	<!-- new markup below -->
-	<h2>Reviews</h2>
-	<form id="review-form" method="POST"
+	<br><br><h2>Reviews</h2>
+	<form id="add-review-form" method="POST"
 	  action="/movies/<%= movie._id %>/reviews">
 	  <label>Review:</label>
 	  <textarea name="content"></textarea>
+	  <label>Rating:</label>
 	  <select name="rating">
 	    <option value="1">1</option>
 	    <option value="2">2</option>
@@ -218,6 +219,33 @@
 	  </select>
 	  <input type="submit" value="Add Review">
 	</form>
+	```
+
+---
+#### Adding Movie Reviews - Step 2
+
+- A touch of styling. Update this current CSS rule:
+
+	```css
+	#new-form *, #add-review-form * {
+	  font-size: 20px;
+	  ...
+	```
+	
+	and
+	
+	```css
+	#add-review-form {
+	  display: grid;
+	  grid-template-columns: auto auto;
+	  grid-gap: 1rem;
+	}
+	
+	#add-review-form input[type="submit"] {
+	  width: 8rem;
+	  grid-column: 2 / 3;
+	  margin-bottom: 2rem;
+	}
 	```
 
 ---
