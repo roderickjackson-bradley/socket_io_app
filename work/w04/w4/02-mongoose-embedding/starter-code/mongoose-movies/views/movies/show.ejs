@@ -1,0 +1,23 @@
+<%- include('../partials/header') %>
+<table id="list">
+  <thead>
+    <tr>
+      <th>Title</th>
+      <th>Release<br>Year</th>
+      <th>Rating</th>
+      <th>Cast</th>
+      <th>Now<br>Showing</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><%= movie.title %></td>
+      <td><%= movie.releaseYear %></td>
+      <td><%= movie.mpaaRating %></td>
+      <td><%= movie.cast.join(', ') %></td>
+      <td><%= movie.nowShowing ? 'Yes' : 'Nope' %></td>
+    </tr>
+  </tbody>
+  </table>
+  
+<%- include('../partials/footer') %>
