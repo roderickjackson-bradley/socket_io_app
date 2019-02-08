@@ -26,7 +26,7 @@
 | Meisam (LA) | Minesweeper | [link](https://github.com/pmeisam/minesweeper) | [link](http://www.meisam.org/minesweeper/index.html) |
 | Mike (LA) | Whack-a-Mole | [link](https://github.com/md1285/project-01-whack-a-mole) | [link](https://md1285.github.io/project-01-whack-a-mole/) |
 | Sun (LA) | Yutnori | [link](https://github.com/soobaklee/yutnori) | [link]() |
-| Vance (LA) | Pong | [link] (https://github.com/vooncer17/GameProject) | [link]() |
+| Vance (LA) | Pong | [link](https://github.com/vooncer17/GameProject) | [link]() |
 | Valerie (LA) | Connect Four | [link](https://github.com/vkomova/connect-four) | [link]() |
 | Weronika (LA) | Checkers | [link](https://github.com/weronikaviola/Checkers---game) | [link]() |
 
