@@ -2,7 +2,7 @@
 
 | Student | Game | GitHub | Hosted Site |
 |---|:---:|:---:|:---:|
-| Ali (DAL) | Simon | [link](https://github.com/fagleyali/Project-One) | [link]() |
+| Ali (DAL) | The RGB Color Guessing Game | [link](https://github.com/fagleyali/Project-One) | [link](https://fagleyali.github.io/Project-One/) |
 | David (DAL) | Slot Machine | [link](https://github.com/Davidslider/slot_machine_game) | [link]() |
 | Anna (ATX) | Traffic Jam | [link](https://github.com/annaelizabeth2019/traffic-jam-game) | [link]() |
 | Andrey (ATX) | Ping Pong | [link](https://github.com/AndreykaVSR/WDI-Project1-PingPong) | [link]() |
