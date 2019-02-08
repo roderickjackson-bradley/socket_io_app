@@ -1,23 +1,16 @@
 <%- include('../partials/header') %>
-<table id="list">
-  <thead>
-    <tr>
-      <th>Title</th>
-      <th>Release<br>Year</th>
-      <th>Rating</th>
-      <th>Cast</th>
-      <th>Now<br>Showing</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td><%= movie.title %></td>
-      <td><%= movie.releaseYear %></td>
-      <td><%= movie.mpaaRating %></td>
-      <td><%= movie.cast.join(', ') %></td>
-      <td><%= movie.nowShowing ? 'Yes' : 'Nope' %></td>
-    </tr>
-  </tbody>
-  </table>
+
+<section id="show-page">
+  <div>Title: </div>
+  <div><%= movie.title %></div>
+  <div>Release Year: </div>
+  <div><%= movie.releaseYear %></div>
+  <div>Rating: </div>
+  <div><%= movie.mpaaRating %></div>
+  <div>Cast: </div>
+  <div><%= movie.cast.join(', ') %></div>
+  <div>Now Showing: </div>
+  <div><%= movie.nowShowing ? 'Yes' : 'Nope' %></div>
+</section>
   
 <%- include('../partials/footer') %>
