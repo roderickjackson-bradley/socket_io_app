@@ -1,7 +1,7 @@
 
 [click here to view as a presentation](https://presentations.generalassemb.ly/5a3ff8eeef72ad1a3c53986c2784ee67#/1)
 
-<style style="visibility:hidden"> .reveal li {font-size: 32px;} .reveal ul ul li, .reveal ul ol li, .reveal ol ol li, .reveal ol ul li { font-size: 28px; } </style>
+<link href="https://gist.githubusercontent.com/jim-clark/6919052ab15de680c120907d223c31b5/raw/9eedb5e3c01352b9ccda7264227f253be56a08b7/slide.css">
 
 ---
 
@@ -56,11 +56,11 @@
 #### Review the Starter Code
 <br>
 
-- Today's starter code is the final code from yesterday's _Mongoose - Embedding Related Data_ lesson with one significant refactor...
+- Today's starter code is the final code from yesterday's _Mongoose - Embedding Related Data_ lesson with a couple of changes...
 
-- The `cast` property on the `Movie` model has been removed and all related forms/views and controller code have been adjusted accordingly.
+- The `cast` property on the `Movie` model has been removed and all related forms/views and controller code have been adjusted accordingly. This was done so that in this lesson we can reference _performer_ documents created using a `Performer` Model.
 
-- Instead, during this lesson we'll learn how to reference _performer_ documents created using a `Performer` Model.
+- The **movies/show.ejs** view shows how you can use EJS to calculate an _average rating_ for a movie.
 
 ---
 #### Perform CRUD Using<br>Mongoose Models in a Node REPL
