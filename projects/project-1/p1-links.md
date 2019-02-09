@@ -8,6 +8,7 @@
 | Anna (ATX) | Traffic Jam | [link](https://github.com/annaelizabeth2019/traffic-jam-game) |  |
 | Andrey (ATX) | Ping Pong | [link](https://github.com/AndreykaVSR/WDI-Project1-PingPong) |  |
 | D'angelo (ATX) | Chess | [link](https://github.com/dmshakur/chess) |  |
+| Drew (ATX) | Cross the Box |  | [link](http://drewcclark.com/) |
 | Josh (ATX) | Jeopardy | [link](https://github.com/joshjoll/Jeopardy-Game) | [link](http://male-plant.surge.sh/) |
 | Kyle A. (ATX) | First Person Shooter | [link](https://github.com/kanderson425/WDI-Game-Project) |  
 | Kyle S. (ATX) | Minesweeper | [link](https://github.com/kdsmith500/wdi-p1-mineSweeper) | [link](http://material-land.surge.sh/) |
@@ -15,6 +16,7 @@
 | Michelle (ATX) | Guess Animals | [link](https://github.com/themichellemcguire/Guess-Who-Animals-P1) | [link](http://acid-plate.surge.sh/) |
 | Paul (ATX) | Canvas | [link](https://github.com/TanPOTGS/smol-game) | [link](https://tanpotgs.github.io/smol-game/) |
 | Siara (ATX) | Bouncy Ball | [link](https://github.com/siaraclemente/wdiproject1game) | [link](http://opposite-afterthought.surge.sh/) |
+| Tyler (ATX) |  |  | [link](http://lacking-straw.surge.sh/) |
 | Ursula (ATX) | Bubbles | [link](https://git.generalassemb.ly/ursulacj/WDI-CC-6/tree/master/practice_file/canvasPractice) | [link](http://bubblit.surge.sh/) |
 | Carly (LA) | Connect Four | [link](https://github.com/cjmarsh2/WDI-Project-One) | [link](https://cjmarsh2.github.io/WDI-Project-One/) |
 | Danillo (LA) | Star-Ride (canvas) | [link](https://github.com/Danvieira7/star-ride) | [link](https://danvieira7.github.io/star-ride/index.html) |
