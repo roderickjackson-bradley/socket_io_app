@@ -15,6 +15,7 @@
 | Michelle (ATX) | Guess Animals | [link](https://github.com/themichellemcguire/Guess-Who-Animals-P1) | [link](http://acid-plate.surge.sh/) |
 | Paul (ATX) | Canvas | [link](https://github.com/TanPOTGS/smol-game) | [link](https://tanpotgs.github.io/smol-game/) |
 | Siara (ATX) | Bouncy Ball | [link](https://github.com/siaraclemente/wdiproject1game) | [link](http://opposite-afterthought.surge.sh/) |
+| Ursula (ATX) | Bubbles | [link](https://git.generalassemb.ly/ursulacj/WDI-CC-6/tree/master/practice_file/canvasPractice) | [link](http://bubblit.surge.sh/) |
 | Carly (LA) | Connect Four | [link](https://github.com/cjmarsh2/WDI-Project-One) | [link](https://cjmarsh2.github.io/WDI-Project-One/) |
 | Danillo (LA) | Star-Ride (canvas) | [link](https://github.com/Danvieira7/star-ride) | [link](https://danvieira7.github.io/star-ride/index.html) |
 | David (LA) | Slot Machine| [link](https://github.com/DavidGalindo23/slot-machine-game-pj1) | [link](https://davidgalindo23.github.io/slot-machine-game-pj1/) |
