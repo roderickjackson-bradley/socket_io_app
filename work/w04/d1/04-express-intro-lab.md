@@ -11,6 +11,8 @@ It's natural, in fact, **expected**, to feel "uncomfortable" and confused by Nod
 
 As always, the journey toward competence requires practice - so let's get on with it!
 
+##### This Lab is Not a Deliverable
+
 ## Exercise
 
 The goal of the exercise is to do put in a rep doing everything that you did during the Express lesson!
@@ -33,7 +35,7 @@ We refer to this as the `show` route/view, vs. the `index` route/view.
 
 The key to implementing this feature is **route parameters** documented in the **Route parameters** section of the [Express Routing guide](https://expressjs.com/en/guide/routing.html).
 
-Basically, if you can define a route as follows:
+Basically, you can define a route as follows:
 
 ```js
 app.get('/students/:id', function(req, res) {
@@ -42,7 +44,7 @@ app.get('/students/:id', function(req, res) {
 });
 ```
 
-To send a matching route from the browser, you might have EJS that generates a  hyperlink that looks like:
+To send a matching route from the browser, you can use EJS that generates a hyperlink that looks like:
 
 ```html
 <a href="/students/<%= student.id %>">
