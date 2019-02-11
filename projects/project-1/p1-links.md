@@ -23,7 +23,7 @@
 | Son (ATX) | |  |  |
 | Tyler (ATX) |  |  | [link](http://lacking-straw.surge.sh/) |
 | Ursula (ATX) | Bubbles | [link](https://git.generalassemb.ly/ursulacj/WDI-CC-6/tree/master/practice_file/canvasPractice) | [link](http://bubblit.surge.sh/) |
-| Bonny (ATX) | |  |  |
+| Bonny (ATX) | Simon | [link](https://github.com/bmrivers/simon-says) | [link](https://bmrivers.github.io/simon-says/) |
 | Carly (LA) | Connect Four | [link](https://github.com/cjmarsh2/WDI-Project-One) | [link](https://cjmarsh2.github.io/WDI-Project-One/) |
 | Danillo (LA) | Star-Ride (canvas) | [link](https://github.com/Danvieira7/star-ride) | [link](https://danvieira7.github.io/star-ride/index.html) |
 | David (LA) | Slot Machine| [link](https://github.com/DavidGalindo23/slot-machine-game-pj1) | [link](https://davidgalindo23.github.io/slot-machine-game-pj1/) |
