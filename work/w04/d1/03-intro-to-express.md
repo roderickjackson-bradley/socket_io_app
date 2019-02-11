@@ -168,7 +168,7 @@
 #### Our First Route
 <br>
 
-- Let's define a route to replace the one we just replaced:
+- Let's define a route to replace the one we just wrote:
 
 	```js
 	// Mount routes
