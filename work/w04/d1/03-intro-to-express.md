@@ -55,7 +55,7 @@
 - Open the project's folder in your code editor.
 
 ---
-#### The Three Fundamental Capabilities of Web Frameworks 
+#### The Three Fundamental Capabilities of<br>Web Application Frameworks 
 <br>
 
 - Web Application Frameworks have three capabilities fundamental to writing a back-end web application:
@@ -76,7 +76,7 @@
 - Express uses Node's built-in HTTP module to listen for, and respond to, HTTP requests - Express simply adds those three web application capabilities on top of Node
 
 ---
-### Install the Express Module
+#### Install the Express Module
 <br>
 
 - Let's use `npm` to install the Express module in this project:
@@ -95,7 +95,7 @@
 ---
 #### Express - Hello World!
 
-- As a first look at Express, we'll write the obligatory "Hello World!" application - in `server.js`:
+- Let's write the obligatory "Hello World!" application:
 
 	```js
 	// Load express
@@ -194,7 +194,7 @@
 
 - Now, thanks to the `main` key in `package.json`, we can start the server by simply typing `nodemon`.
 
-- Let's get back to talking about routing...
+- Let's move on to routing...
 
 ---
 #### Our First Route
@@ -210,7 +210,7 @@
 #### Our First Route
 <br>
 
-- The first argument provided to `app.get`, `/`, defines the path for the route - in this case the root of the application - that is just the host name like `localhost:3000`.
+- The first argument provided to `app.get`, `/`, defines the path for the route. In this case the root of the application, i.e., just the host name like `localhost:3000`.
 
 - In Express, all strings used to define a path should start with a forward-slash character (`/`).
 
@@ -253,9 +253,9 @@
 #### The Route's Callback
 <br>
 
-- The `request` object has properties and methods we will use to access information regarding the current HTTP request, including any data being sent from the browser.
+- The `request` object has properties and methods used to access information regarding the current HTTP request, including any data being sent from the browser.
 
-- The `response` object contains properties and methods we will use to end the request/response cycle - like we've done so far using the  `res.send` method.
+- The `response` object contains properties and methods used to end the request/response cycle - like we've done so far using the  `res.send` method.
 
 ---
 #### Practice - Define Another Route (3 mins)
@@ -302,7 +302,7 @@
 
 - A template can include a mixture of static HTML and "code" that generates HTML dynamically.
 
-- For example, a template can generate a series of `<li>` elements for data provided to it in an array.
+- For example, code in a template could generate a series of `<li>` elements for data provided to it in an array.
 
 ---
 #### Rendering Views
@@ -466,7 +466,7 @@
 
 - We just used the `render` method, passing in the view name as an argument.
 
-- We can also pass in a JavaScript object as a second argument, and all of its properties will be accessible in the view within `ejs` tags!
+- We can also pass in a JavaScript **object** as a second argument, and all of its properties will be accessible in the view within `ejs` tags!
 
 ---
 #### Dynamic Templating Using EJS
