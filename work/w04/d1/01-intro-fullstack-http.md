@@ -256,7 +256,7 @@
 	|:-:|:-:|
 	| GET | The GET method requests a representation of the specified resource (URL). Requests using GET should only retrieve data. |
 	| POST | The POST method is used to create a resource on the server. |
-	| PUT | The PUT method replaces a resource with the request payload (data in the body). |
+	| PUT | The PUT method replaces a resource with the request payload<br>(data in the body). |
 	| DELETE | The DELETE method deletes the specified resource. |
 
 ---

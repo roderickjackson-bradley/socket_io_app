@@ -58,7 +58,7 @@
 ### What is Node.js?
 <br>
 
-- **Node.js is runtime environment for executing JavaScript outside of the browser!**
+- **Node.js is a runtime environment for executing JavaScript outside of the browser!**
 
 - Created in 2009 by Ryan Dahl with Joyent, Inc.
 
@@ -91,7 +91,7 @@
 #### What is Node.js?
 <br>
 
-- Node is very "lightweight" - only low-level "core" modules for networking, filesystem access, etc. are baked-in.
+- Node is very "lightweight", i.e., only low-level "core" modules for networking, filesystem access, etc. are baked-in.
 
 - Node's functionality is extended via open source libraries called packages.
 
@@ -270,7 +270,7 @@
 
 - A Node app's modules (files) can be put in any folder within the project.
 
-- This allows us to create modules inside of aptly named folders, such as `models`, `routes`, `controllers`, etc.
+- This allows us to create modules inside of aptly named folders, such as `models`, `routes`, `controllers`, `views`, etc.
 
 ---
 #### Node Modules
@@ -587,7 +587,7 @@
 - There are a couple of practice exercises following...
 
 ---
-### Module Practice - Modules #1
+#### Practice - Modules #1
 
 <p style="text-align:left">Create two separate modules:</p>
 
