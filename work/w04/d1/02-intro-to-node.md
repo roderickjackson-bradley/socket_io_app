@@ -439,7 +439,7 @@
 #### Questions - Modules (cont.)
 <br>
 
-- **Wy won't the following code work as intended?**
+- **Why won't the following code work as intended?**
 
 	```js
 	// add.js module
