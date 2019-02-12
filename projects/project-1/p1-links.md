@@ -6,7 +6,7 @@
 | David (DAL) | Slot Machine | [link](https://github.com/Davidslider/slot_machine_game) | [link](https://davidslider.github.io/slot_machine_game/) |
 | Alexis (ATX) | Tetris | [link](https://github.com/baltazaralexis3/wdi-project-1) |  |
 | Anna (ATX) | Traffic Jam | [link](https://github.com/annaelizabeth2019/traffic-jam-game) |  |
-| Andrey (ATX) | Ping Pong | [link](https://github.com/AndreykaVSR/WDI-Project1-PingPong) |  |
+| Andrey (ATX) | Ping Pong | [link](https://github.com/AndreykaVSR/WDI-Project1-PingPong) | [link](http://ping-pong-game.surge.sh/) |
 | D'angelo (ATX) | Chess | [link](https://github.com/dmshakur/chess) |  |
 | Don (ATX) | |  |  |
 | Drew (ATX) | Cross the Box |  | [link](http://drewcclark.com/) |
