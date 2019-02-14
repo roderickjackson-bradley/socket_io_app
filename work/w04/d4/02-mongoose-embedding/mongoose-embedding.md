@@ -224,7 +224,7 @@
 ---
 #### Adding Movie Reviews - Step 2
 
-- A touch of styling. Update this current CSS rule:
+- A touch of styling. **Update** this existing CSS rule on line 68:
 
 	```css
 	#new-form *, #add-review-form * {
@@ -232,7 +232,7 @@
 	  ...
 	```
 	
-	and
+	and **add** this new CSS to the bottom:
 	
 	```css
 	#add-review-form {
@@ -262,7 +262,7 @@
 #### Adding Movie Reviews - Step 3
 <br>
 
-- To achieve max flexibility for CUD'ing the _reviews_ resource, let's define dedicated **route** module:
+- To achieve max flexibility for CUD'ing the _reviews_ resource, let's define a dedicated **route** module:
 
 	```sh
 	$ touch routes/reviews.js
@@ -293,7 +293,7 @@
 	app.use('/', reviewsRouter);
 	```
 
-- Note that for flexibility we will mount to root in _server.js_
+- Note that when mounting routers for _nested_ resources we need more flexibility in our paths, so we are going to mount to the root (`/`) path.
 
 ---
 #### Adding Movie Reviews - Step 3
@@ -425,7 +425,7 @@
 	var reviewDoc = movieDoc.reviews.id('5c5ce1be03563ad5540e93e2');
 	```
 
-- Again, the string argument represents the `_id` of the review subdoc.
+- Note that the string argument represents the `_id` of the _review_ subdoc, not the _movie_ doc.
 
 ---
 #### Remove a Subdocument from a Mongoose Array
