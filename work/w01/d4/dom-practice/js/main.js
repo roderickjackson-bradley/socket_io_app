@@ -11,6 +11,8 @@ let pEl = document.querySelector('.cool');
 pEl.innerHTML = 'Comments for <strong>Today</strong>';
 titleEL.style.textAlign = 'center';
 
+document
+
 const commentEls = document.querySelectorAll('.comment');
 
 console.dir(commentsIles);
