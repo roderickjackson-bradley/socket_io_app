@@ -68,7 +68,7 @@
 ---
 #### Web Technology Stack<br>Unit 2
 
-- In this unit, we'll learn 3 of the 4 technologies that comprise the MEARN Stack:
+- In this unit, we'll learn 3 of the 4 technologies that comprise the MERN Stack:
 
 	<img src="https://i.imgur.com/FKGehuM.jpg" style="display: inline-block;margin:auto;height:400px">
 
