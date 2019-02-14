@@ -493,7 +493,7 @@ This presentation can be viewed [here](https://presentations.generalassemb.ly/d7
     <% todos.forEach(function(t, idx) { %>
       <li>
         <form action="/todos/<%= idx %>?_method=DELETE"
-          id="delete-form" method="POST">
+          class="delete-form" method="POST">
           <button type="submit">X</button>
         </form>
 	```
@@ -507,12 +507,12 @@ This presentation can be viewed [here](https://presentations.generalassemb.ly/d7
 - Let's some styling in **public/stylesheets/style.css**:
 
 	```css
-	#delete-form {
+	.delete-form {
 	  display: inline-block;
 	  margin-right: 10px;
 	}
 	
-	#delete-form button {
+	.delete-form button {
 	  color: red;
 	}
 	
