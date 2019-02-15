@@ -6,6 +6,15 @@
   </head>
   <body>
     <h1>Skills</h1>
+    <ul>
+        <% skills.forEach(function(t, idx) { %>
+        <li>
+            <a href="/skills/<%= idx %>"><%= t.name %></a>
+            <p><%= t.desc %></p>
+        </li>
+        <% }); %>
+    </ul>
+    <a href="/skills/new">Add A New Skill</a>
   </body>
 </html>
  
