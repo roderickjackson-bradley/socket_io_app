@@ -34,7 +34,7 @@
 | Karen (LA) | Connect Four | [link](https://github.com/KarenkSmith/connect4) | [link](https://karenksmith.github.io/connect4/) |
 | Meisam (LA) | Minesweeper | [link](https://github.com/pmeisam/minesweeper) | [link](http://www.meisam.org/minesweeper/index.html) |
 | Mike (LA) | Whack-a-Mole | [link](https://github.com/md1285/project-01-whack-a-mole) | [link](https://md1285.github.io/project-01-whack-a-mole/) |
-| Sean (ATX) | |  |  |
+| Sean (ATX) | Blackjack | [link](https://github.com/spackwood/blackjack) | [link](https://spackwood.github.io/blackjack/) |
 | Sun (LA) | Yutnori | [link](https://github.com/soobaklee/yutnori) | [link](https://soobaklee.github.io/yutnori/) |
 | Vance (LA) | Pong | [link](https://github.com/vooncer17/GameProject) |  |
 | Valerie (LA) | Connect Four | [link](https://github.com/vkomova/connect-four) | [link](http://www.valeriekomova.com/) |

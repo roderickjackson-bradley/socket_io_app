@@ -5,5 +5,4 @@ router.get('/', function(req, res, next) {
   res.redirect('/movies');
 });
 
-
 module.exports = router;

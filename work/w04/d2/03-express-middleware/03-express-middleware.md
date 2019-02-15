@@ -1,14 +1,10 @@
 This presentation can be viewed [here](https://presentations.generalassemb.ly/d71414a1f2c9cf64d6f1966eb85f1c7a#/1)
 
-<style style="visibility:hidden">
-	.reveal li {font-size: 32px;}
-	.reveal ul ul li, .reveal ul ol li, .reveal ol ol li, .reveal ol ul  li {
-		font-size: 28px;
-	}
-</style>
+<link href="https://gist.githubusercontent.com/jim-clark/6919052ab15de680c120907d223c31b5/raw/9eedb5e3c01352b9ccda7264227f253be56a08b7/slide.css">
+
 ---
 
-![](https://i.imgur.com/vUOu9NW.jpg)
+<img src="https://i.imgur.com/vUOu9NW.jpg">
 <br>
 # Express Middleware
 
@@ -542,7 +538,7 @@ This presentation can be viewed [here](https://presentations.generalassemb.ly/d7
 
 - I bet you could have done this one on your own!
 
-- In **controllers/todos.js**:
+- In **routes/todos.js**:
 
 	```js
 	router.post('/', todosCtrl.create);

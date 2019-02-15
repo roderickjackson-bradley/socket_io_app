@@ -1,4 +1,5 @@
 <img src="https://i.imgur.com/XseXU8J.png" width="900">
+hi
 
 # Welcome to General Assembly WDI-CC-6
 
