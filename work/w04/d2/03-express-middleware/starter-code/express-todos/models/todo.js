@@ -27,7 +27,7 @@ function getOne(id) {
 function getAll() {
   return todos;
 }
-
+  
 function deleteOne(id){
   todos.splice(id, 1)
 }
