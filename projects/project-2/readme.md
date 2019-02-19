@@ -38,6 +38,11 @@ Your app must:
 - Be styled with well-organized and DRY CSS.
 - Be **deployed online** (Heroku).
 
+Optionally, your app may:
+
+- Consume a third-party API.
+- Expose its own data resources as JSON via an API.
+
 ---
 
 ### Necessary Deliverables
