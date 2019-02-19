@@ -15,9 +15,9 @@ function index(req, res){
 };
 
 function create(req, res){
-    req,body.nowShowing = !!req.body.nowShowing;
+    req.body.nowShowing = !!req.body.nowShowing;
   
-    req,body.cast = req.body.cast.replace(/\s*,\s*/g, ',');
+    req.body.cast = req.body.cast.replace(/\s*,\s*/g, ',');
 
     if (req.body.cast) req.body.cast = req.body.cast.split(',');
 
