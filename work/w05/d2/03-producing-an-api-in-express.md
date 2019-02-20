@@ -58,13 +58,11 @@
 ### Postman
 <br>
 
-- In this lesson we'll be using a Chrome extension called Postman.
+- In this lesson we'll be using an app called Postman that enables us to make any type of HTTP request, including sending along a data payload.
 
-- Postman enables us to make any type of HTTP request, including sending along a data payload.
+- It can be installed by [this download](https://www.getpostman.com/downloads/) or...
 
-- Install it in Chrome by browsing to `chrome://extensions` and clicking the _Get more extensions_ link at the bottom.
-
-- Search for and install **Postman**. 
+- Postman can also be installed as a Chrome extension by browsing to `chrome://extensions` and clicking the _Get more extensions_ link at the bottom. Search for and install **Postman**. 
 
 ---
 ### We need an Express app
