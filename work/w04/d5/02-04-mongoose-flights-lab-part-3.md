@@ -52,7 +52,7 @@ Styling is secondary, spend time on it only after the functionality has been imp
 	Define the `seat` property as follows:<br>`seat: {type: String, match: /[A-F][1-9]\d?/}` - that's what we call a [regular expression](https://en.wikipedia.org/wiki/Regular_expression) that's being assigned to the `match` validator. Now for the best part, which just might blow your mind! You ready?  Are you sure? Here it is... HTML `<input>` tags have a `pattern` attribute that accept a regex pattern; and if what's typed in the `<input>` doesn't match the pattern, the form can't be submitted! Here's what your `<input>` should look like for entering the seat:
 	
 	```html
-	<input name="seat" pattern="[A-F][1-9]\d?">
+	<input name="seat" required pattern="[A-F][1-9]\d?">
 	```
 	That regex pattern will match the following characters:
 	
