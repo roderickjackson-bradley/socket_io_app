@@ -423,7 +423,6 @@
 
 ---
 #### Creating _Performers_
-<br>
 
 - In **controllers/performers.js**:
 
@@ -432,8 +431,12 @@
 	  new: newPerformer,
 	  create
 	};
-	
+		
 	function create(req, res) {
+	  // need to "fix" date formatting to prevent day off by 1
+	  var s = req.body.born;
+	  req.body.born = 
+	    `${s.substr(5,2)}-${s.substr(8,2)}-${s.substr(0,4)}`;
 	  Performer.create(req.body, function(err, performer) {
 	    res.redirect('/performers/new');
 	  });
@@ -537,7 +540,7 @@
 	The log will show we are retrieving the _performers_ - a good sign at this point. 
 
 ---
-#### Refactor _show.ejs>
+#### Refactor _show.ejs_
 <br>
 
 - The next slide has some refactored markup in **movies/show.ejs**.

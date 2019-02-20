@@ -91,6 +91,8 @@ Styling is secondary, spend time on it only after the functionality has been imp
 
 	##### Hints
 	
+	To display the view/form for adding a ticket, the path of the `href` for the **New Ticket** link will need to include the flight's `_id`.  The path should match this route on the server:  `/flights/:id/tickets/new`. The `req.params.id` can now be passed to the **tickets/new.ejs** and used for the ticket form's `action` attribute...
+	
 	If you use the "proper" route for the ticket form's `action` attribute, the `ticketsCtrl.create` action will have access to the `_id` of the _flight_ the _ticket_ is being created for.
 	
 	In the controller action, there **will not** be a `flight` property on the `req.body` object. You must add that property yourself before using `req.body` to create the _ticket_. Failure to do so will result in the _ticket_ being created without a `flight` property that references the _flight_ it belongs to - so if newly added tickets are not showing up with the flight, this is probably the cause.
