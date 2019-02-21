@@ -29,7 +29,7 @@
 | David (LA) |  |  |  |  | 
 | Demetrious (LA) |  |  |  |  | 
 | Eliana (LA) |  |  |  |  | 
-| Felicity (LA) |  |  |  |  | 
+| Felicity (LA) | Rocket Launch |  | [link](https://trello.com/b/uLrz2fk3/rocket-launch) |  |
 | Johnny (LA) |  |  |  |  | 
 | Karen (LA) |  |  |  |  | 
 | Meisam (LA) |  |  |  |  | 
