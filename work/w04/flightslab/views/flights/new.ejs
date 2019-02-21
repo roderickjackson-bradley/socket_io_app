@@ -7,23 +7,33 @@
 </head>
 
 <body>
-  <h2>Enter a New Flight</h2>
-  <form action="/new" method="POST">
-    <label>Airline:
-      <select name="airline">
-        <option value="American">American</option>
-        <option value="Southwest">Southwest</option>
-        <option value="United">United</option>
-      </select>
-    </label><br>
-    <label>FlightNo:
-      <input type="number" name="flightNo">
-    </label><br>
-    <label>Departure:
-      <input type="datetime-local" name="departs">
-    </label><br>
-    <input class="submitInput" type="submit" value="Add Flight">
-  </form>
+    <div class="contatiner">
+    <h2>Enter a New Flight</h2>
+    <form action="/new" method="POST">
+        <label>Airline:
+        <select name="airline">
+            <option value="American">American</option>
+            <option value="Southwest">Southwest</option>
+            <option value="United">United</option>
+        </select>
+        <br>
+        <label>Airport:
+        <select name="airport">
+            <option value="AUS">AUS</option>
+            <option value="DAL">DAL</option>
+            <option value="LAX">LAX</option>
+            <option value="SEA">SEA</option>
+        </select>
+        </label><br>
+        <label>FlightNo:
+        <input type="number" name="flightNo">
+        </label><br>
+        <label>Departure:
+        <input type="datetime-local" name="departs">
+        </label><br>
+        <input class="submitInput" type="submit" value="Add Flight">
+    </form>
+    </div>
 </body>
 
 </html>

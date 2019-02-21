@@ -10,28 +10,31 @@
 </head>
 
 <body>
-  <h1>Flight List</h1>
-  <table>
-    <thead>
-      <tr>
-        <th>Airline</th>
-        <th>Flight Number</th>
-        <th>Departs</th>
-      </tr>
-    </thead>
-    <tbody>
-      <% flights.forEach(function(f) { %>
-      <tr>
-        <td><%= f.airline %></td>
-        <td><%= f.flightNo %></td>
-        <td><%= f.departs %></td>
-      </tr>
-      <% }); %>
-    </tbody>
+    <div class="container">
+        <h1>Flight List</h1>
+        <table>
+            <thead>
+            <tr>
+                <th>Airline</th>
+                <th>Flight Number</th>
+                <th>Departs</th>
+                <th></th>
+            </tr>
+            </thead>
+            <tbody>
+            <% flights.forEach(function(f) { %>
+            <tr>
+                <td><%= f.airline %></td>
+                <td><%= f.flightNo %></td>
+                <td id="date-item"><%= f.departs %></td>
+                <td><button><a href="/flights/<%= f._id %>">DETAILS</a></button></td>
+            </tr>
+            <% }); %>
+            </tbody>
 
-  </table>
-  <a href="/flights/new">Add A New flight</a>
-
+        </table>
+        <a href="/flights/new">Add A New flight</a>
+    </div>
 </body>
 
 </html>

@@ -1,8 +1,78 @@
 body {
   padding: 50px;
   font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
+  background-color: #ACD4;
+}
+.container {
+  display: flex;
+  flex-direction: column;
 }
 
+h1 {
+  display: flex;
+  justify-content: center;
+}
+
+table {
+  /*justify-content: center;
+  align-items: center;*/
+  align-self: center;
+  table-layout: fixed;
+  border-collapse: collapse;
+  border: 1px solid #aaccdd;
+
+}
+
+tbody tr:nth-child(even) {
+  background-color: #FFFFFF;
+}
+
+thead {
+  display: table-header-group;
+}
+
+tr {
+  display: table-row;
+  vertical-align: inherit;
+  border-color: inherit;
+}
+
+th {
+  font-weight: bold;
+  text-align: -internal-center;
+}
+
+tbody {
+  display: table-row-group;
+  vertical-align: middle;
+  border-color: inherit;
+}
+
+tr {
+  display: table-row;
+  vertical-align: inherit;
+  border-color: inherit;
+}
+
+td, th {
+  display: table-cell;
+  vertical-align: inherit;
+  padding: 20px;
+}
+
+thead th, tfoot th, tfoot td {
+  background: linear-gradient(to bottom, #6AB4CA, #ACD4DC);
+}
+
+thead, tfoot {
+  color: white;
+  text-shadow: 1px 1px 1px black;
+}
+
+
 a {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
   color: #00B7FF;
 }

@@ -1,7 +1,7 @@
 var Flight = require('../models/flight');
 
 module.exports = {
-index, new: newFormForFlight, create, update
+index, new: newFormForFlight, create, update, show
 };
 
 function index(req, res){
@@ -36,5 +36,11 @@ function update(req, res){
         newFlight.airline  = req.body.airline  || newFlight.airline
         newFlight.flightNo = req.body.flightNo || newFlight.flightNo
     
+    })
+}
+
+function show(req, res){
+    Flight.findById(req.params.id, (err, flight) => {
+        res.render('flights/show')
     })
 }
