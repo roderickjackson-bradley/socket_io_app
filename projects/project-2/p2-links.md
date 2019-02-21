@@ -16,7 +16,7 @@
 | Kyle A. (ATX) |  |  |  |  | 
 | Kyle S. (ATX) |  |  |  |  | 
 | Nhung (ATX) |  |  |  |  |
-| Michelle (ATX) |  |  |  |  | 
+| Michelle (ATX) | Teacher Classroom Info |  | [link](https://trello.com/b/WycacutU/teacher-classroom-info) |  | 
 | Paul (ATX) |  |  |  |  | 
 | Roderick (ATX) | |  |  |
 | Siara (ATX) |  |  |  |  | 
