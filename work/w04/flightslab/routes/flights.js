@@ -5,6 +5,6 @@ flightsController = require('../controllers/flights')
 Router.get('/',flightsController.index)
 Router.get('/flights/new', flightsController.new)
 Router.post('/new', flightsController.create)
-Router.get('/:id', flightsController.update)
+Router.put('/:id', flightsController.update)
 
 module.exports = Router;

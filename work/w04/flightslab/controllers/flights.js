@@ -30,5 +30,11 @@ function create(req, res){
 }
 
 function update(req, res){
+    Flight.findById(req.params.id, (err, flight) => {
+
+        newFlight.airport  = req.body.airport  || newFlight.airport
+        newFlight.airline  = req.body.airline  || newFlight.airline
+        newFlight.flightNo = req.body.flightNo || newFlight.flightNo
     
+    })
 }
