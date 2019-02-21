@@ -371,9 +371,10 @@ We will complete these stories today:
 	| Purpose | Method | Path |
 	|---|---|---|
 	| Display all students | `GET` | `/students` |
-	| Create a fact for a student | `POST` | `/students/:id/facts` |
+	| Create a fact for a student | `POST` | `/facts` |
 	| Delete a fact | `DELETE`| `/facts/:id` |
 
+- **Why aren't we using `POST /students/:id/facts` to create a fact?**
 
 ---
 #### Review the Starter Code<br><small>Controller</small>
