@@ -15,5 +15,8 @@ It is a requirement to complete at least **80%** of the following to to receive:
 |Thu 1/24|[JS Objects Lab](https://git.generalassemb.ly/WDI-CC/WDI-CC-6/tree/master/work/w01/d3/04-js-objects-lab)|
 |Fri 1/25|[Tic-Tac-Toe Weekend](https://git.generalassemb.ly/WDI-CC/WDI-CC-6/blob/master/work/w01/d4/tic-tac-toe-weekend.md)|
 |Mon 1/28|[Responsive Design Lab](https://git.generalassemb.ly/WDI-CC/WDI-CC-6/blob/master/work/w02/d1/04-responsive-design-lab.md)|
+|Tue 2/12|[Express "Dev Skills" Lab](https://git.generalassemb.ly/WDI-CC/WDI-CC-6/blob/master/work/w04/d2/04-dev-skills-lab-part-2.md)|
+|Wed 2/13 (due 2/18)|[Mongoose Flights Lab (3 parts)](https://git.generalassemb.ly/WDI-CC/WDI-CC-6/blob/master/work/w04/d5/02-04-mongoose-flights-lab-part-3.md)|
+|Wed 2/20|[Mongoose Movies API Lab](https://git.generalassemb.ly/WDI-CC/WDI-CC-6/tree/master/work/w05/d2/04-producing-api-lab)|
 
 
