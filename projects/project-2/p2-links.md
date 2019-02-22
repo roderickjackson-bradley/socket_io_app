@@ -1,8 +1,8 @@
 ## Student Project 2 Links
 
 | Student | Project Name | GitHub | Trello | Hosted Site |
-|---|:---:|:---:|:---:|---:|
-| Ali (DAL) |  |  |  |  | 
+|---|:---:|:---:|:---:|:---:|
+| Ali (DAL) | Sonargaon (Travel) |  | [link](https://trello.com/b/cCnn4hNR/sonargaontravel-app) |  | 
 | David (DAL) |  |  |  |  | 
 | Alexis (ATX) |  |  |  |  | 
 | Anna (ATX) | Well Read |  | [link](https://trello.com/b/jMrJFzd7/well-read-app) | [link](https://github.com/annaelizabeth2019/well-read) | 
@@ -27,7 +27,7 @@
 | Carly (LA) | Take Me Away (travel app) |  | [link](https://trello.com/b/8CHBVCsX/wdi-project-two) |  | 
 | Danillo (LA) | Pocket PT |  | [link](https://trello.com/b/dWkNiL1t/project-2-pocket-pt) |  | 
 | David (LA) |  |  |  |  | 
-| Demetrious (LA) |  |  |  |  | 
+| Demetrious (LA) |  |  | [link](https://trello.com/b/wYZw6POl/wdi-project-2) |  | 
 | Eliana (LA) | AHRON (Closets) |  | [link](https://trello.com/b/zJKBuzpq/ahron) |  | 
 | Felicity (LA) | Rocket Launch |  | [link](https://trello.com/b/uLrz2fk3/rocket-launch) |  |
 | Johnny (LA) |  |  |  |  | 
