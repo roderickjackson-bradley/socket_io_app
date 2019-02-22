@@ -5,11 +5,11 @@
 | Ali (DAL) |  |  |  |  | 
 | David (DAL) |  |  |  |  | 
 | Alexis (ATX) |  |  |  |  | 
-| Anna (ATX) | Well Read |  | [link](https://trello.com/b/jMrJFzd7/well-read-app) |  | 
+| Anna (ATX) | Well Read |  | [link](https://trello.com/b/jMrJFzd7/well-read-app) | [link](https://github.com/annaelizabeth2019/well-read) | 
 | Andrey (ATX) |  |  |  |  | 
 | D'angelo (ATX) |  |  |  |  | 
 | Don (ATX) | |  |  |
-| Drew (ATX) |  |  |  |  | 
+| Drew (ATX) | Political News |  | [link](https://trello.com/b/YmrLysZu/political-news-app) |  | 
 | Henry (ATX) |  |  |  |  | 
 | J Salvador (ATX) |  |  |  |  | 
 | Josh (ATX) | Pickup Soccer |  | [link](https://trello.com/b/sxPBYh8K/pickup-soccer-app) |  | 
@@ -18,25 +18,25 @@
 | Nhung (ATX) |  |  |  |  |
 | Michelle (ATX) | E-Classroom Tool |  | [link](https://trello.com/b/WycacutU/teacher-classroom-info) |  | 
 | Paul (ATX) |  |  |  |  | 
-| Roderick (ATX) | | [link](https://trello.com/b/KJaVS6SO/crud-project) |  |
-| Siara (ATX) |  |  |  |  | 
+| Roderick (ATX) | Predict My Balance |  | [link](https://trello.com/b/KJaVS6SO/crud-project) | |
+| Siara (ATX) | Musiclust |  | [link](https://trello.com/b/MKQEjzHd/musiclust) |  | 
 | Son (ATX) | Catch Hands |  | [link](https://trello.com/b/Yryz4bXR/catch-hands) |  | 
 | Tyler (ATX) |  |  |  |  | 
-| Ursula (ATX) |  |  |  |  | 
-| Bonny (ATX) |  |  |  |  | 
+| Ursula (ATX) |  |  | [link](https://trello.com/b/Wc2mIzQM/express-app-1) |  | 
+| Bonny (ATX) | Pawfect |  | [link](https://trello.com/b/OGwj6Ol2/pawfect) |  | 
 | Carly (LA) | Take Me Away (travel app) |  | [link](https://trello.com/b/8CHBVCsX/wdi-project-two) |  | 
-| Danillo (LA) |  |  |  |  | 
+| Danillo (LA) | Pocket PT |  | [link](https://trello.com/b/dWkNiL1t/project-2-pocket-pt) |  | 
 | David (LA) |  |  |  |  | 
 | Demetrious (LA) |  |  |  |  | 
 | Eliana (LA) | AHRON (Closets) |  | [link](https://trello.com/b/zJKBuzpq/ahron) |  | 
 | Felicity (LA) | Rocket Launch |  | [link](https://trello.com/b/uLrz2fk3/rocket-launch) |  |
 | Johnny (LA) |  |  |  |  | 
 | Karen (LA) | Notemon |  | [link](https://trello.com/b/H7Bmbc8A/notemon) |  | 
-| Meisam (LA) |  |  |  |  | 
+| Meisam (LA) | Meisagram |  | [link](https://trello.com/b/d87nvA0z/meisagram) |  | 
 | Mike (LA) |  |  |  |  | 
-| Sean (ATX) |  |  | [link](https://trello.com/b/flO4uqYK/project-2) |  | 
+| Sean (ATX) | Twitcherquide |  | [link](https://trello.com/b/flO4uqYK/project-2) |  | 
 | Sun (LA) |  |  |  |  | 
 | Vance (LA) |  |  |  |  | 
 | Valerie (LA) | Paleo Recipes |  | [link](https://trello.com/b/F2itMzfQ/project-2-paleo-recipes) |  | 
-| Weronika (LA) |  |  |  |  | 
+| Weronika (LA) | HouseMates |  | [link](https://trello.com/b/HbmuAzzQ/housemates) |  | 
 
