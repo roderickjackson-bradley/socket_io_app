@@ -12,7 +12,7 @@
 | Drew (ATX) |  |  |  |  | 
 | Henry (ATX) |  |  |  |  | 
 | J Salvador (ATX) |  |  |  |  | 
-| Josh (ATX) |  |  |  |  | 
+| Josh (ATX) | Pickup Soccer |  | [link](https://trello.com/b/sxPBYh8K/pickup-soccer-app) |  | 
 | Kyle A. (ATX) |  |  |  |  | 
 | Kyle S. (ATX) |  |  |  |  | 
 | Nhung (ATX) |  |  |  |  |
@@ -20,11 +20,11 @@
 | Paul (ATX) |  |  |  |  | 
 | Roderick (ATX) | |  |  |
 | Siara (ATX) |  |  |  |  | 
-| Son (ATX) |  |  |  |  | 
+| Son (ATX) | Catch Hands |  | [link](https://trello.com/b/Yryz4bXR/catch-hands) |  | 
 | Tyler (ATX) |  |  |  |  | 
 | Ursula (ATX) |  |  |  |  | 
 | Bonny (ATX) |  |  |  |  | 
-| Carly (LA) |  |  |  |  | 
+| Carly (LA) | Travel Log |  | [link](https://trello.com/b/8CHBVCsX/wdi-project-two) |  | 
 | Danillo (LA) |  |  |  |  | 
 | David (LA) |  |  |  |  | 
 | Demetrious (LA) |  |  |  |  | 
