@@ -28,7 +28,7 @@
 | Danillo (LA) |  |  |  |  | 
 | David (LA) |  |  |  |  | 
 | Demetrious (LA) |  |  |  |  | 
-| Eliana (LA) |  |  |  |  | 
+| Eliana (LA) | AHRON (Closets) |  | [link](https://trello.com/b/zJKBuzpq/ahron) |  | 
 | Felicity (LA) | Rocket Launch |  | [link](https://trello.com/b/uLrz2fk3/rocket-launch) |  |
 | Johnny (LA) |  |  |  |  | 
 | Karen (LA) |  |  |  |  | 
