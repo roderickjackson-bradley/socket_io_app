@@ -12,7 +12,7 @@
 | Drew (ATX) | Political News |  | [link](https://trello.com/b/YmrLysZu/political-news-app) |  | 
 | Henry (ATX) |  |  |  |  | 
 | Irvin (ATX) | Audio |  | [link](https://trello.com/b/IxMV9u8X/class-project-2) |  | 
-| J Salvador (ATX) |  |  |  |  | 
+| J Salvador (ATX) | Dish of the Day |  | [link](https://trello.com/b/g5ozWUbL/dish-of-the-day) | [link](https://github.com/jsnavarr/dish-of-the-day) | 
 | Josh (ATX) | Pickup Soccer |  | [link](https://trello.com/b/sxPBYh8K/pickup-soccer-app) |  | 
 | Kyle A. (ATX) |  |  |  |  | 
 | Kyle S. (ATX) | National Park Tracker |  | [link](https://trello.com/b/XmM9ByIy/wdi-national-parks-app-project) |  | 
