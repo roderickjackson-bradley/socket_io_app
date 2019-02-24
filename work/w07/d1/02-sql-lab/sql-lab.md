@@ -1,6 +1,6 @@
 # SQL Lab
 
-<img src="http://i.giphy.com/13n8txR8c9UDHG.gif?raw=true">
+<img src="https://i.imgur.com/OGKTx2f.jpg">
 
 # Where In The World Is Carmen Sandiego?
 
