@@ -14,7 +14,7 @@
 | Irvin (ATX) | Audio |  | [link](https://trello.com/b/IxMV9u8X/class-project-2) |  | 
 | J Salvador (ATX) | Dish of the Day |  | [link](https://trello.com/b/g5ozWUbL/dish-of-the-day) | [link](https://github.com/jsnavarr/dish-of-the-day) | 
 | Josh (ATX) | Pickup Soccer |  | [link](https://trello.com/b/sxPBYh8K/pickup-soccer-app) |  | 
-| Kyle A. (ATX) |  |  |  |  | 
+| Kyle A. (ATX) | How's the Sky |  | [link](https://trello.com/b/8KU6L9MI/hows-the-sky) |  | 
 | Kyle S. (ATX) | National Park Tracker |  | [link](https://trello.com/b/XmM9ByIy/wdi-national-parks-app-project) |  | 
 | Nhung (ATX) |  |  |  |  |
 | Michelle (ATX) | E-Classroom Tool |  | [link](https://trello.com/b/WycacutU/teacher-classroom-info) |  | 
