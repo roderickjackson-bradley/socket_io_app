@@ -7,7 +7,7 @@
 | Alexis (ATX) |  |  |  |  | 
 | Anna (ATX) | Well Read |  | [link](https://trello.com/b/jMrJFzd7/well-read-app) | [link](https://github.com/annaelizabeth2019/well-read) | 
 | Andrey (ATX) |  |  |  |  | 
-| D'angelo (ATX) |  |  |  |  | 
+| D'angelo (ATX) | wineCat |  | [ink](https://trello.com/b/BIu8GXkn/winecat) | [link](https://github.com/dmshakur/wineCat) | 
 | Don (ATX) | |  |  |
 | Drew (ATX) | Political News |  | [link](https://trello.com/b/YmrLysZu/political-news-app) |  | 
 | Henry (ATX) |  |  |  |  | 
