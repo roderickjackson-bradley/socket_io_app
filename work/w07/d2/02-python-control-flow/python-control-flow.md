@@ -309,6 +309,26 @@ As you have seen today so far, Python is not all that different than JavaScript.
 
 The remainder of the day will provide you with lab time to get some practice performing branching and looping in Python.
 
+But first...
+
+## Essential Questions
+
+1. **What are the two types of control flow discussed in this lesson.**
+
+2. **Name three values in Python that are considered to be falsey.**
+
+3. **What is returned by the following expression:**
+
+	```python
+	25 or 50
+	```
+	
+4. **What is returned by the following expression:**
+
+	```python
+	25 and 50
+	```
+
 ## References
 
 [Official Docs for Control Flow in Python](https://docs.python.org/3/tutorial/controlflow.html#)
