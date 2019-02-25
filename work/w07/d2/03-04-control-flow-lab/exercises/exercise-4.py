@@ -1,7 +1,7 @@
 # exercise-04 What kind of Triangle?
 
 # Write the code that:
-# 1. Prompts the user to enter the three lengths of a triangle:
+# 1. Prompts the user to enter the three lengths of a triangle (one at a time):
 #      Enter the lengths of three side of a triangle:
 #      a: 
 #      b:

@@ -7,3 +7,6 @@
 # 3. Print one of following messages (substituting the letter for x):
 #      - The letter x is a vowel
 #      - The letter x is a consonant
+
+# Hints:  Use the in operator to check if a character is in another string
+#         For example, if some_char in 'abc':

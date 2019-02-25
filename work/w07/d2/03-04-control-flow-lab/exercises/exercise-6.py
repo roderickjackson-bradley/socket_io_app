@@ -12,3 +12,10 @@
 #      Sep 22 - Dec 20: Fall
 # 4. Print the result as follows:
 #      <Mmm> <dd> is in <season> 
+
+# Hints:
+# Consider using the in operator to check if a string is in a particular list/tuple like this:
+# if input_month in ('Jan', 'Feb', 'Mar'):
+#
+# After setting the likely season, you can use another if...elif...else statement to "adjust" if
+# the day number falls within a certain range.
