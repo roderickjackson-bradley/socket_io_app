@@ -3,7 +3,6 @@
 | Student | Project Name | GitHub | Trello | Hosted Site |
 |---|:---:|:---:|:---:|:---:|
 | Ali (DAL) | Sonargaon (Travel) |  | [link](https://trello.com/b/cCnn4hNR/sonargaontravel-app) |  | 
-| David (DAL) |  |  |  |  | 
 | Alexis (ATX) |  |  |  |  | 
 | Anna (ATX) | Well Read |  | [link](https://trello.com/b/jMrJFzd7/well-read-app) | [link](https://github.com/annaelizabeth2019/well-read) | 
 | Andrey (ATX) | VSR (Vehicle) | [link](https://trello.com/b/G2RHDvIP/ga-wdi-andreyka-vsr-project-2) | [link](https://github.com/AndreykaVSR/GA-WDI-Project2) |  | 
