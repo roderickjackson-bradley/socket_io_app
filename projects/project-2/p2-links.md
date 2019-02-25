@@ -6,7 +6,7 @@
 | David (DAL) |  |  |  |  | 
 | Alexis (ATX) |  |  |  |  | 
 | Anna (ATX) | Well Read |  | [link](https://trello.com/b/jMrJFzd7/well-read-app) | [link](https://github.com/annaelizabeth2019/well-read) | 
-| Andrey (ATX) |  |  |  |  | 
+| Andrey (ATX) | VSR (Vehicle) | [link](https://trello.com/b/G2RHDvIP/ga-wdi-andreyka-vsr-project-2) | [link](https://github.com/AndreykaVSR/GA-WDI-Project2) |  | 
 | D'angelo (ATX) | wineCat |  | [ink](https://trello.com/b/BIu8GXkn/winecat) | [link](https://github.com/dmshakur/wineCat) | 
 | Don (ATX) | |  |  |
 | Drew (ATX) | Political News |  | [link](https://trello.com/b/YmrLysZu/political-news-app) |  | 
