@@ -1,4 +1,4 @@
-<img src="https://i.imgur.com/YtsIJBb.jpg">
+<img src="https://i.imgur.com/uz3kC2P.jpg">
 
 # Python Functions 
 
