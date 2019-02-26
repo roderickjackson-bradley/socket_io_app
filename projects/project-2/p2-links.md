@@ -10,9 +10,9 @@
 | Don (ATX) | |  |  |
 | Drew (ATX) | Political News |  | [link](https://trello.com/b/YmrLysZu/political-news-app) |  | 
 | Henry (ATX) |  |  |  |  | 
-| Irvin (ATX) | Audio |  | [link](https://trello.com/b/IxMV9u8X/class-project-2) |  | 
+| Irvin (ATX) | ConTent (media) | [link](https://github.com/Developirv/contentHome) | [link](https://trello.com/b/IxMV9u8X/class-project-2) |  | 
 | J Salvador (ATX) | Dish of the Day | [link](https://github.com/jsnavarr/dish-of-the-day) | [link](https://trello.com/b/g5ozWUbL/dish-of-the-day) |  | 
-| Josh (ATX) | Pickup Soccer |  | [link](https://trello.com/b/sxPBYh8K/pickup-soccer-app) |  | 
+| Josh (ATX) | Pickup Soccer | [link](https://github.com/joshjoll/Pickup-Sports-App) | [link](https://trello.com/b/sxPBYh8K/pickup-soccer-app) |  | 
 | Kyle S. (ATX) | How's the Sky | [link](https://github.com/kdsmith500/wdi-p2-howsTheSky) | [link](https://trello.com/b/8KU6L9MI/hows-the-sky) |  | 
 | Kyle A. (ATX) | National Park Tracker | [link](https://github.com/kanderson425/WDI-App-Project2) | [link](https://trello.com/b/XmM9ByIy/wdi-national-parks-app-project) |  | 
 | Nhung (ATX) |  |  |  |  |
