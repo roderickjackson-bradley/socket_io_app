@@ -6,7 +6,7 @@
 | Alexis (ATX) |  |  |  |  | 
 | Anna (ATX) | Well Read | [link](https://github.com/annaelizabeth2019/well-read) | [link](https://trello.com/b/jMrJFzd7/well-read-app) | [link](https://well-read-app.herokuapp.com/) | 
 | Andrey (ATX) | VSR (Vehicle) | [link](https://github.com/AndreykaVSR/GA-WDI-Project2) | [link](https://trello.com/b/G2RHDvIP/ga-wdi-andreyka-vsr-project-2) |  |
-| D'angelo (ATX) | wineCat | [link](https://github.com/dmshakur/wineCat) | [ink](https://trello.com/b/BIu8GXkn/winecat) |  | 
+| D'angelo (ATX) | wineCat | [link](https://github.com/dmshakur/whiningCat) | [ink](https://trello.com/b/BIu8GXkn/winecat) |  | 
 | Don (ATX) | |  |  |
 | Drew (ATX) | Political News |  | [link](https://trello.com/b/YmrLysZu/political-news-app) |  | 
 | Henry (ATX) |  |  |  |  | 
@@ -24,7 +24,7 @@
 | Tyler (ATX) | Spools | [link](https://github.com/tylerarnone1/spools-MEN) | [link](https://trello.com/b/igDyjSbk/spool) | [link](https://spools.herokuapp.com/) | 
 | Ursula (ATX) | FieldGuide | | [link](https://trello.com/b/Wc2mIzQM/express-app-1) |  |
 | Bonny (ATX) | Pawfect | [link](https://github.com/bmrivers/pawfect) | [link](https://trello.com/b/OGwj6Ol2/pawfect) | [link](https://pawfect-pet.herokuapp.com/) | 
-| Carly (LA) | Take Me Away (travel app) |  | [link](https://trello.com/b/8CHBVCsX/wdi-project-two) |  | 
+| Carly (LA) | Take Me Away (travel app) |  | [link](https://trello.com/b/8CHBVCsX/wdi-project-two) | [link](https://take-meaway.herokuapp.com/) | 
 | Danillo (LA) | Pocket PT |  | [link](https://trello.com/b/dWkNiL1t/project-2-pocket-pt) |  | 
 | David (LA) |  |  |  |  | 
 | Demetrious (LA) | Books | [link](https://github.com/EternalDev1/Project2) | [link](https://trello.com/b/wYZw6POl/wdi-project-2) | [link](https://wdi-read-me.herokuapp.com/users) | 
@@ -38,5 +38,5 @@
 | Sun (LA) | Tutorials | [link](https://github.com/soobaklee/sunnieexcels) | [link](https://trello.com/invite/accept-board) | [link](https://sunniexcels.herokuapp.com/) | 
 | Vance (LA) |  |  |  |  | 
 | Valerie (LA) | Paleo Recipes | [link](https://github.com/vkomova/delicious-recipes) | [link](https://trello.com/b/F2itMzfQ/project-2-paleo-recipes) |  | 
-| Weronika (LA) | HouseMates | [link](https://github.com/weronikaviola/HouseMates) | [link](https://trello.com/b/HbmuAzzQ/housemates) |  | 
+| Weronika (LA) | HouseMates | [link](https://github.com/weronikaviola/HouseMates) | [link](https://trello.com/b/HbmuAzzQ/housemates) | [link](https://house--mates.herokuapp.com/) | 
 
