@@ -37,6 +37,6 @@
 | Sean (ATX) | Twitcherquide |  | [link](https://trello.com/b/flO4uqYK/project-2) |  | 
 | Sun (LA) | Tutorials | [link](https://github.com/soobaklee/sunnieexcels) | [link](https://trello.com/invite/accept-board) | [link](https://sunniexcels.herokuapp.com/) | 
 | Vance (LA) |  |  |  |  | 
-| Valerie (LA) | Paleo Recipes | [link](https://github.com/vkomova/delicious-recipes) | [link](https://trello.com/b/F2itMzfQ/project-2-paleo-recipes) |  | 
+| Valerie (LA) | Paleo Recipes | [link](https://github.com/vkomova/delicious-recipes) | [link](https://trello.com/b/F2itMzfQ/project-2-paleo-recipes) | [link](https://wdi-delicious-recipes.herokuapp.com/) | 
 | Weronika (LA) | HouseMates | [link](https://github.com/weronikaviola/HouseMates) | [link](https://trello.com/b/HbmuAzzQ/housemates) | [link](https://house--mates.herokuapp.com/) | 
 
