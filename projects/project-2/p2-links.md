@@ -15,7 +15,7 @@
 | Josh (ATX) | Pickup Soccer | [link](https://github.com/joshjoll/Pickup-Sports-App) | [link](https://trello.com/b/sxPBYh8K/pickup-soccer-app) |  | 
 | Kyle S. (ATX) | How's the Sky | [link](https://github.com/kdsmith500/wdi-p2-howsTheSky) | [link](https://trello.com/b/8KU6L9MI/hows-the-sky) |  | 
 | Kyle A. (ATX) | National Park Tracker | [link](https://github.com/kanderson425/WDI-App-Project2) | [link](https://trello.com/b/XmM9ByIy/wdi-national-parks-app-project) | [link](https://national-park-tracker-app.herokuapp.com/) | 
-| Nhung (ATX) |  |  |  |  |
+| Nhung (ATX) | Puppy Journal | [link](https://github.com/nhungtrannn/WDI-APP-Project2) | [link](https://trello.com/b/yS7iMn2U/new-puppy-one-photo-a-day-a-one-year-pupper-journal) |  |
 | Michelle (ATX) | E-Classroom Tool | [link](https://github.com/themichellemcguire/ClassroomTools) | [link](https://trello.com/b/WycacutU/teacher-classroom-info) | [link](https://e-classroomtools.herokuapp.com/) | 
 | Paul (ATX) |  |  |  |  | 
 | Roderick (ATX) | Predict My Balance |  | [link](https://trello.com/b/KJaVS6SO/crud-project) | |
@@ -26,7 +26,7 @@
 | Bonny (ATX) | Pawfect | [link](https://github.com/bmrivers/pawfect) | [link](https://trello.com/b/OGwj6Ol2/pawfect) | [link](https://pawfect-pet.herokuapp.com/) | 
 | Carly (LA) | Take Me Away (travel app) | [link](https://github.com/cjmarsh2/WDI-Project-Two/tree/master/take-me-away) | [link](https://trello.com/b/8CHBVCsX/wdi-project-two) | [link](https://take-meaway.herokuapp.com/) | 
 | Danillo (LA) | Pocket PT |  | [link](https://trello.com/b/dWkNiL1t/project-2-pocket-pt) |  | 
-| David (LA) |  |  |  |  | 
+| David (LA) |  | [link](https://github.com/DavidGalindo23/sneakers) | [link](https://trello.com/b/pxhPCiGk/sneaker-web-app) |  | 
 | Demetrious (LA) | Books | [link](https://github.com/EternalDev1/Project2) | [link](https://trello.com/b/wYZw6POl/wdi-project-2) | [link](https://wdi-read-me.herokuapp.com/users) | 
 | Eliana (LA) | AHRON (Closets) | [link](https://github.com/eliana-michelle/ahron) | [link](https://trello.com/b/zJKBuzpq/ahron) | [link](https://ahron.herokuapp.com/) | 
 | Felicity (LA) | Rocket Launch | [link](https://github.com/felicitysmusings/rocket-launch) | [link](https://trello.com/b/uLrz2fk3/rocket-launch) | [link](https://wdi-rocket-launch.herokuapp.com) |
@@ -36,7 +36,7 @@
 | Mike (LA) | Tag | [link](https://github.com/md1285/tag) | [link](https://trello.com/b/7n53hBSR/tag) | [link](https://tag-app-md.herokuapp.com/) |
 | Sean (ATX) | Twitcherquide |  | [link](https://trello.com/b/flO4uqYK/project-2) |  | 
 | Sun (LA) | Tutorials | [link](https://github.com/soobaklee/sunnieexcels) | [link](https://trello.com/invite/accept-board) | [link](https://sunniexcels.herokuapp.com/) | 
-| Vance (LA) |  |  |  |  | 
+| Vance (LA) | Krystal Korner | [link](https://github.com/vooncer17/krystal-korner) |  | [link](https://wdi-krystal-korner.herokuapp.com) | 
 | Valerie (LA) | Paleo Recipes | [link](https://github.com/vkomova/delicious-recipes) | [link](https://trello.com/b/F2itMzfQ/project-2-paleo-recipes) | [link](https://wdi-delicious-recipes.herokuapp.com/) | 
 | Weronika (LA) | HouseMates | [link](https://github.com/weronikaviola/HouseMates) | [link](https://trello.com/b/HbmuAzzQ/housemates) | [link](https://house--mates.herokuapp.com/) | 
 
