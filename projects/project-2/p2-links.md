@@ -24,7 +24,7 @@
 | Tyler (ATX) | Spools | [link](https://github.com/tylerarnone1/spools-MEN) | [link](https://trello.com/b/igDyjSbk/spool) | [link](https://spools.herokuapp.com/) | 
 | Ursula (ATX) | FieldGuide | | [link](https://trello.com/b/Wc2mIzQM/express-app-1) |  |
 | Bonny (ATX) | Pawfect | [link](https://github.com/bmrivers/pawfect) | [link](https://trello.com/b/OGwj6Ol2/pawfect) | [link](https://pawfect-pet.herokuapp.com/) | 
-| Carly (LA) | Take Me Away (travel app) |  | [link](https://trello.com/b/8CHBVCsX/wdi-project-two) | [link](https://take-meaway.herokuapp.com/) | 
+| Carly (LA) | Take Me Away (travel app) | [link](https://github.com/cjmarsh2/WDI-Project-Two/tree/master/take-me-away) | [link](https://trello.com/b/8CHBVCsX/wdi-project-two) | [link](https://take-meaway.herokuapp.com/) | 
 | Danillo (LA) | Pocket PT |  | [link](https://trello.com/b/dWkNiL1t/project-2-pocket-pt) |  | 
 | David (LA) |  |  |  |  | 
 | Demetrious (LA) | Books | [link](https://github.com/EternalDev1/Project2) | [link](https://trello.com/b/wYZw6POl/wdi-project-2) | [link](https://wdi-read-me.herokuapp.com/users) | 
