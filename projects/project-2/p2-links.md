@@ -11,7 +11,7 @@
 | Drew (ATX) | Political News |  | [link](https://trello.com/b/YmrLysZu/political-news-app) |  | 
 | Henry (ATX) | Save My Gas | [link](https://github.com/henryosi/SavMGas-) |  | [link](https://savmgas.herokuapp.com/) | 
 | Irvin (ATX) | Comtent (media) | [link](https://github.com/Developirv/contentHome) | [link](https://trello.com/b/IxMV9u8X/class-project-2) | [link](https://comtent.herokuapp.com/) | 
-| J Salvador (ATX) | Dish of the Day | [link](https://github.com/jsnavarr/dish-of-the-day) | [link](https://trello.com/b/g5ozWUbL/dish-of-the-day) |  | 
+| J Salvador (ATX) | Dish of the Day | [link](https://github.com/jsnavarr/dish-of-the-day) | [link](https://trello.com/b/g5ozWUbL/dish-of-the-day) | [link](https://dish-of-the-day.herokuapp.com/) | 
 | Josh (ATX) | Pickup Soccer | [link](https://github.com/joshjoll/Pickup-Sports-App) | [link](https://trello.com/b/sxPBYh8K/pickup-soccer-app) |  | 
 | Kyle S. (ATX) | How's the Sky | [link](https://github.com/kdsmith500/wdi-p2-howsTheSky) | [link](https://trello.com/b/8KU6L9MI/hows-the-sky) | [link](https://connect-ai-app.herokuapp.com/) | 
 | Kyle A. (ATX) | National Park Tracker | [link](https://github.com/kanderson425/WDI-App-Project2) | [link](https://trello.com/b/XmM9ByIy/wdi-national-parks-app-project) | [link](https://national-park-tracker-app.herokuapp.com/) | 
@@ -22,7 +22,7 @@
 | Siara (ATX) | Musiclust | [link](https://github.com/siaraclemente/MusicLust) | [link](https://trello.com/b/MKQEjzHd/musiclust) | [link](https://musiclust.herokuapp.com/) | 
 | Son (ATX) | Catch Hands | [link](https://github.com/sntruong12/catch-hands) | [link](https://trello.com/b/Yryz4bXR/catch-hands) | [link](https://catch-hands.herokuapp.com/) | 
 | Tyler (ATX) | Spools | [link](https://github.com/tylerarnone1/spools-MEN) | [link](https://trello.com/b/igDyjSbk/spool) | [link](https://spools.herokuapp.com/) | 
-| Ursula (ATX) | FieldGuide | | [link](https://trello.com/b/Wc2mIzQM/express-app-1) |  |
+| Ursula (ATX) | FieldGuide | [link](https://github.com/ursulacj/adulting-101) | [link](https://trello.com/b/Wc2mIzQM/express-app-1) |  |
 | Bonny (ATX) | Pawfect | [link](https://github.com/bmrivers/pawfect) | [link](https://trello.com/b/OGwj6Ol2/pawfect) | [link](https://pawfect-pet.herokuapp.com/) | 
 | Carly (LA) | Take Me Away (travel app) | [link](https://github.com/cjmarsh2/WDI-Project-Two/tree/master/take-me-away) | [link](https://trello.com/b/8CHBVCsX/wdi-project-two) | [link](https://take-meaway.herokuapp.com/) | 
 | Danillo (LA) | Pocket PT |  | [link](https://trello.com/b/dWkNiL1t/project-2-pocket-pt) |  | 
