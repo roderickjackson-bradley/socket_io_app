@@ -31,7 +31,7 @@
 | Eliana (LA) | AHRON (Closets) | [link](https://github.com/eliana-michelle/ahron) | [link](https://trello.com/b/zJKBuzpq/ahron) | [link](https://ahron.herokuapp.com/) | 
 | Felicity (LA) | Rocket Launch | [link](https://github.com/felicitysmusings/rocket-launch) | [link](https://trello.com/b/uLrz2fk3/rocket-launch) | [link](https://wdi-rocket-launch.herokuapp.com) |
 | Johnny (LA) |  |  |  |  | 
-| Karen (LA) | Notemon |  | [link](https://trello.com/b/H7Bmbc8A/notemon) | [link](https://the-real-notemon.herokuapp.com/) | 
+| Karen (LA) | Notemon | [link](https://github.com/KarenkSmith/notemon) | [link](https://trello.com/b/H7Bmbc8A/notemon) | [link](https://the-real-notemon.herokuapp.com/) | 
 | Meisam (LA) | Meisagram | [link](https://github.com/pmeisam/instagram) | [link](https://trello.com/b/d87nvA0z/meisagram) | [link](http://meisagram.herokuapp.com/) | 
 | Mike (LA) | Tag | [link](https://github.com/md1285/tag) | [link](https://trello.com/b/7n53hBSR/tag) | [link](https://tag-app-md.herokuapp.com/) |
 | Sean (ATX) | Twitcherquide |  | [link](https://trello.com/b/flO4uqYK/project-2) |  | 
