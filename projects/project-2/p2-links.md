@@ -5,9 +5,9 @@
 | Ali (DAL) | Sonargaon (Travel) | [link](https://github.com/fagleyali/Project-Two) | [link](https://trello.com/b/cCnn4hNR/sonargaontravel-app) | [links](https://wdi-sonargaon.herokuapp.com/destinations) | 
 | Alexis (ATX) |  |  |  |  | 
 | Anna (ATX) | Well Read | [link](https://github.com/annaelizabeth2019/well-read) | [link](https://trello.com/b/jMrJFzd7/well-read-app) | [link](https://well-read-app.herokuapp.com/) | 
-| Andrey (ATX) | VSR (Vehicle) | [link](https://github.com/AndreykaVSR/GA-WDI-Project2) | [link](https://trello.com/b/G2RHDvIP/ga-wdi-andreyka-vsr-project-2) |  |
+| Andrey (ATX) | VSR (Vehicle) | [link](https://github.com/AndreykaVSR/GA-WDI-Project2) | [link](https://trello.com/b/G2RHDvIP/ga-wdi-andreyka-vsr-project-2) | [link](https://vsr-inventory-app.herokuapp.com/) |
 | D'angelo (ATX) | wineCat | [link](https://github.com/dmshakur/whiningCat) | [ink](https://trello.com/b/BIu8GXkn/winecat) |  | 
-| Don (ATX) | |  |  |
+| Don (ATX) | World Craft| [link](https://github.com/donBelizaire/worldCraft) | [link](https://trello.com/b/Oo5wF9Ky/project-2) |  |
 | Drew (ATX) | Political News | [link](https://github.com/project423/Image-Board) | [link](https://trello.com/b/YmrLysZu/political-news-app) | [link](https://salty-citadel-76474.herokuapp.com/) | 
 | Henry (ATX) | Save My Gas | [link](https://github.com/henryosi/SavMGas-) |  | [link](https://savmgas.herokuapp.com/) | 
 | Irvin (ATX) | Comtent (media) | [link](https://github.com/Developirv/contentHome) | [link](https://trello.com/b/IxMV9u8X/class-project-2) | [link](https://comtent.herokuapp.com/) | 
@@ -17,15 +17,15 @@
 | Kyle A. (ATX) | National Park Tracker | [link](https://github.com/kanderson425/WDI-App-Project2) | [link](https://trello.com/b/XmM9ByIy/wdi-national-parks-app-project) | [link](https://national-park-tracker-app.herokuapp.com/) | 
 | Nhung (ATX) | Puppy Journal | [link](https://github.com/nhungtrannn/WDI-APP-Project2) | [link](https://trello.com/b/yS7iMn2U/new-puppy-one-photo-a-day-a-one-year-pupper-journal) |  |
 | Michelle (ATX) | E-Classroom Tool | [link](https://github.com/themichellemcguire/ClassroomTools) | [link](https://trello.com/b/WycacutU/teacher-classroom-info) | [link](https://e-classroomtools.herokuapp.com/) | 
-| Paul (ATX) |  |  |  |  | 
-| Roderick (ATX) | Predict My Balance |  | [link](https://trello.com/b/KJaVS6SO/crud-project) | |
+| Paul (ATX) | Slime Trader | [link](https://github.com/TanPOTGS/slime-trader) | [link](https://trello.com/b/OOJm2AAq/wdi-project) | [link](https://slime-trader.herokuapp.com/) | 
+| Roderick (ATX) | Predict My Balance | [link](https://github.com/roderickjackson-bradley/auth-authy) | [link](https://trello.com/b/KJaVS6SO/crud-project) | |
 | Siara (ATX) | Musiclust | [link](https://github.com/siaraclemente/MusicLust) | [link](https://trello.com/b/MKQEjzHd/musiclust) | [link](https://musiclust.herokuapp.com/) | 
 | Son (ATX) | Catch Hands | [link](https://github.com/sntruong12/catch-hands) | [link](https://trello.com/b/Yryz4bXR/catch-hands) | [link](https://catch-hands.herokuapp.com/) | 
 | Tyler (ATX) | Spools | [link](https://github.com/tylerarnone1/spools-MEN) | [link](https://trello.com/b/igDyjSbk/spool) | [link](https://spools.herokuapp.com/) | 
 | Ursula (ATX) | FieldGuide | [link](https://github.com/ursulacj/adulting-101) | [link](https://trello.com/b/Wc2mIzQM/express-app-1) |  [link](https://adulting-field-guide.herokuapp.com/) |
 | Bonny (ATX) | Pawfect | [link](https://github.com/bmrivers/pawfect) | [link](https://trello.com/b/OGwj6Ol2/pawfect) | [link](https://pawfect-pet.herokuapp.com/) | 
 | Carly (LA) | Take Me Away (travel app) | [link](https://github.com/cjmarsh2/WDI-Project-Two/tree/master/take-me-away) | [link](https://trello.com/b/8CHBVCsX/wdi-project-two) | [link](https://take-meaway.herokuapp.com/) | 
-| Danillo (LA) | Pocket PT |  | [link](https://trello.com/b/dWkNiL1t/project-2-pocket-pt) |  | 
+| Danillo (LA) | Pocket PT | [link](https://github.com/Danvieira7/pocket-pt) | [link](https://trello.com/b/dWkNiL1t/project-2-pocket-pt) | [link](https://pocket-pt.herokuapp.com/) | 
 | David (LA) | LA Kicks | [link](https://github.com/DavidGalindo23/sneakers) | [link](https://trello.com/b/pxhPCiGk/sneaker-web-app) | [link](https://la-kicks.herokuapp.com/) | 
 | Demetrious (LA) | Books | [link](https://github.com/EternalDev1/Project2) | [link](https://trello.com/b/wYZw6POl/wdi-project-2) | [link](https://wdi-read-me.herokuapp.com/users) | 
 | Eliana (LA) | AHRON (Closets) | [link](https://github.com/eliana-michelle/ahron) | [link](https://trello.com/b/zJKBuzpq/ahron) | [link](https://ahron.herokuapp.com/) | 
