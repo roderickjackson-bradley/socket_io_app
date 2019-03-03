@@ -30,9 +30,7 @@
 
 This lesson will pick up from where the last lesson left off.
 
-The starter code is located in the `.../w05/d2/03-04-django-one-to-many-models/starter-code/catcollector` directory.
-
-**Be sure to be inside of the `catcollector` directory, NOT the `starter-code` directory** before you open VS Code with `code .`.
+**Be sure to be inside of this lesson's `starter-code/catcollector` directory, NOT the `starter-code` directory** before you open VS Code with `code .`.
 
 Then you can start the web server with:
 
