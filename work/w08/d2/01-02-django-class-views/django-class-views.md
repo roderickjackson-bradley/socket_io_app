@@ -1,4 +1,4 @@
-<img src="https://i.imgur.com/RS07hCP.jpg
+<img src="https://i.imgur.com/RS07hCP.jpg">
 
 # Django Class-based Views
 
