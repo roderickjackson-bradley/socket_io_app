@@ -568,12 +568,7 @@ The `cats_detail` function is using the `get` method to obtain the cat object by
 
 > Any captured URL parameters will be passed in as arguments to the view function!
 
-<details>
-	<summary>
-		What determined the parameter name of cat_id in the cars_detail view function?
-	</summary>
-	Because of the way the URL parameter was named in `path('cats/<int:cat_id>', views.cats_detail, name='detail')`
-</details>
+**What determined the parameter name of cat_id in the cars_detail view function?**
 
 ##### Step 5
 
