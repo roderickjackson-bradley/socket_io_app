@@ -572,7 +572,7 @@ The `cats_detail` function is using the `get` method to obtain the cat object by
 	<summary>
 		What determined the parameter name of cat_id in the cars_detail view function?
 	</summary>
-	<p>Because of the way the URL parameter was named in `path('cats/<int:cat_id>', views.cats_detail, name='detail')`</p>
+	<p>Because of the way the URL parameter was named in **path('cats/\<int:cat_id\>', views.cats_detail, name='detail')**</p>
 </details>
 
 ##### Step 5
