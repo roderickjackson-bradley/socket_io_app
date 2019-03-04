@@ -1,7 +1,7 @@
 <img src="https://i.imgur.com/3p19Uum.jpg">
 
 # Intro to Relational Databases and SQL
-
+# SQL is the best
 ## Learning Objectives
 
 |Students will be able to:|
