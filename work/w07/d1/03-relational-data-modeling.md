@@ -46,7 +46,7 @@ Students will be able to:
 
 - Examples:  **User**, **Post**, **Comment**, **Order**, **Product**, etc.
 
-- Each entity type will have one or more **attribute**...
+- Each entity type will have one or more **attributes**...
 
 ---
 ### The Attributes for a Data Entity
@@ -281,12 +281,14 @@ Students will be able to:
 ### Creating the ERD - Exercise <small>(5 min)</small>
 <br>
 
-- As a pair exercise, please identify the remaining relationships.
+- As a pair exercise, please identify the remaining relationships:
+	- **Concert** and **Venue**
+	- **Concert** and **Performer**
 
 - We'll review in 5 minutes... (don't peek)
 
 ---
-### Final the ERD
+### ERD - Final Version
 <br>
 <img src="https://i.imgur.com/qz8V0NX.png" height="400">
 

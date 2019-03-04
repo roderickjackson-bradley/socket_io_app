@@ -87,9 +87,9 @@ Everyone should have a global **git ignore** file so that you don’t have to wo
 
 First, create the file:  `touch ~/.gitignore_global`
 
-Next, configure git to use this file:  `git config --global core.excludesfile ~/.gitignore_global`
+Open it in VS Code: `code `~/.gitignore_global`
 
-Finally, lets put some good stuff in there:
+Let's put this good stuff in there and save it:
 
 ```sh
 # This is a list of rules for ignoring files in every Git repositories on your computer.
@@ -192,6 +192,8 @@ tags
 #######
 .env
 ```
+
+Finally, here's how we configure git to use this file (run in terminal):  `git config --global core.excludesfile ~/.gitignore_global`
 
 ## Node
 
