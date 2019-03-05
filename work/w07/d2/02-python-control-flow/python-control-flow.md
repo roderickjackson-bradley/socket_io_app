@@ -16,7 +16,7 @@
 
 2. Open the folder in VS Code: `$ code .`
 
-You should see a **exercise.py** file that will be used to enter Python code during the lesson's exercises.  
+You should see an **exercise.py** file that will be used to enter Python code during the lesson's exercises.  
 
 ## Review of Control Flow
 
@@ -28,13 +28,13 @@ We also used statements such as `for` and `while` to perform **looping**.
 
 The good news is that most programming languages, including Python, share these same control flow constructs.
 
-It's worth pointing out that programming concepts such as variables, data types, control flow and functions apply in general to programming as a whole and that learning a new language amounts to nothing more that learning a new syntax and a few idiosyncrasies about each particular language. 
+It's worth pointing out that programming concepts such as variables, data types, control flow and functions apply in general to programming as a whole and that learning a new language amounts to not much more than learning a new syntax and a few idiosyncrasies about each particular language. 
 
 ## Conditional Expressions in Python
 
-Control flow typically comes down to different code paths executing according to the evaluation of a **conditional expression**.
+Control flow typically comes down to different code paths executing according to the evaluation of **conditional expressions**.
 
-In other words, if the **conditional expression** evaluates to _truthiness_ do this stuff, optionally, do something else.
+In other words, if the **conditional expression** evaluates to _truthiness_, do this stuff, optionally, do something else.
 
 Let's review some of the logic and fundamentals of conditional expressions.
 
@@ -42,17 +42,17 @@ Let's review some of the logic and fundamentals of conditional expressions.
 
 Python has two logical boolean values: `True` and `False`.
 
-Most logical operations result in one of these two values. The work exactly the same as in JS but are always written with a starting capital letter in Python.
+Most logical operations result in one of these two values. They work exactly the same as in JS but are always written with a starting capital letter in Python.
 
 ### Truthy & Falsey in Python
 
-Like JS, every piece of data in Python has evaluate to **truthiness** or **falseyness**.
+Like JS, every piece of data in Python is considered either **truthy** or **falsey**.
 
 Conditional expressions for `if` statements, etc., rely on an expression evaluating to `True`/**truthy** or `False`/**falsey** to determine which path the code will follow.
 
 Just like in JavaScript, most things in Python are considered to be truthy.
 
-Here's what's considered to be falsey in Python:
+Here's what is falsey in Python:
 
 - `False`
 - `None`
@@ -75,7 +75,7 @@ Python has all the same comparison operators as JavaScript:
 - `==` - equal to
 - `!=` - not equal to
 
-Note that in Python, only **strict** equality exists. The `==` in Python is the same as `===` in JavaScript.
+Note that in Python, there's only one equality operator. The `==` in Python is the same as `===` in JavaScript.
 
 #### Examples 
 
@@ -158,20 +158,20 @@ False and True
 
 ### Indentation!
 
-Before we start looking at control flow, a reminder that Python uses indentation to define blocks of code - not curly braces.
+Before we start looking at control flow, just a reminder that Python uses indentation to define blocks of code - not curly braces.
 
 It has always been recommended to use indentation in languages for readability purposes, however, in Python, proper indentation is mandatory!
 
-### Branching With the `if` Statement
+### Branching with the `if` Statement
 
-Just like in JavaScript, we have the ability to run one of several code paths depending upon the result of condition expression(s).
+Just like in JavaScript, we have the ability to run one of several code paths depending upon the result of conditional expression(s).
 
 Single path `if` statement:
 
 ```python
 floor = "sticky"
 walls = "clean"
-if floor == "sticky":
+if floor == "sticky":   # don't forget the colon
   print("Clean the floor! It's sticky!")
 if walls == "sticky":
   print("Clean the walls! They're sticky!")
@@ -297,7 +297,7 @@ while condition:
 
 ### The `break` Statement
 
-The `break` statement in Python can be used to immediately exit both `for` and `while` loops.
+The `break` statement in Python can be used to immediately exit `for` and `while` loops and continue executing any statements that may follow them.
 
 ### Looping Exercise (5 - 10 minutes)
 
@@ -312,6 +312,8 @@ The remainder of the day will provide you with lab time to get some practice per
 But first...
 
 ## Essential Questions
+
+Take a minute to review before the picker shows up...
 
 1. **What are the two types of control flow discussed in this lesson.**
 
