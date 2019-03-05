@@ -14,7 +14,11 @@ Let's get some practice working with control flow and logic in Python!
 
 2. Open the folder in VS Code: `$ code .`
 
-3. Write the code to solve the 6 exercises inside of each file `exercise-1.py` through `exercise-6`.
+## Exercises
+
+Write the code to solve the 6 exercises inside of each file `exercise-1.py` through `exercise-6.py`.
+
+Possible solutions are [here](https://repl.it/@jim_clark/Python-Control-Flow-Lab), but do your best not to peek.
 
 ## Deliverable
 
