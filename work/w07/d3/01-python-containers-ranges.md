@@ -68,6 +68,8 @@
 	```
 - Unlike in JS, _strings_ used as keys must be quoted.
 
+- If not quoted, Python expects the identifier to be a variable holding what you want to use as the key. This is similar to how _computed properties_ work in JS.
+
 ---
 ### Dictionaries - Features
 <br>
@@ -98,7 +100,7 @@
 	> Tina
 	```
 
-- Unlike with _objects_ in JS, Python _dictionaries_ **have no dot notation**. 
+- Unlike JS, you cannot access items in a Python dictionary using ** dot notation** (dots are used to invoke methods).
 
 ---
 ### Dictionaries - <span style="text-transform: lowercase">get</span> Method
@@ -111,10 +113,10 @@
 	```python
 	birthdate = student['birthdate']
 	> KeyError: 'birthdate'
-	print( student.get('birthdate', 'unknown') )
-	> unknown
 	print( student.get('birthdate') )
 	> None
+	print( student.get('birthdate', '07-04-1776') )
+	> 07-04-1776
 	```
 
 ---
@@ -222,7 +224,7 @@
 
 - **Lists** can contain items of different types, including _dictionaries_ and nested _lists_.
 
-- **List** have a class (type) of `list`.
+- **Lists** have a class (type) of `list`.
 
 ---
 ### Lists - Basic Syntax
@@ -248,7 +250,7 @@
 
 - They are considered to be a _sequence_ type in Python. A _sequence_ is a generic term used for an **ordered** collection. Other _sequence_ types in Python include _strings_ and _tuples_.
 
-- They are mutable:
+- Lists are mutable:
 
  	- Items within the _list_ can be replaced
  	- Items can be added and removed from a _list_
@@ -256,7 +258,7 @@
 ---
 ### Lists - Accessing Elements
 
-- Accessing the individual elements of a _list_ is much like that as accessing elements in a JS array, i.e., by using an expression that evaluates to an _integer_ within _square brackets_:
+- Accessing the individual elements of a _list_ is much like accessing elements in a JS array, i.e., by using _square brackets_ with an expression that evaluates to an integer:
 
 	```python
 	idx = 1
@@ -436,8 +438,6 @@
 
 - They will probably seem a little confusing as first, but they certainly are a favorite of _Pythonistas_ and you will certainly come across them when googling.
 
-- Also, _comprehensions_ can be used similarly to create _dictionaries_ too.
-
 ---
 ### List Comprehensions<br><small>Numerical Example</small>
 <br>
@@ -601,11 +601,11 @@
 
 - _Tuples_ are immutable, so they are great for protecting data that you don't want changed.
 
-- Because they are immutable, iterating over _tuples_ is faster than with _lists_. They can also be used as _keys_ for _dictionaries_.
+- Python iterates over _tuples_ faster than _lists_. _Tuples_ can also be used as _keys_ for _dictionaries_.
 
 - Generally, you'll find that _tuples_ are used to contain heterogeneous (different) data types and _lists_ for homogeneous (similar) data types.
 
-- _Tuples_ are often classified based on how many elements they contain, e.g., a **2-tuple** would be used to hold a `key` and its `value`.
+- _Tuples_ are often classified based on how many elements they contain, e.g., a **2-tuple** would be used to hold a `key` and its `value`
 
 ---
 ### Tuples - Accessing Elements
@@ -740,7 +740,7 @@
 
 - Python is known for having some cool tricks up its sleeve, for one, there's the "slice" operator (`[m:n]`).
 
-- Since _sequence_ types are a collection of items (BTW, characters are the items in a _string_), we should be to target any subset of those items. We can, and those subsets are called _slices_.
+- Since _sequence_ types are a collection of items (BTW, characters are the items in a _string_), we can target subsets, called _slices_, of those items using `[m:n]`.
 
 ---
 ### Slicing Sequences
