@@ -119,6 +119,8 @@ multiline comment
 # multiline comment
 ```
 
+Multiline comments are often used to document what a function or module does, therefore, they are sometimes referred to as _docstrings_.
+
 ### Python Variables
 
 Variables in Python work in much the same way that variables work in JavaScript.
@@ -147,7 +149,7 @@ NameError: name 'my_variable' is not defined
 
 Variables are case sensitive - variables named `my_number` and `My_Number` would be two different variables.
 
-When you have a variable name with multiple words, the convention is is **snake-case** the identifer:
+When you have a variable name with multiple words, the convention is to **snake-case** the identifer:
 
 ```js
 // In JavaScript we use camelCase...
@@ -195,7 +197,7 @@ Python's data types are similar to those available in JavaScript, there's just m
 
 #### Integer Numbers (`<class 'int'>`)
 
-Unlike in JavaScript, Python distinguishes between integers (whole numbers) and decimals.
+Unlike in JavaScript, Python distinguishes between integers (whole numbers) and decimals (AKA floats).
 
 When we don't follow a number literal with a decimal point, an integer is assumed:
 
@@ -305,7 +307,7 @@ num *= 3
 # And so on with the other operators.
 ```
 
-> IMPORTANT: A couple of our favorites in JS, the Increment (`++`) and Decrement (`--`) operators, do not exist in Python.
+> IMPORTANT: A couple of our favorites in JS, the Increment (`++`) and Decrement (`--`) operators, do not exist in Python. Use `+= 1` and `-= 1` instead.
 
 ### Converting Between Data Types
 
@@ -347,9 +349,9 @@ your_string = 'A single quoted string'
 You can also do some multi-line strings by using a triple quote (single or double):
 
 ```python
-multiline_string = """ This is my string that
+multiline_string = '''This is my string that
                         goes on multiple lines
-                        for whatever reason """
+                          for whatever reason'''
 ```
 
 #### Concatenating Strings
@@ -366,9 +368,9 @@ print(long_string)
 
 #### String Interpolation using f-Strings
 
-One fancy thing that Python has had much longer than JavaScript is nice syntax for string interpolation, or injecting expressions into strings.
+One fancy thing that Python has had much longer than JavaScript is a nice syntax for string interpolation, or injecting expressions into strings.
 
-While we can always use the concatenation operators above, these get ugly when too many of them appear in a string. Instead, we can use syntax similar to what was introduced in ES6 with string template literals. You just need to remember to add an "f" before the string:
+While we can always use the concatenation operators above, these get ugly when too many of them appear in a string. Instead, we can use syntax similar to what was introduced in ES6 with string template literals. You just need to remember to add an `f` before the string:
 
 ```python
 state = "Hawaii"
@@ -416,7 +418,7 @@ Some are familiar, like `split()` but others have different names:
 # => 'Then you went to the store you like'
 ```
 
-Want to know if a string contains a substring? You don't even need a function for that. You can use the special `in` operator to quickly find out if one string appears in another.
+Want to know if a string contains a substring? You don't even need a function for that. You can use the most excellent `in` operator to quickly find out if one string appears in another.
 
 ```python
 "eggs" in "green eggs and ham"
@@ -432,7 +434,7 @@ len("Tacos")
 
 ### Python's Built-in Functions
 
-Notice above that we did not call `len()` as a method on the string.
+Notice above that we did not call `len()` as a method on the string - we didn't do this: `"Tacos".len()`.
 
 `len()` is just one of several [built-in functions](https://docs.python.org/3/library/functions.html) that exists in Python.
 
@@ -440,7 +442,7 @@ Notice above that we did not call `len()` as a method on the string.
 
 Why does `len()` work on strings?  Because in Python, a string is a sequence of characters.
 
-Because a string is a `sequence`, as we can in JS, we can use square brackets to access the characters in the string (but not assign to them):
+Because a string is a `sequence`, as we can in JS, we can use square brackets to access the characters in the string (but not assign to them, also like JS):
 
 ```python
 course = 'WDI'
