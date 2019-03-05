@@ -27,7 +27,7 @@
 | Carly (LA) | Take Me Away (travel app) | [link](https://github.com/cjmarsh2/WDI-Project-Two/tree/master/take-me-away) | [link](https://trello.com/b/8CHBVCsX/wdi-project-two) | [link](https://take-meaway.herokuapp.com/) | 
 | Danillo (LA) | Pocket PT | [link](https://github.com/Danvieira7/pocket-pt) | [link](https://trello.com/b/dWkNiL1t/project-2-pocket-pt) | [link](https://pocket-pt.herokuapp.com/) | 
 | David (LA) | LA Kicks | [link](https://github.com/DavidGalindo23/sneakers) | [link](https://trello.com/b/pxhPCiGk/sneaker-web-app) | [link](https://la-kicks.herokuapp.com/) | 
-| Demetrious (LA) | Books | [link](https://github.com/EternalDev1/Project2) | [link](https://trello.com/b/wYZw6POl/wdi-project-2) | [link](https://wdi-read-me.herokuapp.com/users) | 
+| Demetrious (LA) | Books | [link](https://github.com/drobinsondev/Project2) | [link](https://trello.com/b/wYZw6POl/wdi-project-2) | [link](https://wdi-read-me.herokuapp.com/users) | 
 | Eliana (LA) | AHRON (Closets) | [link](https://github.com/eliana-michelle/ahron) | [link](https://trello.com/b/zJKBuzpq/ahron) | [link](https://ahron.herokuapp.com/) | 
 | Felicity (LA) | Rocket Launch | [link](https://github.com/felicitysmusings/rocket-launch) | [link](https://trello.com/b/uLrz2fk3/rocket-launch) | [link](https://wdi-rocket-launch.herokuapp.com) |
 | Johnny (LA) |  |  |  |  | 
