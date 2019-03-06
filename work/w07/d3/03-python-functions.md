@@ -87,7 +87,7 @@ Besides the obvious syntactical differences, here are a few other things to be a
 
 Every function in Python is defined using the `def` keyword and are never assigned to variables as in JavaScript.
 
-#### Python has a different sort of anonymous functions
+#### Python has a different sort of anonymous function
 
 Python does have a the concept of anonymous functions but they are called `lambda` functions.
 
