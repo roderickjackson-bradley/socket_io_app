@@ -23,7 +23,7 @@ A function is a block of statements that can be called with inputs and often ret
 </p>
 </details>
 
-<details><summary>Why are there functions?/summary>
+<details><summary>Why are there functions?</summary>
 <p>
 Functions provide:
 
