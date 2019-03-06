@@ -100,7 +100,7 @@
 	> Tina
 	```
 
-- Unlike JS, you cannot access items in a Python dictionary using ** dot notation** (dots are used to invoke methods).
+- Unlike JS, you cannot access items in a Python dictionary using **dot notation** (dots are used to invoke methods).
 
 ---
 ### Dictionaries - <span style="text-transform: lowercase">get</span> Method
