@@ -9,7 +9,7 @@
 | Contrast Python and JavaScript functions |
 | Define functions in Python |
 | Invoke functions in Python |
-| Use `*args*` and `**kwargs` parameters |
+| Use `*args` and `**kwargs` parameters |
 
 ## Set Up
 
@@ -17,13 +17,13 @@ To experiment with the code in this lesson, please use a Python-based repl in [r
 
 ## Review the Use Case of Functions - What & Why?
 
-<details><summary>**What is a function?**</summary>
+<details><summary>What is a function?</summary>
 <p>
 A function is a block of statements that can be called with inputs and often return an output.
 </p>
 </details>
 
-<details><summary>**Why are there functions?**</summary>
+<details><summary>Why are there functions?/summary>
 <p>
 Functions provide:
 
@@ -32,6 +32,7 @@ Functions provide:
 - Readability (when functions are appropriately named)
 </p>
 </details>
+<br>
 
 Functions are the building blocks of programming and all programming languages have them, including Python...
 
@@ -90,7 +91,9 @@ Every function in Python is defined using the `def` keyword and are never assign
 
 Python does have a the concept of anonymous functions but they are called `lambda` functions.
 
-Think of `lambda` functions as a JS arrow function that implicitly returns a single express.  For example:
+Think of `lambda` functions as a JS arrow function that implicitly returns a single expression's result.
+
+For example:
 
 ```js
 // JavaScript
@@ -108,7 +111,7 @@ Relax, you more than likely won't need to use lambda functions in Django!
 
 #### Python does not "hoist" functions
 
-You cannot invoke a Python function before the code that defines it:
+The last key difference between Python and JavaScript functions is that you cannot invoke a Python function before the code that defines it:
 
 ```python
 # Not allowed until after the code below
@@ -185,7 +188,7 @@ function sum() {
 console.log( sum(1, 5, 10) );  // -> 16
 ```
 
-Or by using ES20a5's _rest parameters_:
+Or by using ES2015's _rest parameters_:
 
 ```js
 function sum(...nums) {
@@ -236,6 +239,7 @@ If you'd like to be able to access a varying number of _named_ arguments, use `*
 ```python
 def dev_skills(dev_name, **kwargs):
   dev = {'name': dev_name, 'skills': {}}
+  # unpacking the tuples returned by the items function
   for skill, rating in kwargs.items():
     dev['skills'][skill] = rating
   return dev
@@ -248,7 +252,7 @@ print(dev_skills('Jackie', HTML=5, CSS=3, JavaScript=4, Python=2))
 You can define all three types of parameters in a function, but you have to do it in this order:
 
 ```python
-def f(pos1, pos2, *args, **kwargs):
+def arg_demo(pos1, pos2, *args, **kwargs):
   print(f'Positional params: {pos1}, {pos2}')
   print('*args:')
   for arg in args:
@@ -257,7 +261,7 @@ def f(pos1, pos2, *args, **kwargs):
   for keyword, value in kwargs.items():
     print(f'  {keyword}: {value}')
 
-f('A', 'B', 1, 2, 3, color='purple', shape='circle')
+arg_demo('A', 'B', 1, 2, 3, color='purple', shape='circle')
 
 '''Output:
 Positional params: A, B
@@ -285,7 +289,7 @@ I'll give you a couple of minutes to review the following questions:
 	def add(a, b):
 	  return a + b
 	```
-	**Which of the following statements will result in an error?**
+	**Which of the following statements will result in an error?<br> (there could be more than one)**
 	
 	A) `add(10, 100.)` <br>
 	B) `add(10, '10')` <br>
