@@ -72,31 +72,49 @@ Create a new python language [repl.it](https://repl.it/repls) named `Py-Pac-Poe`
 
 ## Hints
 
-- You can access, but not assign to global variables from within a function unless you declare it as `global` as follows:
+- You can access, but not assign to global variables from within a function because it actually creates a new local variable instead (this is a downside of not have keywords like `let` in the language).
+
+	There's a couple of solutions.  One is use the `global` statement as follows:
 
 	```python
-	# global variables
+	# Global variables
 	board = {}
 	turn = 'X'
 	
-	# will not work
+	# Will not work
 	def init_game():
-	  # will generate an error
+	  # Will not work because this creates a new variable
+	  # instead of assigning to the global board variable
 	  board = {
 	  	'a1': None, `b1`: None, 'c1' None,
 	  	# etc
 	  }
 	  turn = 'X'
 	  
-	# do it like this
+	# Do it like this
 	def init_game():
-	  # use the global keyword to update global variables
+	  # Use the global keyword to update global variables
 	  global board, turn
 	  board = {
 	  	'a1': None, `b1`: None, 'c1' None,
 	  	# etc
 	  }
 	  turn = 'X'
+	```
+	
+	Using `global` is easy and works, however, it could be frowned upon by purists. Another approach would be to use a global dictionary named something like `state`, which could then be mutated (updated) without a problem:
+	
+	```python
+	# Global variables
+	state = {}
+	
+	# The following works
+	def init_game():
+	  state['board'] = {
+	  	'a1': None, `b1`: None, 'c1' None,
+	  	# etc
+	  }
+	  state['turn'] = 'X'
 	```
 
 - Think through the game play of Tic-Tac-Toe and, if necessary, pseudocode it.
