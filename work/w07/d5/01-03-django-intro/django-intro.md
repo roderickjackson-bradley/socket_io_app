@@ -92,13 +92,13 @@ By default, Django uses a lightweight database called SQLite. However, it's not 
 
 From the start, we'll be following the better practice of using a more capable database by configuring each of our Django projects to work with PostgreSQL.
 
-To use PostgreSQL, we need to do one-time install of the **psycopg2** Python package:
+To use PostgreSQL, we need to do a one-time install of the **psycopg2** Python package:
 
 ```
 $ pip3 install psycopg2-binary
 ```
 
-`psycopg2` is the most popular library that enables Python applications to interface with PostgreSQL.
+`psycopg2` is a popular library that enables Python applications to interface with PostgreSQL.
 
 #### Create a Database for the Project
 
@@ -115,7 +115,7 @@ $ psql
 
 Run the `\l` command to confirm that `polls` is in the list of databases.
 
-Also, depending upon how PostgreSQL was installed, you might need the database's username/password. Just in case, make note of the username to the right of the database name.
+Also, depending upon how PostgreSQL was installed, you might need the database's username/password. Just in case, make note of the username to the right of the database name in the list.
 
 #### `cd` to Where You Should Be :)
 
@@ -125,9 +125,9 @@ You excited?  Ready to build your first Django app?  Let's do this!
 
 ## Build Django's Official Tutorial App
 
-Django, in so many words, is a beast!
+Django, in so many words, is a beast! Its documentation is hundreds of times larger than that of Express.
 
-A great way to get started learning it is by following the official Django tutorial.  It's an excellent tutorial, straight from the horses mouth!
+A great way to get started learning it is by following the official Django tutorial.  It's an excellent tutorial and we'll be getting a lot of information straight from the horses mouth!
 
 As we work through the tutorial together, I'll be sure to draw analogies to Express whenever possible.
 
