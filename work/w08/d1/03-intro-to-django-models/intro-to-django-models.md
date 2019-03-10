@@ -25,7 +25,7 @@
 
 ## Review Django Architecture
 
-The following diagrams the overall architecture of the Django framework:
+Okay, one last time I present, the overall architecture of the Django framework:
 
 <img src="https://i.imgur.com/1fFg7lz.png">
 	
@@ -33,7 +33,7 @@ This lesson focuses on the **Model layer** connecting the **View** to the **data
 
 ## Review the Starter Code
 
-The only change to the starter code from where the last lesson left off is that the `home` view now renders a `home.html` template instead of using `HttpResponse` to send back a string.
+The only change to the starter code from where the last lesson left off is that the `home` view now renders a **home.html** template instead of using `HttpResponse` to send back a string.
 
 Note that since the `HttpResponse` function is no longer being used in **views.py**, its import has been removed.
 
@@ -41,21 +41,21 @@ Note that since the `HttpResponse` function is no longer being used in **views.p
 
 **Models** are used to perform CRUD data operations on a database.
 
-Remember **entities** in the ERDs?
+Remember **entities** in the Entity-Relationship-Diagrams?
 
 A Django Model represents a single entity from the ERD.
 
-Thus, a Model would also have a one-to-one mapping with a table in the database.
+Thus, a Model has a one-to-one mapping with a table in the database.
 
-<p style="color: red">Again, a Model is what allows us to write code to create, read, update and delete data from a table in the database.</p>
+Again, a Model is what allows us to write code to create, read, update and delete data from a table in the database.
 
-When we retrieve data from the database (using a Model of course), we will have **model objects**, each of which represents a row in a database table. Model objects may also be called _instances_ of the Model.
+When we retrieve data from the database (using a Model of course), we will have **model objects**, each of which represents a row in a database table. Model objects are also called _instances_ of the Model.
 
-> That word "Model" is going being capitalized quite a bit in this lesson.  This is to distinguish a Model for an entity from a model object, which will be in lower case.
+> When the word "Model" is capitalized, it's referring to a Model for an entity from a model instance, which will be in lower case.
 
 ## Models in Django
 
-Each model is defined as a Python class that inherits from `django.db.models.Model`.
+Each Model is defined as a Python class that inherits from `django.db.models.Model`.
 
 Here's the **Cat** entity from an ERD and the code to define the equivalent Model:
 
@@ -63,14 +63,14 @@ Here's the **Cat** entity from an ERD and the code to define the equivalent Mode
 
 All of the Models for an app are defined in the app's `models.py` file.
 
-Let's go ahead and type in the above code.
+Let's create the `Cat` Model by typing in the above code.
 
-Note that each field (attribute) is represented by a Field class, e.g., `CharField`. Here are the [docs of available Field types](https://docs.djangoproject.com/en/2.1/ref/models/fields/#model-field-types) - there's plenty of 'em, and you can even create custom ones too!
+Note that each field (attribute) is represented by a Field class, e.g., `CharField`. Here are the [docs of available Field types](https://docs.djangoproject.com/en/2.1/ref/models/fields/#model-field-types) - there's plenty of options.
 
-It's important to note that the Field types for a Model don't just determine the column's data type in the table, Django also uses this information to:
+It's important to note that the Field types for a Model don't just determine the column's data type in the table, Django also uses this information:
 
-- Determine the default HTML [widget](https://docs.djangoproject.com/en/2.1/ref/forms/widgets/) to render in forms for the Model. For example, a `CharField` uses a `<input type="text">` as its _widget_, whereas, a `TextField` uses a `<textarea>`.
-- Implement some validation in automatically-generated forms
+- To determine the default HTML [widget](https://docs.djangoproject.com/en/2.1/ref/forms/widgets/) to render in forms for the Model. For example, a `CharField` uses a `<input type="text">` as its _widget_, whereas, a `TextField` uses a `<textarea>`.
+- To implement some validation in automatically-generated forms
 
 #### Review Questions
 
@@ -103,11 +103,11 @@ It's important to note that the Field types for a Model don't just determine the
 
 Migrations are used to evolve a database over time - as the requirements of the application change.  However, they can be "destructive" (cause a loss of data), so be careful with migrations if you're working with an application in _production_.
 
-Migrations are just files that are created by running a command Django in Terminal.
+Migrations in Django are just Python files that are created by running a command Django in Terminal.
 
 #### Making Migration Files
 
-Okay, we've defined a `Cat` Model, but the database does not yet have a table to hold all of our furry _model objects_ (rows). 
+Okay, we've defined a `Cat` Model, but the database does not yet have a table to hold all of our furry model instances (rows). 
 
 The following command creates migration files for all models that have been added or changed since the last migration:
 
@@ -117,7 +117,7 @@ $ python3 manage.py makemigrations
 
 The output in the terminal informs us that the following migration file was created: `main_app/migrations/0001_initial.py`
 
-a `migrations` directory is created for an **app** the first time you run `makemigrations`.
+A `migrations` directory is created for an **app** the first time you run `makemigrations`.
 
 You don't have to do anything with the migration files, but since this is the first time we've made one, let's open it and take a peek.
 
@@ -213,9 +213,9 @@ Django refers to the ORM functions available as its [database API](https://docs.
 
 #### Performing CRUD in a Python Interactive Shell
 
-After creating a new Model, **it's a best practice** to take it for a test drive using a Python shell:
+After creating a new Model, it's a best practice to take it for a test drive using a Python shell:
 
-```bash
+```
 $ python3 manage.py shell
 ```
 
@@ -238,13 +238,13 @@ To see all of our Cat objects, enter this command:
 
 Any time you want to perform query operations on a **Model** to retrieve _model objects_ (rows) from a database table, it is done via a **Manager** object.
 
-By default, Django adds a Manager to every Model class - this is the **objects** attribute attached to `Cat` above.
-
-Advanced Django programmers can modify and add custom Managers if they want, however, the default Manager is quite capable as you will see.
+By default, Django adds a Manager to every Model class - this is the `objects` attribute attached to `Cat` above.
 
 ##### **The `<QuerySet>`**
 
-The `<QuerySet []>` returned is a `list`-like object that represents a collection of objects (rows) from the database.
+The `<QuerySet []>` returned represents a database query that can be refined by chaining additional methods to it.
+
+Ultimately though, when the app needs the data, for example, to iterate over cats, the query will be sent to the database and the result is a `list`-like object that represents a collection of model instances (rows) from the database.
 
 Besides `Cat.objects.all()`, let's see some of the other common ORM operations...
 
@@ -280,11 +280,9 @@ Check that your cat was added by using `Cat.objects.all()`.
 
 ##### Adding a `__str__` Method
 
-It's a best practice to add a `__str__` method in our model so that it will print in a more readable way.
+It's a best practice to override the `__str__` method in Models so that they will print in a more helpful way.
 
-The `__str__` method we be added to any Python `class` and it will control what happens when we pass this object to the `print()` function.
-
-For the `Cat` model, we tell `__str__` to return the cat's `name` attribute:
+For the `Cat` model, we'll code `__str__` to return the cat's `name` attribute:
 
 ```python
 # main_app/models.py
@@ -296,7 +294,7 @@ For the `Cat` model, we tell `__str__` to return the cat's `name` attribute:
         return self.name
 ```
 
-Note that changes to a model do not become active in the shell unless you `exit()`, re-launch, and re-import the Models.
+Note that changes to a Model do not become active in the shell unless you `exit()`, re-launch, and re-import the Models.
 
 #### Give Me a "U"
 
@@ -326,7 +324,7 @@ For example, this query would return all cats with the name "Rubber Biscuit":
 
 Using `objects.filter()` and `objects.exclude()` is like writing a `WHERE` clause in SQL.
 
-However, the Django ORM creates **a slew** of [Field lookups](https://docs.djangoproject.com/en/2.1/topics/db/queries/#field-lookups).
+The Django ORM creates several helpful [Field lookups](https://docs.djangoproject.com/en/2.1/topics/db/queries/#field-lookups).
 
 For example if we wanted to query for all cats whose names _contain_ a string:
 
@@ -367,13 +365,13 @@ However, it's a very common data operation to read one specific model object fro
 
 Instead of the `objects.all()` method, we can use the `get()` method like this:
 
-```bash
+```python
 Cat.objects.get(id=1)
 ```
 
 The `get()` method can also be called with multiple `field=value` arguments to query multiple columns.
 
-However, be sure to use `get()` when you **know** the record that you want, because if Django doesn't find it, an error is raised.
+Be sure to use error handling if there's a chance that `get()` won't find what you're looking for because if Django doesn't find it, an error is raised.
 
 #### What About Ordering (sorting)?
 
@@ -399,11 +397,11 @@ Poor old cat:
 
 ## On to the Code!
 
-Time to add some of this ORM magic to the _CatCollector_ app!
+Time to add some of this ORM magic to the  Cat Collector app!
 
 Currently, we are "faking" the data with a `list` of cats.
 
-Time to update `main_app/views.py`...
+Time to update **main_app/views.py**...
 
 First let's be sure to remove the `class Cat...` and the `cats` list.
 
@@ -418,11 +416,11 @@ from .models import Cat
 ...
 
 def cats_index(request):
-		cats = Cat.objects.all()
-		return render(request, 'cats/index.html', { 'cats': cats })
+  cats = Cat.objects.all()
+  return render(request, 'cats/index.html', { 'cats': cats })
 ```
 
-Don't forget to import the `Cat` model too!
+Don't forget to import the `Cat` Model too!
 
 Refresh the page and you should see something like this:
 
@@ -471,13 +469,13 @@ We can add, edit, and remove data objects anytime we need to by browsing to `/ad
 
 ## Adding a Cat "Details" Page
 
-Usually the "index" view showing all cats would only show a "summary" of each cat's info.  For example, just their "name" perhaps.
+Typically, the _index_ page showing all cats would only show a "summary" of each cat's info.  For example, just their "name" perhaps.
 
-Showing the "details" for an object in the database is typically reserved for a separate view that is activated by clicking on that summary info - in this case, the cat's "card" in _index.html_.
+It's common to show the "details" for an object in the database using a separate page that is activated by clicking on that summary info - in this case, the cat's "card" in **index.html**.
 
 #### Typical Process to Add Functionality to an App
 
-<p style="color:red">Remember, nothing is going to happen unless an HTTP request leaves the browser informing the server what the app wants to do.</p>
+Remember, nothing is going to happen unless an HTTP request leaves the browser informing the server what the app wants to do.
 
 When adding additional functionality to a web app we need to do the following:
 
@@ -497,32 +495,32 @@ So what's the URL for viewing a single cat's detail page?
 
 For sure we need to "capture" the `id` of the cat we want the details for in the URL. We use angle brackets to declare a _URL parameter_ to capture values within the _segments_ of a URL.
 
-Let's go with this: `cats/<int:cat_id>`
+Let's go with this: `cats/<int:cat_id>/`
 
-The `int:` part is called a converter and it's used to convert the captured value from a string into, in this case, an integer.
+The `int:` part is called a converter and it's used to match and convert the captured value from a string into, in this case, an integer.
 
 ##### Step 2
 
-As far as the UI is concerned, clicking on a cat's "card" in the _index.html_ should trigger the request to the server to view the details of a cat.
+As far as the UI is concerned, clicking on a cat's "card" in the **index.html** should trigger the request to the server to view the details of a cat.
 
 We can accomplish this by wrapping the card's content with an `<a>` tag and setting its `href` appropriately:
 
 ```html
 <div class="card">
-    <!-- add this line below -->
-    <a href="/cats/{{ cat.id }}">
-        <div class="card-content">
-            <span class="card-title">{{ cat.name }}</span>
-            <p>Breed: {{ cat.breed }}</p>
-            <p>Description: {{ cat.description }}</p>
-            {% if cat.age > 0 %}
-                <p>Age: {{ cat.age }}</p>
-            {% else %}
-                <p>Age: Kitten</p>
-            {% endif %}
-        </div>
+  <!-- add this line below -->
+  <a href="/cats/{{ cat.id }}">
+    <div class="card-content">
+        <span class="card-title">{{ cat.name }}</span>
+        <p>Breed: {{ cat.breed }}</p>
+        <p>Description: {{ cat.description }}</p>
+        {% if cat.age > 0 %}
+           <p>Age: {{ cat.age }}</p>
+        {% else %}
+           <p>Age: Kitten</p>
+        {% endif %}
+    </div>
     <!-- and this one below as well -->
-    </a>
+  </a>
 </div>
 ```
 
@@ -532,17 +530,15 @@ Cool, on to the next step...
 
 ##### Step 3
 
-Now that clicking a cat card is going to send a `GET /cats/<int:id>` request, we need to add a new "route" entry to the `urlpatterns` list in _urls.py_ that will match this request:
+Now that clicking a cat card is going to send a request like `GET /cats/1`, we need to add a new route entry to the `urlpatterns` list in **urls.py** that will match this request:
 
 ```python
-# main_app/urls.py
-
 urlpatterns = [
-    path('', views.home, name='home'),
-    path('about/', views.about, name='about'),
-    path('cats/', views.cats_index, name='index'),
-    # new code below 
-    path('cats/<int:cat_id>/', views.cats_detail, name='detail'),
+  path('', views.home, name='home'),
+  path('about/', views.about, name='about'),
+  path('cats/', views.cats_index, name='index'),
+  # new route below 
+  path('cats/<int:cat_id>/', views.cats_detail, name='detail'),
 ]
 ```
 
@@ -550,7 +546,7 @@ We've decided that the newly added route will invoke an appropriately named _vie
 
 ##### Step 4
 
-As you know, _view functions_ are defined within _views.py_.
+As you know, _view functions_ are defined within **views.py**.
 
 Here's the new `cats_detail` function:
 
@@ -560,8 +556,8 @@ Here's the new `cats_detail` function:
 ...
 
 def cats_detail(request, cat_id):
-	cat = Cat.objects.get(id=cat_id)
-	return render(request, 'cats/detail.html', { 'cat': cat })
+  cat = Cat.objects.get(id=cat_id)
+  return render(request, 'cats/detail.html', { 'cat': cat })
 ```
 
 The `cats_detail` function is using the `get` method to obtain the cat object by its `id`.
@@ -572,11 +568,17 @@ The `cats_detail` function is using the `get` method to obtain the cat object by
 
 ##### Step 5
 
-The `cats_detail` view function is passing a dictionary of data (often called the _context_) to a template called _detail.html_.
+The `cats_detail` view function is passing a dictionary of data (called the _context_) to a template called **detail.html**.
 
-So we want to render the cat data within a _detail.html_ template...
+So we want to render the cat data within a **detail.html** template...
 
-Create the `main_app/templates/cats/detail.html` file and add the following template code:
+Create the **detail.html** template:
+
+```
+$ touch main_app/templates/cats/detail.html
+```
+
+Now let's add the following template code:
 
 ```html
 {% extends 'base.html' %}
@@ -585,22 +587,22 @@ Create the `main_app/templates/cats/detail.html` file and add the following temp
 <h1>Cat Details</h1>
 
 <div class="card">
-    <div class="card-content">
-        <span class="card-title">{{ cat.name }}</span>
-        <p>Breed: {{ cat.breed }}</p>
-        <p>Description: {{ cat.description }}</p>
-        {% if cat.age > 0 %}
-            <p>Age: {{ cat.age }}</p>
-        {% else %}
-            <p>Age: Kitten</p>
-        {% endif %}
-    </div>
+  <div class="card-content">
+    <span class="card-title">{{ cat.name }}</span>
+    <p>Breed: {{ cat.breed }}</p>
+    <p>Description: {{ cat.description }}</p>
+    {% if cat.age > 0 %}
+      <p>Age: {{ cat.age }}</p>
+    {% else %}
+      <p>Age: Kitten</p>
+    {% endif %}
+  </div>
 </div>
 
 {% endblock %}
 ```
 
-It's basically the same cat "card", except the wrapping `<a>` tags have been removed.
+It's basically the same cat "card" from **index.html**, except the wrapping `<a>` tags have been removed.
 
 **What's that `{% extends 'base.html' %}{% block content %}` business about?**
 
@@ -610,33 +612,33 @@ Okay, let's refresh and check it out!
 
 ##### Removing Hand-coded URLs in Templates
 
-Although everything works nicely, hand-coding the URLs in templates, is not considered a best practice because during development, URL's may change.
+Although everything works nicely, hand-coding the URLs in templates, is not considered a good practice because during development, URL's may change.
 
-For example, in _index.html_, we find:
+For example, in **index.html**, we find:
 
 ```html
 ...
 <div class="card">
-    <a href="/cats/{{ cat.id }}">
-    ...
+  <a href="/cats/{{ cat.id }}">
+  ...
 ```
 
 Django has a better way!
 
-Let's take another look at the `urlpatterns` in _urls.py_:
+Let's take another look at the `urlpatterns` in **urls.py**:
 
 ```python
 urlpatterns = [
-    path('', views.home, name='home'),
-    path('about/', views.about, name='about'),
-    path('cats/', views.cats_index, name='index'),
-    path('cats/<int:cat_id>/', views.cats_detail, name='detail'),
+  path('', views.home, name='home'),
+  path('about/', views.about, name='about'),
+  path('cats/', views.cats_index, name='index'),
+  path('cats/<int:cat_id>/', views.cats_detail, name='detail'),
 ]
 ```
 
-That `name` argument within each `path` is used to obtain the correct URL in our templates using the built-in `url` template tag!
+That `name` argument within each `path` is used to obtain the correct URL in templates using DTL's `url` template tag!
 
-In _index.html_, replace this code:
+In **index.html**, replace this code:
 
 ```html
 <a href="/cats/{{cat.id}}">
@@ -650,7 +652,11 @@ With this code:
 
 Congrats!
 
+## Lab
+
 For practice, do everything we did in this lesson on your Finch Collector project!
+
+Don't forget to make commits.
 
 ## Resources
 
