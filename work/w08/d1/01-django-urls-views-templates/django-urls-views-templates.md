@@ -21,6 +21,8 @@ All lessons this week are 100% Django!
 
 The lessons will add features, piece-by-piece, to a modern full-stack reference app named **CatCollector**.
 
+Let me show you the final version we're going to build this week.
+
 Then, after the lessons, you will use lab time to repeat what you saw in the lesson by building your own app named anything you want, say - **FinchCollector**.
 
 Here's an overview of the high-level topics we'll be covering this week, in order:
@@ -134,7 +136,7 @@ $ python3 manage.py runserver
 
 Browse to `localhost:8000` and make sure you see the rocket on the page:
 
-<img src=https://i.imgur.com/RozMgJ0.png">
+<img src="https://i.imgur.com/RozMgJ0.png">
 
 Ignore the red message about unapplied migrations, we'll take care of that in a bit.
 
@@ -142,7 +144,7 @@ Ignore the red message about unapplied migrations, we'll take care of that in a 
 
 Earlier we created a dedicated `catcollector` PostgreSQL database.
 
-Like other configuration, we will need to update **settings.py**:
+A Django project's configuration lives in **settings.py**. Let's update it to use our `catcollector` database:
 
 ```python
 DATABASES = {
@@ -183,7 +185,7 @@ So, let's start by setting up **main_app**'s own **urls.py**:
 
 1. Create the URLconf module:
 
-	```python
+	```
 	$ touch main_app/urls.py
 	```
 
@@ -198,11 +200,11 @@ So, let's start by setting up **main_app**'s own **urls.py**:
 	    path('', include('main_app.urls')),
 	]
 	```
-	Be sure to import the `include` function.
+	Be sure to import the `include` function near the top.
 	
 	Note that similar to how Express appends paths defined in a router module to the path in `app.use`, the paths defined in `'main_app.urls'` will be appended to the path specified in the `include` function.
 	
-	Close up **catcollector/urls.py** you will never need to touch it again because all routes will be defined in **main_app/urls.py**.
+	Close up **catcollector/urls.py** you will likely never need to touch it again because all routes will be defined in **main_app/urls.py**.
 
 3. Now for the boilerplate needed in **main_app/urls.py**:
 
@@ -232,7 +234,7 @@ urlpatterns = [
 
 The above code defines a root path using an **empty string** and maps it to the `view.home` view function that does not exist yet - making the server unhappy.
 
-The `name='home'` kwarg is optional but can come in handy for referencing the URL in other parts of the app.
+The `name='home'` kwarg is optional but will come in handy for referencing the URL in other parts of the app, especially from within templates.
 
 The Home page route has been defined!  On to the view...
 
@@ -284,7 +286,7 @@ Test it by browsing to `localhost:8000/about`:
 
 So, we just finished responding to requests by using `HttpResponse()` to send back a string of HTML (just like we did when using Express for the first time using `res.send()`).
 
-Now we want to step it up by rendering a template instead.
+Now let's move beyond the baby step by rendering a template instead.
 
 Just like how Express can use different templating engines (Jade, EJS, etc.), so can Django.
 
@@ -297,7 +299,7 @@ Not surprisingly, a Django project is pre-configured to use DTL, which is very c
 
 #### One-time Template Setup
 
-A Django project is configured to look for templates inside of a `templates` folder within each app.
+By default, a Django project is configured to look for templates inside of a `templates` folder within each app's folder - `main_app` in our case.
 
 Let's create that `templates` folder for `main_app` to hold all of its template files:
 
@@ -307,17 +309,17 @@ $ mkdir main_app/templates
 
 #### Create an `about.html` Template
 
-Let's start with a simple template for our About page:
+Let's start with a simple template for the About page:
 
 1. Create the template:
 
 	```
 	touch main_app/templates/about.html
 	```
-	Note that Django templates have a simple `.html` file extension
+	Note that Django templates have a simple `.html` file extension.
 
 
-2. Open **about.html** and add the boilerplate:
+2. Open **about.html** and add the boilerplate (`! + tab`):
 
 	```html
 	<!DOCTYPE html>
@@ -343,7 +345,7 @@ Let's start with a simple template for our About page:
 	<footer>All Rights Reserved, &copy; 2019 Cat Collector</footer>
 	```
 
-4. Now in the `about` View in **views.py** we will now be **rendering** our template instead of sending a string response. Update it as follows:
+4. Now update the `about` view in **views.py** to `render` the **about.html** template instead of sending a string response:
 
 	```python
 	# main_app/views.py
@@ -354,20 +356,20 @@ Let's start with a simple template for our About page:
 	def about(request):
 	  return render(request, 'about.html')
 	```
-	Much like Express' `res.render()`, except for the extra `request` arg and that the `.html` is necessary.
+	Much like Express' `res.render()`, except for the positional `request` arg. Also, the `.html` extension is required.
 	
 
-Browsing to `localhost:8000/about` will render the new **about.html** template.
+Browsing to `localhost:8000/about` will now render the new **about.html** template!
 
-So far, so goo, but we haven't used any dynamic templating to render data, perform control flow, etc.
+So far, so good, but we haven't yet used any of DTL's power to dynamically render data, perform control flow, etc.
 
-However, before we break the DRY principle, let's see how we can use what Django calls **template inheritance**, which we know from Express as _partials_.
+However, before we go any further and break the DRY principle by repeating the boilerplate in future templates, let's see how we can use what Django calls **template inheritance**.
 
 ## Template Inheritance (Partials)
 
 Django has a [template inheritance](https://docs.djangoproject.com/en/2.1/ref/templates/language/#template-inheritance) feature built-in.
 
-Template inheritance is like using partials in EJS, except they're far more flexible.
+Template inheritance is like using partials in EJS with Express, except they're more flexible.
 
 The reason Django calls it template _inheritance_ is because:
 
@@ -380,7 +382,7 @@ Here's how it works in practice. First let's create a **base.html** template (na
 $ touch main_app/templates/base.html
 ```
 
-This is the template that will hold all of the boilerplate and markup that belongs on every page, such as navigation.
+This is the template that will hold all of the boilerplate and markup that belongs on every page, such as the `<head>`, navigation, even a footer!
 
 This will be our sweet boilerplate for now:
 
@@ -411,7 +413,7 @@ This will be our sweet boilerplate for now:
         {% block content %}
         {% endblock %}
     </main>
-  	<footer class="page-footer">
+  	 <footer class="page-footer">
        <div class="right">All Rights Reserved, &copy; 2019 Cat Collector &nbsp;</div>
     </footer>
 </body>
@@ -427,7 +429,7 @@ However, the most important part of the boilerplate in regards to template inher
 {% endblock %}
 ```
 
-Hey, that's our first look at DTL **template tags**, `block` & `endblock`, enclosed within `{% %}` delimiters.
+Hey, that's our first look at DTL **template tags**, `block` & `endblock`, enclosed within the template tag delimiters `{% %}`.
 
 Django [template tags](https://docs.djangoproject.com/en/2.1/ref/templates/builtins/#ref-templates-builtins-tags) control logic within a template.  Depending upon the tag, they may, or may not, result in content being embedded in the page. 
 
@@ -446,16 +448,16 @@ To see this in action, let's update **about.html** so that it extends **base.htm
 {% endblock %}
 ```
 
-Refresh. Yeah, it's not perfect (yet), but the template inheritance is working!
+Refresh. Yeah, it's not great (yet), but the template inheritance is working!
 
 
 ## Including Static Files in a Template
 
 Hopefully you are familiar with what static files are, you know, `.css`, `.js`, image files, etc.
 
-If we want catcollector to look better, we're going to have to be able to define some custom CSS.
+If we want Cat Collector to look better, we're going to have to be able to define some custom CSS.
 
-Django projects are pre-configured with a `'django.contrib.staticfiles'` app installed designed to serve static files.
+Django projects are pre-configured with a `'django.contrib.staticfiles'` app installed for the purpose of serving static files.
 
 At the bottom of **settings.py**, there is a `STATIC_URL = '/static/'` variable that declares what folder within the app to look for static files in.
 
@@ -536,7 +538,7 @@ Luckily the [process of how to add a feature to a web application](https://gist.
 
 First, it's important to know that Django's URL-based routing is not RESTful routing - **why is this the case?**
 
-However, in this user story, the path to view the **index** page of cats, what would have been the RESTful path works: `cats/`
+For this **index** page user story, what would have been the RESTful path works for Django's URL only routing as well: `cats/`
 
 #### Step 2 - Create the UI
 
@@ -548,7 +550,7 @@ For the UI, it makes sense to add the **View All My Cats** link to the navigatio
 <li><a href="/cats">View All My Cats</a></li>
 ```
 
-Make sure to continue to use leading slashes in the HTML!
+Be sure to continue to use leading slashes in the HTML!
 
 A quick refresh and we have our link:
 
@@ -556,7 +558,7 @@ A quick refresh and we have our link:
 
 #### Step 3 - Define the Route
 
-To **main_app/urls.py** we go:
+Now let's add the new route to **main_app/urls.py**:
 
 ```python
 urlpatterns = [
@@ -575,7 +577,7 @@ Of course, by referencing a nonexistent view, the server's not happy.
 
 When working in Django, we'll just have to get used to calling _controller actions_, **views** instead.
 
-Let's add the `cats_index` view to **views.py**.  If there's time, we'll type this, otherwise, we'll copy and review:
+Let's type in the `cats_index` view inside of **views.py**:
 
 ```python
 # Add new view
@@ -585,15 +587,15 @@ def cats_index(request):
 
 Two interesting things above:
 
-1. We're namespacing the `index.html` template by putting it in a new `templates/cats` folder - I bet you know why this is a good idea.
+1. We're namespacing the `index.html` template by putting it in a new `templates/cats` folder for organizational purposes.
 
-2. Similar to how we passed data to a template in Express using a JS object, we pass an extra dictionary argument in Django's `render` function.
+2. Similar to how we passed data to a template in Express using a JS object, we pass a dictionary as a third positional argument in Django's `render` function.
 
 Now for the cats data...
 
 We're going to use a `Cat` class to simulate a Cat Model and use it to create some cats in the `cats` list:
 
-```
+```python
 # Add the Cat class & list and view function below the imports
 class Cat:
     def __init__(self, name, breed, description, age):
@@ -611,7 +613,7 @@ cats = [
 
 #### Step 5 - Respond to the Client's HTTP Request
 
-We have already responded to the client via by calling the `render` method in the view.
+We have already responded to the client via the `render` method in the view.
 
 We just need to create the **cats/index.html** template.
 
@@ -627,7 +629,7 @@ Now create the **cats/index.html** template file:
 $ touch main_app/templates/cats/index.html
 ```
 
-Now the fun stuff. We'll copy/paste and review:
+Now the fun stuff. We'll type it in if there's time, otherwise we'll copy/paste and review:
 
 ```html
 {% extends 'base.html' %}
@@ -666,23 +668,27 @@ Next notice how double curly brace syntax `{{}}` is used to print the values of 
 
 > Note: If the property on an object is a method, it is automatically invoked by the template without any arguments and we **do not** put parens after the method name.  For example, assuming a person object has a getFullName method, it would be used like this `{{ person.getFullName }}` in the template. This is another example of how DTL is it's own language and not Python.
 
-Some of you have probably already clicked the link and are grinning:
+Some of you have probably already clicked the link and are understandably grinning:
 
 <img src="https://i.imgur.com/Aak87k4.png">
 
 ## Summary
 
-You should now have a somewhat boring but completely functional application that renders a hardcoded array of Cat objects in a cats index template.
+You now have a minimal but completely functional application that renders an _index_ page of a hardcoded list of Cat objects.
 
 You now know pretty much all there is to know about URLs and the overall structure of a Django app.
 
 However, we've only touched upon the basics of views and DTL templating.
 
-We're going to get our first look at Models in the next lesson and use one to replace the current `Cat` class so that we can save cats in the database!
+We're going to get our first look at Models in the next lesson where we will use one to replace the current `Cat` class so that we can save cats in the database!
 
-Although the next lesson builds upon this one, it's okay if your code is not 100% because starter code will be provided.
+## Lab
 
-The lab for this lesson is repeating what we've done, except you'll call the project something else and collect Finches, or whatever.
+The lab for this lesson is repeating everything we just did, except you'll collect something else like Finches and call the project something like Finch Collector, or whatever.
+
+The final version of your Finch Collector project will be a deliverable.
+
+Because it will be fairly comprehensive, you should **create it outside of the class repo** so that you can add it to your personal GitHub.
 
 ## References
 
