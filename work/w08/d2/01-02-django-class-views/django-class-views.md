@@ -98,7 +98,7 @@ CBVs are highly configurable by adding class attributes, overriding methods and 
 
 For example, here's how we could have used the `template_name` attribute in the above `BookList` to render a template other than the default:
 
-```pyhton
+```python
 class BookList(ListView):
     model = Book
     template_name = 'books/index.html'
@@ -106,7 +106,7 @@ class BookList(ListView):
 
 ## 4. Creating Data Using a CBV
 
-We need a way to create cats in Cat Collector.
+We need a way to create cats in Cat Collector!
 
 #### Add the Route
 
@@ -118,7 +118,7 @@ If this we're an Express app, we would need to code two separate routes and cont
 However, using Django, we only need a single URL-based route because a `CreateView` CBV will automatically:
 
 - Create a Django [ModelForm]() used to automatically create the form's inputs for the Model. 
-- Render a template (where our `<form>` will be) if the request is a `GET`, and
+- If the request is a `GET`, render a template (where we'll put include a `<form>`)  and
 - In the case of a `POST`, use the form's contents to create data and perform a redirect.
 
 Let's add that new URL pattern to **main_app/urls.py**
@@ -134,15 +134,15 @@ urlpatterns = [
 ]
 ```
 
-The `path()` function still needs a view **function**, not a class, as its second argument and that's what a CBV's `as_view()` method returns.
+The `path()` function still needs a view **function** as its second argument, not a class, and that's what a CBV's `as_view()` method returns.
 
-> Did you notice that we didn't have to put that route above the `cats/<int:cat_id>/'`?  Django won't match that route unless there's an integer in the second segment, thus it ignores `cats/create/`
+> Did you notice that we didn't have to put that route above the `cats/<int:cat_id>/'`?  Django won't match that route unless there's something that looks like an integer in the second segment, thus it ignores `cats/create/`
 
 We'll need to add the `views.CatCreate` CBV to make the server happy, but first let's add a link to the nav for adding a cat.
 
 #### Update the UI
 
-We know our path, let's update **base.html** to add a link to the nav:
+Now that we know the path used to create cats, let's update **base.html** to add a link to the nav:
 
 ```html
 <li><a href="{% url 'about' %}">About</a></li>
@@ -174,9 +174,9 @@ class CatCreate(CreateView):
   fields = '__all__'
 ```
 
-The `fields` attribute is required and can be used to limit or change the ordering of the attributes from the `Cat` model are generated in the `ModelForm` passed to the template.
+The `fields` attribute is required and can be used to limit or change how the ordering of the attributes from the `Cat` model are generated in the `ModelForm` passed to the template.
 
-We've taken advantage of the special `__all__` value to specify that the form should contain all of the `Cat` Model's attributes. Alternatively, we could have listed which fields in a list like this:
+We've taken advantage of the special `'__all__'` value to specify that the form should contain all of the `Cat` Model's attributes. Alternatively, we could have listed which fields in a list like this:
 
 ```python
 class CatCreate(CreateView):
@@ -214,16 +214,16 @@ There's not too much so we'll review as we type it in:
 {% extends 'base.html' %}
 
 {% block content %}
-    <!-- Leaving the action empty makes the form post to the same url used to display it -->
-	<form action="" method="post">
-		<!-- Django requires the following for security purposes -->
-    	{% csrf_token %}
-    	<table>
-      		<!-- Render the inputs inside of <tr>s & <td>s -->
-      		{{ form.as_table }}
-    	</table>
-    	<input type="submit" value="Submit!" class="btn">
-	</form>
+  <!-- Leaving the action empty makes the form post to the same url used to display it -->
+  <form action="" method="post">
+    <!-- Django requires the following for security purposes -->
+    {% csrf_token %}
+    <table>
+      <!-- Render the inputs inside of <tr>s & <td>s -->
+      {{ form.as_table }}
+    </table>
+    <input type="submit" value="Submit!" class="btn">
+  </form>
 {% endblock %}
 ```
 
@@ -283,7 +283,7 @@ from django.db import models
 from django.urls import reverse
 ```
 
-With most of the fundamentals of class-based views covered in fair amount of detail above, we'll be a little more brief by adding the functionality to delete and update cats together...
+We've covered all of the fundamentals of class-based views above so we'll be a little more brief while adding the functionality to delete and update cats by combining their steps together...
 
 ## 5. Updating & Deleting Data Using a CBV
 
@@ -303,11 +303,11 @@ path('cats/<int:pk>/update/', views.CatUpdate.as_view(), name='cats_update'),
 path('cats/<int:pk>/delete/', views.CatDelete.as_view(), name='cats_delete'),
 ```
 
-By default, CBVs that work with individual model instances will expect to find a named parameter of `pk`. This is why didn't use `cat_id` as we've done in the _detail_ entry.
+By default, CBVs that work with individual model instances will expect to find a named parameter of `pk`. This is why we didn't use `cat_id` as we did in the _detail_ entry.
 
 #### Update the UI
 
-Now we need to see those links to show up on the detail view of a cat.
+We need to see EDIT and DELETE links on a cat's detail page.
 
 Let's update **templates/cats/detail.html** by adding to a cat's "card" a `<div>` with a Materialize class of `card-action`:
 
@@ -361,11 +361,11 @@ First though, it would be nice to see the name of the cat we're editing...
 
 #### Customize `cat_form.html`
 
-Since we didn't include `'name'` in the fields list in `CatUpdate`, the name is written into the form.
+Since we didn't include `'name'` in the fields list in `CatUpdate`, the `name` attribute isn't listed.
 
 We're going to customize **cat_form.html** to show the cat's name that is being edited, and learn a little more about Django in the process.
 
-The CBVs designed to work with a single model instance automatically pass as part of the context an `object` attribute representing the model instance.
+The CBVs that work with a single model instance automatically pass as part of the context an `object` attribute representing the model instance.
 
 `object` will be set to `None` in a `CreateView`, which makes sense.
 
