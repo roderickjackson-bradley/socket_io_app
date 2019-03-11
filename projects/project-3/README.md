@@ -117,10 +117,13 @@ Working in a team is going to require more upfront planning to ensure the team i
 
 ### Unit 3 Assessment
 
-The goal of this unit's assessment will be to gauge your ability to develop a minimal Django application that:
+After project presentations, there will be a unit assessment.
 
-- Renders a list of To Do items.
-- Has a form for entering new To Do items.
+The goal of this unit's assessment will be to gauge your ability to develop a minimal full-stack Django application that:
+
+- Renders a list of items.
+- Has a form for entering new items.
+- Provides for the deletion of an item (bonus).
 
 You will work on the assessment individually, however, the assessment is "open book", so you will have access to all notes, code, lessons, google, etc.
 
