@@ -658,7 +658,6 @@ For practice, do everything we did in this lesson on your Finch Collector projec
 
 Don't forget to make commits.
 
-
 ## Resources
 
 [Django Model API](https://docs.djangoproject.com/en/2.1/ref/models/)
