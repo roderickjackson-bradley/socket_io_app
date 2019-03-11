@@ -694,5 +694,6 @@ Because it will be fairly comprehensive, you should **create it outside of the c
 
 [Django Template Docs](https://docs.djangoproject.com/en/2.1/ref/templates/)
 
+
 [Django Static Files](https://docs.djangoproject.com/en/2.1/howto/static-files/)
 
