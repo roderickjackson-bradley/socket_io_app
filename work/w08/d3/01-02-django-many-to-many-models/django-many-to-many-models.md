@@ -27,13 +27,13 @@
 
 The starter code for this lesson has had quite a bit of code added to it since you last saw the Cat Collector.
 
-However, none of the code has anything that you haven't worked with already.
+However, none of the additional code has anything that you haven't worked with already.
 
-Because many-to-many relationships require a Model that is independent of other models, a `Toy` Model, and all of its CRUD has been implemented.
+Because many-to-many relationships require a Model that is independent of other models, a `Toy` Model and all of its CRUD has been implemented.
 
 This way, we can focus on how to implement the actual `Cat >--< Toy` relationship in this lesson.
 
-Because a new `Toy` model has been, there are migration files in the starter code that have not yet been migrated in your copy of the database. Let's do that now:
+Because a new `Toy` model has been, there are migration files in the starter code that have not yet been migrated in the database on your computer. Let's do that now:
 
 ```
 $ python3 manage.py migrate
@@ -51,9 +51,9 @@ Browse to `localhost:8000` and checkout the CRUD features for Toys.
 
 As you can see, the `Toy` Model is pretty minimal, just `name` and `color` attributes.
 
-Go ahead and create a view toys so that you have them to assign to cats later.
+Go ahead and create a few toys so that you have them to assign to cats later.
 
-After you're done having fun, let's take a look at the `Toy`-related key Django modules in `main_app`:
+After you're done, let's take a look at the `Toy`-related Django modules in `main_app`:
 
 - **models.py**
 - **urls.py**
@@ -65,7 +65,7 @@ Now that we have One-to-Many relationships under our belt, it's time to see how 
 
 Because Django is going to perform quite a bit of magic behind the scenes, it's good to know what it takes to implement M:M relationships in any relational databases.
 
-Unlike MongoDB, which can easily implement one and many-to-many relationships without much fuss, SQL databases need what is known as a **join table**.
+Unlike MongoDB, which can easily implement both one and many-to-many relationships without much fuss, SQL databases need what is known as a **join table** to implement M:M relationships.
 
 Join tables provide the "glue" between two other tables in a database.  
 
@@ -75,9 +75,9 @@ Each row in the join table contains _foreign keys_ for the other two tables' _pr
 
 ## 4. Many-to-Many Relationship in Django
 
-As usual, the Django framework handles a lot of the heavy lifting when it comes to using Many-to-Many Relationships between Models.
+As usual, the Django framework handles a lot of the heavy lifting when it comes to working with Many-to-Many Relationships between Models.
 
-Forms and templates aside, all we need to do to implement a many-to-many using Django's Models is:
+Forms and templates aside, all we need to do to implement a many-to-many relationship using Django is:
 
 1. Add a `ManyToManyField` on one side of the relationship
 2. Create the migration and migrate it to update the database
@@ -136,7 +136,7 @@ $ from main_app.models import *
 
 When we perform CRUD using a Model in Django, we've used the the `objects` manager to do it. For example, let's use the manager to query for all cats:
 
-```
+```python
 >>> Cat.objects.all()
 <QuerySet [<Cat: Biscuit>, <Cat: Morris>, <Cat: Maki>]>
 ```
@@ -145,20 +145,20 @@ However, when a one-to-many or many-to-many relationship exists, Django also cre
 
 To check this out, let's query for a cat and save it in a variable:
 
-```
+```python
 >>> cat = Cat.objects.get(name='Maki')
 ```
 
 Now, thanks to the `toys = models.ManyToManyField(Toy)` field we added, we can use the `toys` _related manager_ like this:
 
-```
+```python
 >>> cat.toys.all()
 <QuerySet []>   # Maki has no toys associated with it yet
 ```
 
 Let's grab the first toy:
 
-```
+```python
 >>> first_toy = Toy.objects.first()
 >>> first_toy
 <Toy: Cat Charmer>
@@ -166,7 +166,7 @@ Let's grab the first toy:
 
 Although we didn't add another field on the `Toy` Model, Django still created a related manager that allows a toy to read, add & remove associated cats:
 
-```
+```python
 >>> first_toy.cat_set.all()
 <QuerySet []>
 ```
@@ -179,7 +179,7 @@ To add an association, use the related manager's `add` method.
 
 Let's associate the `cat` and the `first_toy`:
 
-```
+```python
 >>> cat.toys.add(first_toy)
 >>> cat.toys.all()
 <QuerySet [<Toy: Cat Charmer>]>
@@ -189,7 +189,7 @@ Let's associate the `cat` and the `first_toy`:
  
 Let's get crazy and associate the last cat with both the first and last toy:
 
-```
+```python
 >>> Cat.objects.last().toys.add(Toy.objects.first(), Toy.objects.last())
 >>> Cat.objects.last().toys.all()
 <QuerySet [<Toy: Cat Charmer>, <Toy: Bouncy Mouse>]>
@@ -203,7 +203,7 @@ To remove an association, use the related manager's `remove` method.
 
 Let's remove the association between the `cat` and the `first_toy`, but this time we'll do it using `first_toy`:
 
-```
+```python
 >>> first_toy.cat_set.all()
 <QuerySet [<Cat: Morris>, <Cat: Maki>]>   # Associated with two cats
 >>> cat    # Going to unassociate this cat
@@ -215,14 +215,14 @@ Let's remove the association between the `cat` and the `first_toy`, but this tim
 
 Here's how we can use a `for...in` loop and the `clear()` method to remove all associations between cats and toys:
 
-```
+```python
 >>> for c in Cat.objects.all():
 ...     c.toys.clear()    # Don't forget to tab
 ... [press enter]
 >>>
 ```
 
-Fun stuff!  Exit the shell by typing `exit()`
+Fun stuff!  Exit the shell by typing `ctrl + D` or `exit()`
 
 ## 5. Implement the Cat & Toy Association in Cat Collector
 
