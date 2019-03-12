@@ -614,7 +614,7 @@ Refreshing and inspecting the elements using DevTools shows that our `<form>` is
 
 <img src="https://i.imgur.com/ENEb2d0.png">
 
-Now let's turning our attention back to the `add_feeding` function. 
+Now let's turn our attention back to the `add_feeding` function. 
 
 Here it is:
 
