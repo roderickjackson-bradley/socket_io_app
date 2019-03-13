@@ -136,11 +136,17 @@ You'll have to enter a **globally unique** _Bucket name_. I'm willing to sell "c
 
 Then select the nearest _Region_ as follows:
 
-<img src="https://i.imgur.com/0EtWKYH.png">
+<img src="https://i.imgur.com/pgQHKMB.png">
 
 For the best performance, always be sure to select the nearest location to where most of your users will be.  For this lesson, be sure to select the Region nearest you.
 
-Click the **Create** button (bottom-left of popup).
+Click the **Next** button (bottom-right of popup) - **TWICE** to get to this screen:
+
+<img src="https://i.imgur.com/z5FAnTV.png">
+
+Be sure to unselect all four checkboxes as shown above.
+
+Click **Next**, then a new screen will appear where you will click the **Create Bucket** button!
 
 The bucket has been created!
 
@@ -330,7 +336,7 @@ from .forms import FeedingForm
 # new/updated imports below
 import uuid
 import boto3
-from .models import Cat, Photo
+from .models import Cat, Toy, Photo
 ```
 
 Next, we're going to define a couple of constants we'll use in the _view function_.
