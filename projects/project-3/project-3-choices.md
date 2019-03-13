@@ -4,7 +4,7 @@
 |---|:---:|:---:|:---:|:---:|:---:|
 | **TEXAS** |  |  |  |  |  |
 | Anna, Son, Ursula |  |  |  |  |  |
-| **Django Unchained:**<br>Nhung, Salvador, Siara |  |  |  |  |  |
+| **Django Unchained:**<br>Nhung, Salvador, Siara |  |  |  | [link](https://trello.com/b/K6kJmv9J/foodraiseratx) |  |
 | Andrey, Josh, Paul |  |  |  |  |  |
 | Alexis, Kyle S, Tyler |  |  |  |  |  |
 | D'Angelo, Don, Kyle A |  |  |  |  |  |
