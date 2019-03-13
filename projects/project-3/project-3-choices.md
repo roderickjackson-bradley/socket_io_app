@@ -7,7 +7,7 @@
 | **Django Unchained:**<br>Nhung, Salvador, Siara | FoodRaiserATX |  | [link](https://docs.google.com/presentation/d/1-6OqntLFfdrx6nVp4mRhuVxSXJuNfktb_uYloKOpJ44/edit#slide=id.g5224fbf7f3_0_77) | [link](https://trello.com/b/K6kJmv9J/foodraiseratx) |  |
 | Andrey, Josh, Paul |  |  |  |  |  |
 | Alexis, Kyle S, Tyler |  |  |  |  |  |
-| **happy_little_coders**<br>D'Angelo, Don, Kyle A |  |  |  | [link](https://spark.adobe.com/page/BxR1rk3TJeIEz/) |  |
+| **happy\_little\_coders**<br>D'Angelo, Don, Kyle A |  |  |  | [link](https://spark.adobe.com/page/BxR1rk3TJeIEz/) |  |
 | Henry, Irvin, RJ | Writerr. |  | [link](https://spark.adobe.com/page/BxR1rk3TJeIEz/) |  |  |
 | Ali, Drew, Michelle |  |  |  |  |  |
 | **LA** |  |  |  |  |  |
