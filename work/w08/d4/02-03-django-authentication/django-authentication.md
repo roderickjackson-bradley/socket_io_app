@@ -475,6 +475,9 @@ If you use VS Code's UI to copy it, just make sure **signup.html** is within the
 Make the necessary changes to **signup.html**:
 
 ```html
+{% extends 'base.html' %}
+{% block content %}
+
 <h1>Sign Up</h1>
 
 {% if error_message %}<p class="red-text">{{ error_message }}</p>{% endif %}
@@ -484,6 +487,8 @@ Make the necessary changes to **signup.html**:
   {{ form.as_p }}
   <input type="submit" class="btn" value="signup">
 </form>
+
+{% endblock %}
 ```
 
 With the above template, clicking the **Sign Up** in the nav should show a page like the following:
