@@ -8,7 +8,7 @@
 | **Y'aller Ballerz**<br>Andrey, Josh, Paul |  |  |  |  |  |
 | Alexis, Kyle S, Tyler |  |  |  |  |  |
 | **happy\_little\_coders**<br>D'Angelo, Don, Kyle A | WDI Homework Tracker | [link](https://github.com/dmshakur/homework_tracker) | [link](https://docs.google.com/presentation/d/1puSIJzocx863FpTMzGpc9qtUEER_d37f00WisMeDeos/edit#slide=id.p) | [link](https://trello.com/b/w0hA2pvD/wdi-project-3) |  |
-| **Rowdy Ruff Boyz**<br>Henry, Irvin, RJ | Writerr. |  | [link](https://spark.adobe.com/video/gtfrwPk5tGH3W) |  |  |
+| **Rowdy Ruff Boyz**<br>Henry, Irvin, RJ | Writrr |  | [link](https://spark.adobe.com/video/gtfrwPk5tGH3W) |  |  |
 | **DATX**<br>Ali, Drew, Michelle | Kids MeetUp |  | [link](https://docs.google.com/presentation/d/1p3Q7vMzOEqd_vT0TUYXEc4E_LBAK1cxazGH9B38Io_I/edit#slide=id.gc6f8954bc_0_53) |  |  |
 | **LA** |  |  |  |  |  |
 | **MGR international**<br>Bonny, David, Weronika | I Don't Know Yet |  | [link](https://docs.google.com/presentation/d/1zvDjPjBGm_4EokHQNywKntfCZCpNvSdJI4-4fVKDmXk/edit#slide=id.g529abe8f2c_0_5) | [link](https://trello.com/b/Z1mn9UPK/i-dont-know-yet) |  |
