@@ -18,5 +18,8 @@ It is a requirement to complete at least **80%** of the following to to receive:
 |Tue 2/12|[Express "Dev Skills" Lab](https://git.generalassemb.ly/WDI-CC/WDI-CC-6/blob/master/work/w04/d2/04-dev-skills-lab-part-2.md)|
 |Wed 2/13 (due 2/18)|[Mongoose Flights Lab (3 parts)](https://git.generalassemb.ly/WDI-CC/WDI-CC-6/blob/master/work/w04/d5/02-04-mongoose-flights-lab-part-3.md)|
 |Wed 2/20|[Mongoose Movies API Lab](https://git.generalassemb.ly/WDI-CC/WDI-CC-6/tree/master/work/w05/d2/04-producing-api-lab)|
+|Wed 3/5|[Python Control Flow Lab](https://git.generalassemb.ly/WDI-CC/WDI-CC-6/blob/master/work/w07/d2/03-04-control-flow-lab/control-flow-lab.md)|
+|Wed 3/11 (due 3/18)|Django Finch Collector Project (duplicate everything done during week 8 building out the Cat Collector App)|
+
 
 
