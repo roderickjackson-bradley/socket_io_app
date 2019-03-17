@@ -20,6 +20,8 @@ It is a requirement to complete at least **80%** of the following to to receive:
 |Wed 2/20|[Mongoose Movies API Lab](https://git.generalassemb.ly/WDI-CC/WDI-CC-6/tree/master/work/w05/d2/04-producing-api-lab)|
 |Wed 3/5|[Python Control Flow Lab](https://git.generalassemb.ly/WDI-CC/WDI-CC-6/blob/master/work/w07/d2/03-04-control-flow-lab/control-flow-lab.md)|
 |Wed 3/11 (due 3/18)|Django Finch Collector Project (duplicate everything done during week 8 building out the Cat Collector App)|
+|Tue 3/26|[React "Floor Plan" Lab](https://git.generalassemb.ly/WDI-CC/WDI-CC-6/blob/master/work/w10/d2/04-react-floorplan-lab.md)|
+
 
 
 

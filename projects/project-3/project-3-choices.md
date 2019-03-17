@@ -9,7 +9,7 @@
 | Alexis, Kyle S, Tyler |  |  |  |  |  |
 | **happy\_little\_coders**<br>D'Angelo, Don, Kyle A | WDI Homework Tracker | [link](https://github.com/dmshakur/homework_tracker) | [link](https://docs.google.com/presentation/d/1puSIJzocx863FpTMzGpc9qtUEER_d37f00WisMeDeos/edit#slide=id.p) | [link](https://trello.com/b/w0hA2pvD/wdi-project-3) |  |
 | **Rowdy Ruff Boyz**<br>Henry, Irvin, RJ | Writrr | [link](https://github.com/Developirv/writtr) | [link](https://spark.adobe.com/video/gtfrwPk5tGH3W) | [link](https://trello.com/writrr) |  |
-| **DATX**<br>Ali, Drew, Michelle | Kids MeetUp |  | [link](https://docs.google.com/presentation/d/1p3Q7vMzOEqd_vT0TUYXEc4E_LBAK1cxazGH9B38Io_I/edit#slide=id.gc6f8954bc_0_53) | [link](https://trello.com/b/uNiUV3Hu/kids-meetup) |  |
+| **DATX**<br>Ali, Drew, Michelle | Kids MeetUp | [link](https://github.com/fagleyali/kidsmeetup) | [link](https://docs.google.com/presentation/d/1p3Q7vMzOEqd_vT0TUYXEc4E_LBAK1cxazGH9B38Io_I/edit#slide=id.gc6f8954bc_0_53) | [link](https://trello.com/b/uNiUV3Hu/kids-meetup) |  |
 | **LA** |  |  |  |  |  |
 | **MGR international**<br>Bonny, David, Weronika | I Don't Know Yet |  | [link](https://docs.google.com/presentation/d/1zvDjPjBGm_4EokHQNywKntfCZCpNvSdJI4-4fVKDmXk/edit#slide=id.g529abe8f2c_0_5) | [link](https://trello.com/b/Z1mn9UPK/i-dont-know-yet) |  |
 | **PRV INK**<br>Danillo, Demetrius, Sun | The Ink Challenger | [link](https://github.com/dRobinsonDev/TheInkChallenger) |  | [link](https://trello.com/b/595tEhne/the-ink-challenger) |  |
