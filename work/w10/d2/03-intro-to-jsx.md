@@ -155,11 +155,7 @@ Be sure to create a new React sandbox, then:
 	  display: flex;
 	  justify-content: center;
 	  align-items: center;
-	}
-	
-	div {
-	  text-align: center;
-	}
+	}`****`
 	```
 
 3. Let's cleanup the `<App>` component in **index.js** as follows:
@@ -174,23 +170,23 @@ Be sure to create a new React sandbox, then:
 	}
 	```
 
-4. Okay, let's create our own `<Greeter>` component by creating a **src/Greeter.js** and defining the component as a `class` that is exported like this:
+4. Okay, let's create our own `<Greeter>` component by creating a **src/Greeter.js** (note that the naming convention is UpperCamelCase) and defining the component as a Function Component and exporting like this:
 
 	```js
 	import React from 'react';
-	
-	class Greeter extends React.Component {
-	  render() {
-	    return (
-	      <div>
-	        <h1>Greetings Earthling</h1>
-	      </div>
-	    );
-	  }
+		
+	function Greeter(props) {
+	  return (
+	    <div>
+	      <h1>Greetings Earthling {props.earthling}</h1>
+	    </div>
+	  );
 	}
 	
 	export default Greeter;
 	```
+	Note how a **Function Component** (a component defined as a `function`) accepts "props" as an argument and must return its UI (defined using JSX).
+
 5. Be sure to click the "Save" button. Now let's modify `<App>` to render the new `<Greeter>` component instead of the built-in `<h1>` React element:
 
 	```js
@@ -223,7 +219,7 @@ Besides these rules:
 
 - JSX uses XML syntax (elements within angle brackets) for defining components.
 - All "empty" components (components with just a start tag - no closing tag) must be self-closed using a forward slash.
-- **props** are camel-cased like `cohortId='WDI-99'`, never kebob-cased - **why?**
+- **props** are camelCased like `cohortId='WDI-99'`, never kebob-cased - **why?**
 
 There are a few other syntax rules, etc.:
 
@@ -235,18 +231,16 @@ There are a few other syntax rules, etc.:
 	</details>
 	
 - Our app's user-defined components are **always uppercased** - like the `<Greeter />` component.
-- When rendering, a component must return a **single node or array of nodes**. However, we will often want to _compose_ components from multiple components. To return multiple components from the `render` method they must be wrapped by a single component (like a `<div>`). For example, let's update the `Greeter` component like this:
+- When rendering, a component must return a **single node or array of nodes**. However, usually we _compose_ components from multiple components. To return multiple components from the `render` method they must be wrapped by a single component (like a `<div>`). For example, let's update the `Greeter` component like this:
 
 	```js
-	class Greeter extends React.Component {
-	  render() {
-	    return (
-	      <div>
-	        <h1>Greetings Earthling</h1>
-	        <h2>We have come in peace</h2>
-	      </div>
-	    );
-	  }
+	function Greeter(props) {
+	  return (
+	    <div>
+	      <h1>Greetings Earthling {props.earthling}</h1>
+	      <h2>We have come in peace</h2>
+	    </div>
+	  );
 	}
 	```
 	Removing the `<div>` would create a syntax error.
@@ -258,7 +252,7 @@ Beginning with version 16.2, react has added support for "fragments" in JSX as d
 Essentially, they allow for multiple components to be "wrapped" with an empty tag, called a **Fragment**.  For example:
 
 ```html
-render() {
+function MyComponent(props) {
   return (
     <React.Fragment>
       <ChildA />
@@ -274,7 +268,7 @@ Previous to this enhancement, you would have had to wrap the sibling components 
 A brand new enhancement is a shortcut for `React.Fragment`:
 
 ```html
-render() {
+function MyComponent(props) {
   return (
     <>
       <ChildA />
@@ -304,9 +298,16 @@ An object, of course!
 
 We will soon have a lesson dedicated to learning about `props` and `state` in React, but let's cover a few basics regarding `props`.
 
-The syntax of adding props to a component is much like defining attributes in an HTML element.
+The syntax of passing props to a component is much like defining attributes in an HTML element.
 
 Many pre-defined props map to HTML attributes. [These docs](https://facebook.github.io/react/docs/dom-elements.html) list the supported HTML attributes and discuss important differences. For example, we cannot use **class** to assign CSS classes to a built-in HTML component, instead we must use **className** because _class_ is a reserved word in JavaScript.
+
+Many props map directly to their HTML attribute counterparts. For example, this is how you could add an `id` to a `<div>`:
+
+```js
+<div id='todos-container'>
+```
+Of course, it would make sense to add attributes such as `id` to React Elements only, because they are the only components that end up generating actual DOM elements in the page.
 
 Some props map to HMTL attributes but have a slightly differently implementation, for example, the `style` prop is used to style a component inline, however, it must be passed an object consisting of CSS property/values, not a string like its HTML counterpart.
 
@@ -324,13 +325,6 @@ function App() {
 
 When we logged out the component object returned by `React.createElement`, there was a `props` property that was set to an empty object. This object holds the props that we pass to a component.
 
-<details>
-<summary>
-Because a component is an object, and the object has a props property, how do we access props from methods within the object?
-</summary>
-By using the this keyword - this.props
-</details>
-
 ## JavaScript Expressions in JSX
 
 You can embed any JavaScript **expression** in JSX by wrapping it in curly braces.
@@ -339,17 +333,17 @@ Now let's use the `earthling` prop that was passed:
 
 ```js
 <div>
-  <h1>Greetings Earthling {this.props.earthling}</h1>
+  <h1>Greetings Earthling {props.earthling}</h1>
 </div>
 ```
 
-`this.props.earthling` IS a JavaScript expression and its result is being embedded in the JSX.
+`props.earthling` IS a JavaScript expression and its result is being embedded in the JSX.
 
 Now let's add a more interesting expression:
 
 ```js
 <div>
-  <h1>Greetings Earthling, {this.props.earthling}</h1>
+  <h1>Greetings Earthling, {props.earthling}</h1>
   <h2>
     We have come {new Date().getDay() === 1 ? 'on a Monday' : 'in peace'}
   </h2>
@@ -388,7 +382,7 @@ Considering that JSX is a JS expression, leads us to the fact that JSX can be:
 - Returned from a function
 - console.log'd out, etc.
 
-For example, here's a way to define what's known as a **Function Component** that returns JSX (an expression) depending upon the value of `props.user`:
+For example, here's another way to define a **Class Component** that returns different JSX depending upon the value of `this.props.user`:
 
 ```js
 const Greeting = (props) => {
@@ -401,61 +395,66 @@ const Greeting = (props) => {
 
 #### When & How Components Get Rendered
 
-Components created using `class` must have a `render` method which is invoked by React to render the component. Function Components on the other hand are invoked by React when it's time to render them.
+Components can be defined as either a `class` or a `function`.
 
-Regardless of how components are defined (as a class or function), they are rendered as follows:
+A **Function Component** must `return` its JSX.
 
-1. Initially with `ReactDOM.render`
-2. Whenever the `setState` method is called to update a component's state
+**Class Components** must include a `render` method which is invoked by React to render the component. The `render` method, like a Function Component, returns its JSX.
+
+Regardless of how components are defined (as a `class` or `function`), they are rendered as follows:
+
+1. Initially with `ReactDOM.render`.
+2. Whenever the `setState` method is called to update a class component's state.
 
 Now, here's another key to be aware of:  when a component is rendered, **all** of its children components are rendered as well (as well as the children of those children).  It's this cascade of rendering of the component hierarchy that results in an entire app being rendered with that single `ReactDOM.render` call!
 
 #### Rendering Lists (Arrays) of Components
 
-Quite often we need to render "lists" of components, for example, a list of To Dos :)
+Quite often we need to render "lists" of components, for example, a list of To Dos.
 
 How about an array of things the aliens want from Earth:
 
 ```js
-class Greeter extends React.Component {
-  render() {
-    let things = ['Water', 'Cattle', 'Plutonium', 'Gold'];
-    let listOfThings = things.map(thing => <li>{thing}</li>);
-    return (
-      <div>
-        <h1>Greetings Earthling, {this.props.earthling}</h1>
-        <h2>We have come {new Date().getDay() === 1 ? 'on a Monday' : 'in peace'}</h2>
-        <h3>Give us your:</h3>
-        <ul>
-          {listOfThings}
-        </ul>
-      </div>
-    );
-  }
+function Greeter(props) {
+  const things = ["Water", "Cattle", "Plutonium", "Gold"];
+  // Create an array of <li> components
+  const listOfThings = things.map(thing => <li>{thing}</li>);
+  return (
+    <div>
+      <h1>Greetings Earthling, {props.earthling}</h1>
+      <h2>
+        We have come {new Date().getDay() === 1 ? "on a Monday" : "in peace"}
+      </h2>
+      <h3>Give us your:</h3>
+      {/* Render the array of <li>s */}
+      <ul>{listOfThings}</ul>
+    </div>
+  );
 }
 ```
 
-> Note: The array in the `render` method above would more commonly be held in the component's **state** or **props** object, which we'll be covering in a future lesson.
+The `things` array would more commonly be held in the component's **state** or **props** object, which we'll be covering in a future lesson.
 
 Pretty cool. JSX automatically spreads out the components in an array.
 
 Note that because `things.map(...)` results in a value (a new array), it is an expression, therefore, it's actually possible to put it right in the JSX like this:
 
 ```js
-class Greeter extends React.Component {
-  render() {
-    let things = ['Water', 'Cattle', 'Plutonium', 'Gold'];
-    return (
-      <div>
-        <h1>Greetings Earthling, {this.props.earthling}</h1>
-        <h2>We have come {new Date().getDay() === 1 ? 'on a Monday' : 'in peace'}</h2>
-        <h3>Give us your:</h3>
-        <ul>
-          {things.map(thing => <li key={thing}>{thing}</li>)}
-        </ul>
-      </div>
-    );
-  }
+function Greeter(props) {
+  const things = ["Water", "Cattle", "Plutonium", "Gold"];
+  return (
+    <div>
+      <h1>Greetings Earthling, {props.earthling}</h1>
+      <h2>
+        We have come {new Date().getDay() === 1 ? "on a Monday" : "in peace"}
+      </h2>
+      <h3>Give us your:</h3>
+      {/* Render the array of <li>s */}
+      <ul>
+        {things.map(thing => <li key={thing}>{thing}</li>)}
+      </ul>
+    </div>
+  );
 }
 ```
 
@@ -465,7 +464,7 @@ Note that a `key` prop has been added. Whenever React has a list of components, 
 
 - **In your own words, what is JSX and why do we use it?**
 
-- **How many component nodes can be returned from a component's `render` method?**
+- **How many component nodes can be returned from a component's function (or `render` method in the case of a class component)?**
 
 - **We use _______ to pass information as key/value pairs to a component.**
 
