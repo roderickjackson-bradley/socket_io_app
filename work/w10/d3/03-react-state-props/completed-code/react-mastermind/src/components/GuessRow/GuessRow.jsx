@@ -13,7 +13,7 @@ const GuessRow = (props) => (
     {
       props.currentGuess ?
         <ScoreButton /> :
-        <GuessScore score={props.guess.score} />
+        <GuessScore />
     }
   </div>
 );
