@@ -48,7 +48,7 @@ Working in a team is going to require more upfront planning to ensure the team i
 
 - Be a full-stack **Django** application.
 - Persist data in **PostreSQL**.
-- **Authenticate users using Django's build-in authentication**.
+- **Authenticate users using Django's built-in authentication**.
 - **Implement authorization by restricting access to the Creation, Updating & Deletion of resources.**
 - Be **deployed online** using **Heroku**.
 
