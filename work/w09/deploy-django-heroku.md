@@ -118,7 +118,7 @@ Let's create one - be sure to name it exactly as `Procfile` without a file exten
 $ touch Procfile
 ```
 
-We only need to add a single line of code in **Procfile**. However, it's important to replace the `<your project name here>` with your actual project name (same as the folder's name):
+We only need to add a single line of code in **Procfile**. However, it's important to replace the `<your project name here>` with your actual project name (same as the project's folder name):
 
 ```
 web: gunicorn <your project name here>.wsgi
@@ -126,7 +126,7 @@ web: gunicorn <your project name here>.wsgi
 
 ### Create a `requirements.txt`
 
-The `package.json` file we saw in Node apps was used to inform Heroku which Node modules the app needed to be installed.
+The `package.json` file we used in Node apps informed Heroku which Node modules the app needed to be installed.
 
 The equivalent in a Python app is the `requirements.txt` file.
 
@@ -138,19 +138,19 @@ $ pip3 freeze
 
 That list of packages is in the correct format for the `requirements.txt` file.
 
-Here's how we can use a Unix/Linux pipe to redirect the output of `pip3 freeze` to a `requirements.txt` file:
+Here's how we can use a Unix/Linux pipe to redirect the output of `pip3 freeze` to a `requirements.txt` file (please spell correctly):
 
 ```
 $ pip3 freeze > requirements.txt
 ```
 
-Since we're not using [virtual environments](https://packaging.python.org/guides/installing-using-pip-and-virtualenv/), the list of requirements may actually include packages the Django project does not need.
+Since we're not using [virtual environments](https://packaging.python.org/guides/installing-using-pip-and-virtualenv/), the list of requirements may actually include packages the Django project does not need. This is not a problem, the first deployment just might take a little longer as Heroku installs the extra packages.
 
-The `requirements.txt` file can be edited to remove packages that you **are sure** your project doesn't need, e.g., anaconda packages. 
+However, the `requirements.txt` file may be edited to remove packages that you **are sure** your project doesn't need. 
 
 ## 3. Commit the Changes
 
-Time to commit the changes made above to the `master` branch:
+Now let's commit the changes made to the project (make sure that you're on the `master` branch):
 
 ```
 $ git add -A
@@ -293,17 +293,17 @@ Lots of `OK`s is a good sign!
 
 We need to set environment variables (secrets) on Heroku in the same way we needed to set our OAuth keys in Unit 2.
 
-The best way is to set each environment variable required for your app using the `heroku config:set` command:
+The best way is to set each key=value pair using the `heroku config:set` command:
 
 ```
 $ heroku config:set AWS_ACCESS_KEY_ID=AKIAJYO6WFUBRZUI6ZNQ
 ```
 
-> Note: If setting AWS keys for Boto3, ensure they are in all caps.
+> Note: If setting AWS keys from Boto3, ensure they are in all caps.
 
-Setting the environment variables via the command line automatically restarts the server - which is necessary.  If you set the _config vars_ in Heroku's Dashboard, it won't restart the server.  However, you can restart the server manually using `$ heroku restart`
+Setting the environment variables via the command line automatically restarts the server - which is necessary.  If you set the _config vars_ in Heroku's Dashboard, it won't restart the server.  However, you can restart the server manually using<br>`$ heroku restart`
 
-After finished setting all of the environment variables, you can verify them as follows:
+After you are finished setting all of the environment variables, you can verify them as follows:
 
 ```
 $ heroku config
