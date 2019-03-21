@@ -103,7 +103,7 @@ Just another ternary expression!
  
 That's a tidy example of dynamic styling for the `border` property.
 
-<img src="https://i.imgur.com/bWDtC86.png">
+<img src="https://i.imgur.com/7CX8Dfs.png">
 
 Looking good now, but let's also make the pegs in the **current** guess row look "clickable" by making the cursor a pointer.
 
