@@ -70,7 +70,6 @@ Working in a team is going to require more upfront planning to ensure the team i
     - A link to your **pitch-deck**.
     - A link to your **Trello** board that contains your **user stories**, **ERD**, and **wireframes**.
     - A link to your **deployed app on Heroku**.
-    - Documentation for your app's **RESTful API endpoints**.
     - Descriptions of any **unsolved problems** your team had to overcome.
     - Description of any **future enhancements** planned.
 
