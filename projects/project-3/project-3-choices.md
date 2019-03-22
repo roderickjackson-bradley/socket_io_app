@@ -4,7 +4,7 @@
 |---|:---:|:---:|:---:|:---:|:---:|
 | **TEXAS** |  |  |  |  |  |
 | **The Power Rangers**<br>Anna, Son, Ursula | [noTed.] | [link](https://github.com/ursulacj/noted) | [link](https://www.beautiful.ai/deck/-L_j2MZc-5qHhOStYXVF/noTed) | [link](https://trello.com/b/HIHS5yu2/dream-team) |  |
-| **Django Unchained:**<br>Nhung, Salvador, Siara | FoodRaiserATX | [link](https://github.com/jsnavarr/FoodRaiserATX) | [link](https://docs.google.com/presentation/d/1-6OqntLFfdrx6nVp4mRhuVxSXJuNfktb_uYloKOpJ44/edit#slide=id.g5224fbf7f3_0_77) | [link](https://trello.com/b/K6kJmv9J/foodraiseratx) |  |
+| **Django Unchained:**<br>Nhung, Salvador, Siara | FoodRaiserATX | [link](https://github.com/jsnavarr/FoodRaiserATX) | [link](https://docs.google.com/presentation/d/1-6OqntLFfdrx6nVp4mRhuVxSXJuNfktb_uYloKOpJ44/edit#slide=id.g5224fbf7f3_0_77) | [link](https://trello.com/b/K6kJmv9J/foodraiseratx) | [link](https://foodraiseratx.herokuapp.com/) |
 | **Y'aller Ballerz**<br>Andrey, Josh, Paul | PREP | [link](https://github.com/AndreykaVSR/PREP-App) | [link](https://docs.google.com/presentation/d/1Hrl5OUInwhMOGGzCXr73ewVKlSAcZz5szfQ2ZiA4cfQ/edit#slide=id.p) | [link](https://trello.com/b/qewrqfBt/project-review-app) |  |
 | Alexis, Kyle S, Tyler |  |  |  |  |  |
 | **happy\_little\_coders**<br>D'Angelo, Don, Kyle A | WDI Homework Tracker | [link](https://github.com/dmshakur/homework_tracker) | [link](https://docs.google.com/presentation/d/1puSIJzocx863FpTMzGpc9qtUEER_d37f00WisMeDeos/edit#slide=id.p) | [link](https://trello.com/b/w0hA2pvD/wdi-project-3) |  |
@@ -15,4 +15,4 @@
 | **PRV INK**<br>Danillo, Demetrius, Sun | The Ink Challenger | [link](https://github.com/dRobinsonDev/TheInkChallenger) |  | [link](https://trello.com/b/595tEhne/the-ink-challenger) |  |
 | Eliana, Meisam, Sean | Vagary | [link](https://github.com/pmeisam/Vagary) | [link](https://docs.google.com/presentation/d/1fX7aM9dEpv-n8vV4KU2qez4uc5lbHT2IU8ZylUF12eY/edit#slide=id.gc6f59039d_0_0) | [link](https://trello.com/b/CRkhxSSg/vagary) | [link](https://vagary.herokuapp.com/) |
 | Carly, Mike, Valerie | drinkOn | [link](https://github.com/vkomova/drinkOn) | [link](https://docs.google.com/presentation/d/1Q2y7IEL_R6I0XUfAoAjWWpwYh0fBrYPnl9HST1QQEZ4/edit#slide=id.gc6f83aa91_0_50) | [link](https://trello.com/b/GuNIYohD/project-3-drinkon) | [link](https://drinkon-wdi.herokuapp.com/) |
-| Felicity, Johnny, Karen | FeedDaNeed | [link](https://github.com/johnnybobohnny/feed-the-need) | [link](https://docs.google.com/presentation/d/1lBTUELaiT9r-4gFQ9Mqnej1AE_F94HXkXopeUB5sj2k/edit#slide=id.gd9c453428_0_16) | [link](https://trello.com/b/Qkbrp3yy/feeddaneedbiz) |  |
+| Felicity, Johnny, Karen | FeedDaNeed | [link](https://github.com/johnnybobohnny/feed-the-need) | [link](https://docs.google.com/presentation/d/1lBTUELaiT9r-4gFQ9Mqnej1AE_F94HXkXopeUB5sj2k/edit#slide=id.gd9c453428_0_16) | [link](https://trello.com/b/Qkbrp3yy/feeddaneedbiz) | [link](https://feed-the-need.herokuapp.com/) |
