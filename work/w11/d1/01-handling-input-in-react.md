@@ -26,128 +26,128 @@ To get set up for this lesson, please:
 
 	```js
 	class App extends React.Component {
-		state = {
-			skills: [{ skill: "JavaScript", level: 4 }]
-		};
+	  state = {
+	    skills: [{ skill: "JavaScript", level: 4 }]
+	  };
 	
-		addSkill = () => {
-			alert("ADD SKILL CLICKED");
-		};
+	  addSkill = () => {
+	    alert("ADD SKILL CLICKED");
+	  };
 	
-		render() {
-			return (
-				<section>
-					<h2>DEV SKILLS</h2>
-					<hr />
-					{this.state.skills.map(s => (
-						<article key={s.skill}>
-							<div>{s.skill}</div> <div>{s.level}</div>
-						</article>
-					))}
-					<hr />
-					<form>
-						<label>
-							<span>SKILL</span>
-							<input name='skill'/>
-						</label>
-						<label>
-							<span>LEVEL</span>
-							<select name='level'>
-								<option value="1">1</option>
-								<option value="2">2</option>
-								<option value="3">3</option>
-								<option value="4">4</option>
-								<option value="5">5</option>
-							</select>
-						</label>
-						<button onClick={this.addSkill}>ADD SKILL</button>
-					</form>
-				</section>
-			);
-		}
+	  render() {
+	    return (
+	      <section>
+	        <h2>DEV SKILLS</h2>
+	        <hr />
+	        {this.state.skills.map(s => (
+	          <article key={s.skill}>
+	            <div>{s.skill}</div> <div>{s.level}</div>
+	          </article>
+	        ))}
+	        <hr />
+	        <form>
+	          <label>
+	            <span>SKILL</span>
+	            <input name='skill'/>
+	          </label>
+	          <label>
+	            <span>LEVEL</span>
+	            <select name='level'>
+	              <option value="1">1</option>
+	              <option value="2">2</option>
+	              <option value="3">3</option>
+	              <option value="4">4</option>
+	              <option value="5">5</option>
+	            </select>
+	          </label>
+	          <button onClick={this.addSkill}>ADD SKILL</button>
+	        </form>
+	      </section>
+	    );
+	  }
 	}
 	```
 
 - Let's make it look okay by replacing the contents of **styless.css** with:
-	
+		
 	```css
 	* {
-		box-sizing: border-box;
+	  box-sizing: border-box;
 	}
-	
+		
 	body {
-		font-family: Arial, Helvetica, sans-serif;
-		height: 100vh;
-		display: grid;
-		justify-items: center;
-		align-items: center;
+	  font-family: Arial, Helvetica, sans-serif;
+	  height: 100vh;
+	  display: grid;
+	  justify-items: center;
+	  align-items: center;
 	}
-	
+		
 	h2 {
-		color: #f17d80;
-		margin: 0;
-		text-align: center;
+	  color: #f17d80;
+	  margin: 0;
+	  text-align: center;
 	}
-	
+		
 	section > article {
-		display: flex;
-		justify-content: space-between;
-		min-width: 15rem;
-		color: white;
-		margin: 0.1rem;
-		background-color: #737495;
+	  display: flex;
+	  justify-content: space-between;
+	  min-width: 15rem;
+	  color: white;
+	  margin: 0.1rem;
+	  background-color: #737495;
 	}
-	
+		
 	article > div {
-		padding: 0.5rem;
+	  padding: 0.5rem;
 	}
-	
+		
 	article > div:nth-child(2) {
-		width: 2rem;
-		background-color: #f17d80;
-		text-align: center;
+	  width: 2rem;
+	  background-color: #f17d80;
+	  text-align: center;
 	}
-	
+		
 	label {
-		display: flex;
-		align-items: center;
-		margin-top: 0.5rem;
+	  display: flex;
+	  align-items: center;
+	  margin-top: 0.5rem;
 	}
-	
+		
 	label span {
-		color: #737495;
-		width: 4.5rem;
+	  color: #737495;
+	  width: 4.5rem;
 	}
-	
+		
 	input,
 	select {
-		width: 100%;
-		font-family: Arial, Helvetica, sans-serif;
-		font-size: 1rem;
-		font-weight: bold;
-		padding: 0.4rem;
-		color: #f17d80;
-		border: 2px solid #737495;
-		border-radius: 0;
-		outline: none;
-		-webkit-appearance: none;
+	  width: 100%;
+	  font-family: Arial, Helvetica, sans-serif;
+	  font-size: 1rem;
+	  font-weight: bold;
+	  padding: 0.4rem;
+	  color: #f17d80;
+	  border: 2px solid #737495;
+	  border-radius: 0;
+	  outline: none;
+	  -webkit-appearance: none;
 	}
-	
+		
 	button {
-		display: block;
-		font-family: Arial, Helvetica, sans-serif;
-		font-size: 1rem;
-		margin: 0.5rem 0 0 auto;
-		padding: 0.4rem;
-		background-color: #f17d80;
-		color: white;
-		border: none;
-		outline: none;
+	  display: block;
+	  font-family: Arial, Helvetica, sans-serif;
+	  font-size: 1rem;
+	  margin: 0.5rem 0 0 auto;
+	  padding: 0.4rem;
+	  background-color: #f17d80;
+	  color: white;
+	  border: none;
+	  outline: none;
 	}
-	
+		
 	button:hover {
-		color: white;
-		background-color: #737495;
+	  color: white;
+	  background-color: #737495;
 	}
 	```
 	
@@ -183,10 +183,10 @@ So, if the `<input>` & `<select>` inputs currently in `<App>` get their values f
 
 ```js
 state = {
-	skills: [{ skill: "JavaScript", level: 4 }],
-	// New state for the inputs below
-	skill: "",
-	level: 3
+  skills: [{ skill: "JavaScript", level: 4 }],
+  // New state for the inputs below
+  skill: "",
+  level: 3
 };
 ```
 
@@ -195,15 +195,15 @@ Notice that we intend to initialize the value of the `<select>` for the skills's
 Now, we "connect" those state properties to their respective inputs using the `value` prop:
 
 ```js
-    ...
-    {/* Connect the input to state.skill */}
-    <input name="skill" value={this.state.skill} />
+  ...
+  {/* Connect the input to state.skill */}
+  <input name="skill" value={this.state.skill} />
 </label>
 <label>
-    <span>LEVEL</span>
-    {/* Connect the select to state.level */}
-    <select name="level" value={this.state.level}>
-    ...
+  <span>LEVEL</span>
+  {/* Connect the select to state.level */}
+  <select name="level" value={this.state.level}>
+  ...
 ```
 
 As predicted, the `<select>` has been initialized to `3`:
@@ -225,10 +225,10 @@ First add an `onChange` prop to the `<input>`:
 ```js
 <span>SKILL</span>
 <input
-	name="skill"
-	value={this.state.skill}
-	{/* Add an event handler */}
-	onChange={this.handleChange}
+  name="skill"
+  value={this.state.skill}
+  {/* Add an event handler */}
+  onChange={this.handleChange}
 />
 ```
 
@@ -237,7 +237,7 @@ Now add the `handleChange` method that will be called every time a character is 
 ```js
 // Add the onChange event handler
 handleChange = e => {
-	this.setState({ skill: e.target.value });
+  this.setState({ skill: e.target.value });
 };
 
 render() {
@@ -257,7 +257,7 @@ Refactor `handleChange` as follows to take advantage of [computed property names
 
 ```js
 handleChange = e => {
-	this.setState({ [e.target.name]: e.target.value });
+  this.setState({ [e.target.name]: e.target.value });
 };
 ```
 
@@ -269,9 +269,9 @@ Okay, let's add the event handler to the `<select>`:
 
 ```js
 <select
-	name="level"
-	value={this.state.level}
-	onChange={this.handleChange}
+  name="level"
+  value={this.state.level}
+  onChange={this.handleChange}
 >
 ```
 
@@ -315,13 +315,13 @@ We'll review as we type the new code in the `addSkill` method:
 
 ```js
 addSkill = () => {
-    // Pass function because relying on existing state
-    this.setState(state => ({
-      // Always replace, don't mutate
-      skills: [...state.skills, state.newSkill],
-      // Reset the inputs for better UX
-      newSkill: {skill: '', level: 3}
-    }));
+  // Pass function because relying on existing state
+  this.setState(state => ({
+    // Always replace, don't mutate
+    skills: [...state.skills, state.newSkill],
+    // Reset the inputs for better UX
+    newSkill: {skill: '', level: 3}
+  }));
 };
 ```
 
@@ -356,7 +356,7 @@ Then, **always** call the event's `preventDefault` method straightaway:
 
 ```js
 addSkill = e => {
-    e.preventDefault();
+  e.preventDefault();
 ```
 
 Be sure to add a parameter (`e` in this case) to accept the event object.
@@ -373,12 +373,12 @@ Let's prevent the ability to add empty skills by first adding props to the skill
 
 ```js
 <input
-	name="skill"
-	value={this.state.newSkill.skill}
-	onChange={this.handleChange}
-	{/* Add these two additional props to set constraints */}
-	required
-	pattern="..+"
+  name="skill"
+  value={this.state.newSkill.skill}
+  onChange={this.handleChange}
+  {/* Add these two additional props to set constraints */}
+  required
+  pattern="..+"
 />
 ```
 
@@ -394,8 +394,8 @@ As an example, let's test out the `checkValidity` method on just the skills inpu
 
 ```js
 handleChange = e => {
-	// e.target is the DOM element that changed
-	console.log(e.target.checkValidity());
+  // e.target is the DOM element that changed
+  console.log(e.target.checkValidity());
 ``` 
 
 Testing it out shows that at least two characters need to be entered in the skill input before `true` is logged.
@@ -416,11 +416,11 @@ There's no reason to hold a ref in state, so we'll create a ref and store it in 
 
 ```js
 state = {
-	skills: [{ skill: "JavaScript", level: 4 }],
-	newSkill: {
-		skill: "",
-		level: 3
-	}
+  skills: [{ skill: "JavaScript", level: 4 }],
+  newSkill: {
+    skill: "",
+    level: 3
+  }
 };
 // Create a ref and store in a property named formRef
 formRef = React.createRef();
@@ -438,7 +438,7 @@ Let's see what a `ref` looks like by logging it out:
 
 ```js
 render() {
-	console.log(this.formRef);
+  console.log(this.formRef);
 ```
 
 Checking the console shows that the ref object has a `current` property used to access the DOM element.
@@ -447,9 +447,9 @@ Now we can prevent adding a new skill if the form's invalid like this:
 
 ```js
 addSkill = e => {
-	e.preventDefault();
-	// Do nothing if the form is invalid
-	if (!this.formRef.current.checkValidity()) return;
+  e.preventDefault();
+  // Do nothing if the form is invalid
+  if (!this.formRef.current.checkValidity()) return;
 ```
 
 #### Disabling the Button if Form is Invalid
@@ -460,13 +460,13 @@ One approach would be to first create a new property on `state` to track the val
 
 ```js
 state = {
-	skills: [{ skill: "JavaScript", level: 4 }],
-	newSkill: {
-		skill: "",
-		level: 3
-	},
-	// New state property to track validity of the form
-	formInvalid: true
+  skills: [{ skill: "JavaScript", level: 4 }],
+  newSkill: {
+    skill: "",
+    level: 3
+  },
+  // New state property to track validity of the form
+  formInvalid: true
 };
 formRef = React.createRef();
 ```
@@ -475,22 +475,22 @@ Now in the `render` method, use `this.state.formInvalid` to  conditionally add t
 
 ```js
 <button
-	onClick={this.addSkill}
-	disabled={this.state.formInvalid}
- >
+  onClick={this.addSkill}
+  disabled={this.state.formInvalid}
+>
 ```
 
 The last part requires updating `formInvalid` each time an input changes, i.e., from within the `handleChange` method:
 
 ```js
 handleChange = e => {
-	const newSkill = { ...this.state.newSkill };
-	newSkill[e.target.name] = e.target.value;
-	this.setState({
-		newSkill,
-		// update using the formRef
-		formInvalid: !this.formRef.current.checkValidity()
-	});
+  const newSkill = { ...this.state.newSkill };
+  newSkill[e.target.name] = e.target.value;
+  this.setState({
+    newSkill,
+    // update using the formRef
+    formInvalid: !this.formRef.current.checkValidity()
+  });
 };
 ```
 
@@ -498,7 +498,7 @@ That takes care of the functionality, however, the button won't look disabled un
 
 ```css
 button:disabled {
-	background-color: lightgrey;
+  background-color: lightgrey;
 }
 ```
 
