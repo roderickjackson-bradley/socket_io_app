@@ -45,6 +45,10 @@ class App extends Component {
     this.setState({selColorIdx: colorIdx});
   }
 
+  handleNewGameClick = () => {
+    this.setState(this.getInitialState());
+  }
+
   handlePegClick = (pegIdx) => {
     // Get index of last guess object
     let currentGuessIdx = this.state.guesses.length - 1;
@@ -147,7 +151,7 @@ class App extends Component {
               handleColorSelection={this.handleColorSelection}
             />
             <GameTimer />
-            <NewGameButton />
+            <NewGameButton handleNewGameClick={this.handleNewGameClick}/>
           </div>
         </div>
         <footer className='App-header-footer'>

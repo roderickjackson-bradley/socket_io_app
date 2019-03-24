@@ -24,7 +24,7 @@ const GamePage = (props) => {
           />
           <GameTimer />
           <Link className='btn btn-default GamePage-link-margin' to='/settings'>Difficulty</Link>
-          <NewGameButton />
+          <NewGameButton handleNewGameClick={props.handleNewGameClick}/>
         </div>
       </div>
       <footer className='App-header-footer'>

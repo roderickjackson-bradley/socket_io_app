@@ -377,7 +377,7 @@ const GamePage = (props) => {
             handleColorSelection={props.handleColorSelection}
           />
           <GameTimer />
-          <NewGameButton />
+          <NewGameButton handleNewGameClick={props.handleNewGameClick}/>
         </div>
       </div>
       <footer className='App-header-footer'>

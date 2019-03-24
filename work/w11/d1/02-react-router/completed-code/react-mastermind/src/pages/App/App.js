@@ -44,6 +44,10 @@ class App extends Component {
     this.setState({selColorIdx: colorIdx});
   }
 
+  handleNewGameClick = () => {
+    this.setState(this.getInitialState());
+  }
+
   handlePegClick = (pegIdx) => {
     // Get index of last guess object
     let currentGuessIdx = this.state.guesses.length - 1;
