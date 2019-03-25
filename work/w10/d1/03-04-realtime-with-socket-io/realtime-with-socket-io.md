@@ -411,9 +411,9 @@ This presentation is available [here](https://presentations.generalassemb.ly/e95
 	```js
 	io.on('connection', function (socket) {
 	  //new code below
-   	  socket.on('add-circle', function (data) {
-       io.emit('add-circle', data);
-   	  });
+	  socket.on('add-circle', function (data) {
+	    io.emit('add-circle', data);
+	  });
 	});
 	```
 
@@ -439,10 +439,10 @@ This presentation is available [here](https://presentations.generalassemb.ly/e95
 
 	```js
 	var socket = io();	
-  	// listen to the server for the `add-circle` event
-  	socket.on('add-circle', function (data) {
-   	  console.log(data);
-  	});
+	// listen to the server for the `add-circle` event
+	socket.on('add-circle', function (data) {
+	  console.log(data);
+	});
 	```
 
 - Here on the client (browser), we have the `socket` object representing our realtime connection to the server.
@@ -455,17 +455,18 @@ This presentation is available [here](https://presentations.generalassemb.ly/e95
 - Now let's update the click event listener to emit an `add-circle` message to the server with the data:
 
 	```js
-  	circles.addEventListener('click', function(evt) {
-  	  // replace current line of code with this code
+	circles.addEventListener('click', function(evt) {
+	  // replace current line of code with this code
 	  socket.emit('add-circle', {
-        initials: initials,
-        x: evt.clientX,
-        y: evt.clientY,
-      	 dia: randomBetween(10,100),
-        rgba: getRandomRGBA()
-      });
-  	});
+	    initials: initials,
+	    x: evt.clientX,
+	    y: evt.clientY,
+	    dia: randomBetween(10,100),
+	    rgba: getRandomRGBA()
+	  });
+	});
 	```
+
 - **Our goal is for this message to be received by ________?**
 
 ---
@@ -489,7 +490,7 @@ This presentation is available [here](https://presentations.generalassemb.ly/e95
 // was -> function addCircle(x, y, dia, rgba) {
 // updated to take advantage of ES2015's destructuring assignment
 function addCircle({x, y, dia, rgba, initials}) {
-	...
+  ...
 }
 ```
 
@@ -504,11 +505,11 @@ function addCircle({x, y, dia, rgba, initials}) {
 - All that's left is to call the `addCircle()` function from our `socket.on` listener inside `app.js`:
 
 	```js
-  	// listen to the server for the `add-circle` event
-  	socket.on('add-circle', function (data) {
-   	  // console.log(data);
-   	  addCircle(data);
-  	});
+	// listen to the server for the `add-circle` event
+	socket.on('add-circle', function (data) {
+	  // console.log(data);
+	  addCircle(data);
+	});
 	```
 
 - Use two browsers with different initials and test drive that sucka!
@@ -615,7 +616,7 @@ io.on('connection', function (socket) {
     players[socket.id] = initials;
     io.emit('update-player-list', Object.values(players));
   });
-  ... existing code below
+... existing code below
 ```
 
 <p style="text-align:left">Note that <strong>Object.values()</strong> is from ES2016/ES7</p>
@@ -627,11 +628,11 @@ io.on('connection', function (socket) {
 - Set up the listener for when the player disconnects. Add this along with the other listeners:
 
 	```js
-    socket.on('disconnect', function () {
-      delete players[socket.id];
-      io.emit('update-player-list', Object.values(players));
-    });
-    ... existing code below
+	socket.on('disconnect', function () {
+	  delete players[socket.id];
+	  io.emit('update-player-list', Object.values(players));
+	});
+	... existing code below
 	```
 ---
 
@@ -676,18 +677,18 @@ var players = document.getElementById('players');
 ### Tracking Players - Client Code
 
 - Add the listener for the `update-player-list` event:
-
+	
 	```js
 	...
-	
-  	// listen for when the player list has changed
-  	socket.on('update-player-list', function (data) {
-   	  var playerList = '<li>' + data.join('</li><li>') + '</li>';
-     players.innerHTML = playerList;
-  	});
-   	 	
-    ...
-    ```
+		
+	// listen for when the player list has changed
+	socket.on('update-player-list', function (data) {
+	  var playerList = '<li>' + data.join('</li><li>') + '</li>';
+	  players.innerHTML = playerList;
+	});
+	 	
+	...
+	```
 
 - Using the `join()` method to create a string from an array is very efficient!
 
