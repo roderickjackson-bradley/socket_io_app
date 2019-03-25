@@ -190,7 +190,7 @@ This presentation is available [here](https://presentations.generalassemb.ly/e95
 
 - This is an Express app generated using `express-generator`.
 
-- As a usual best practice in the land of the MEAN Stack,<br>`app.js` has been renamed to `server.js`.
+- As a usual best practice in the land of the MERN-Stack,<br>`app.js` has been renamed to `server.js`.
 
 - Examining `server.js` reveals that much of the default middleware has been removed - no problem because we're not going to be using cookies, parsing the body for posted data, etc.
 
