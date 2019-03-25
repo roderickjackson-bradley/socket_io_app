@@ -343,13 +343,12 @@
 #### Let's Build an Ugly Little SPA
 <br>
 
-- Because `async` functions return a promise, we can use a `.then` like this to fix the problem:
+- `async` functions return a promise, so we can use make the `init` function itself an async function:
 
 	```js
-	function init() {
-	  createOptions().then(() => {
-	    renderTodos();
-	  });
+	async function init() {
+	  await createOptions();
+	  await renderTodos();
 	}
 	```
 
