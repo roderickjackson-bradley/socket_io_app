@@ -410,10 +410,10 @@ This presentation is available [here](https://presentations.generalassemb.ly/e95
 
 	```js
 	io.on('connection', function (socket) {
-		//new code below
-   		socket.on('add-circle', function (data) {
-      		io.emit('add-circle', data);
-   		});
+	  //new code below
+   	  socket.on('add-circle', function (data) {
+       io.emit('add-circle', data);
+   	  });
 	});
 	```
 
@@ -441,7 +441,7 @@ This presentation is available [here](https://presentations.generalassemb.ly/e95
 	var socket = io();	
   	// listen to the server for the `add-circle` event
   	socket.on('add-circle', function (data) {
-   		console.log(data);
+   	  console.log(data);
   	});
 	```
 
@@ -456,14 +456,14 @@ This presentation is available [here](https://presentations.generalassemb.ly/e95
 
 	```js
   	circles.addEventListener('click', function(evt) {
-  		// replace current line of code with this code
-    	socket.emit('add-circle', {
-      		initials: initials,
-      		x: evt.clientX,
-      		y: evt.clientY,
-      		dia: randomBetween(10,100),
-      		rgba: getRandomRGBA()
-    	});
+  	  // replace current line of code with this code
+	  socket.emit('add-circle', {
+        initials: initials,
+        x: evt.clientX,
+        y: evt.clientY,
+      	 dia: randomBetween(10,100),
+        rgba: getRandomRGBA()
+      });
   	});
 	```
 - **Our goal is for this message to be received by ________?**
@@ -506,8 +506,8 @@ function addCircle({x, y, dia, rgba, initials}) {
 	```js
   	// listen to the server for the `add-circle` event
   	socket.on('add-circle', function (data) {
-   		// console.log(data);
-   		addCircle(data);
+   	  // console.log(data);
+   	  addCircle(data);
   	});
 	```
 
@@ -609,13 +609,13 @@ function addCircle({x, y, dia, rgba, initials}) {
 
 ```js
 io.on('connection', function (socket) {
-	 // new code below
-    socket.on('register-player', function (initials) {
-      // each socket has a unique id
-      players[socket.id] = initials;
-      io.emit('update-player-list', Object.values(players));
-    });
-	... existing code below
+  // new code below
+  socket.on('register-player', function (initials) {
+    // each socket has a unique id
+    players[socket.id] = initials;
+    io.emit('update-player-list', Object.values(players));
+  });
+  ... existing code below
 ```
 
 <p style="text-align:left">Note that <strong>Object.values()</strong> is from ES2016/ES7</p>
@@ -631,7 +631,7 @@ io.on('connection', function (socket) {
       delete players[socket.id];
       io.emit('update-player-list', Object.values(players));
     });
-    	... existing code below
+    ... existing code below
 	```
 ---
 
@@ -682,8 +682,8 @@ var players = document.getElementById('players');
 	
   	// listen for when the player list has changed
   	socket.on('update-player-list', function (data) {
-   		var playerList = '<li>' + data.join('</li><li>') + '</li>';
-    	players.innerHTML = playerList;
+   	  var playerList = '<li>' + data.join('</li><li>') + '</li>';
+     players.innerHTML = playerList;
   	});
    	 	
     ...
