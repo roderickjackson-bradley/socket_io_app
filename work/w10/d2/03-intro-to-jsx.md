@@ -58,7 +58,7 @@ You will see the above compiled into:
 
 ```js
 const student = React.createElement(
-  "Student",
+  Student,
   null,
   "Jose"
 );
@@ -73,7 +73,7 @@ Results in this JS:
 
 ```js
 const student = React.createElement(
-  "Student",
+  Student,
   null,
   "Jose",
   React.createElement("br", null),
@@ -86,11 +86,11 @@ const student = React.createElement(
 Okay, we have the following observations regarding the JS for a component:
 
 - There's a call to the `React.createElement` method that creates an element used internally by React.
-- The first argument is the component's name.
+- The first argument is the component's type (function or class). In the case of a React Element, it will be a string.
 - The second argument seems to be `null` so far - more on this next.
 - Any arguments after the second define the children of the component. In the case of the `<br />`, React recognized this as its built-in component for an HTML `<br>` element and knowing that it cannot have children, its `createElement` method was only passed two arguments.
 
-Now let's discuss that `null` second argument. It is for passing **props** to a component. You will learn about props later today, however, you can think of them as key/value pairs, much like the attributes we put within HTML elements.
+Now let's discuss that `null` second argument. It is for passing **props** to a component. You will learn about props in a later lesson, however, you can think of them as key/value pairs, much like the attributes we put within HTML elements.
 
 Let's add a prop and see what happens:
 
@@ -102,7 +102,7 @@ Now the transpiled JS looks like this:
 
 ```js
 const student = React.createElement(
-  "Student",
+  Student,
   { "cohortId": "WDI-99" },
   "Jose",
   React.createElement("br", null),
