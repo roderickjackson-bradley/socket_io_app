@@ -21,17 +21,36 @@ Please complete this lab in a React [CodeSandbox](https://codesandbox.io) named 
 
 1. Define each component in its own file. The naming convention to use for a component's file is UpperCamelCase, for example, a `<CodeSandbox>` component's file would be named `CodeSandbox.js`.
 
-2. Define the following components as functions and code them such that they fulfill their responsibilities:
+2. Export each component from its module. For example:
 
-| Component | Responsibilities |
-|---|---|
-| `<FloorPlan>` | Rendered by `<App>`.<br>Renders the following components:<br>- A `<Kitchen>` component<br>- A `<LivingRoom>` component<br>- Three `<Bedroom>` components<br>- Two `<Bath>` components<br>**Render the components in any order you wish to make the floor plan more interesting.** |
-| `<Kithchen>` | Renders the text "Kitchen" and the following components:<br>- A `<Oven>` component<br>- A `<Sink>` component |
-| `<LivingRoom>` | Renders the text "Living Room" |
-| `<Bedroom>` | Accepts a `bedNum` prop and renders the text "Bedroom [bedNum]" (substituting the value of the `bedNum` prop) |
-| `<Bath>` | Accepts a `size` prop and renders the text "[size] Bath", i.e., "Half Bath", "Full Bath" |
-| `<Oven>` | Renders the text "Oven" |
-| `<Sink>` | Renders the text "Sink" |
+	```js
+	// CodeSandbox.js
+	
+	import React from 'react';
+	
+	function CodeSandbox(props) {
+	  return (
+	    <div>
+	      <h1>CodeSandbox</h1>
+	    </div>
+	  );
+	}
+	
+	// Must export the component's function (or class)
+	export default CodeSandbox;
+	```
+
+3. Define the following components as functions and code them such that they fulfill their responsibilities:
+
+	| Component | Responsibilities |
+	|---|---|
+	| `<FloorPlan>` | Rendered by `<App>`.<br>Renders the following components:<br>- A `<Kitchen>` component<br>- A `<LivingRoom>` component<br>- Three `<Bedroom>` components<br>- Two `<Bath>` components<br>**Render the components in any order you wish to make the floor plan more interesting.** |
+	| `<Kithchen>` | Renders the text "Kitchen" and the following components:<br>- A `<Oven>` component<br>- A `<Sink>` component |
+	| `<LivingRoom>` | Renders the text "Living Room" |
+	| `<Bedroom>` | Accepts a `bedNum` prop and renders the text "Bedroom [bedNum]" (substituting the value of the `bedNum` prop) |
+	| `<Bath>` | Accepts a `size` prop and renders the text "[size] Bath", i.e., "Half Bath", "Full Bath" |
+	| `<Oven>` | Renders the text "Oven" |
+	| `<Sink>` | Renders the text "Sink" |
 
 Add the following CSS inside of **styles.css** to style each component's wrapping `<div>` to make it easier to visualize the components:
 
