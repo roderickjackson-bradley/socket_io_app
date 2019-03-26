@@ -61,7 +61,7 @@ State in a React app is held in a class component's `state` property.
 
 Since data/information can only be passed **down** the component hierarchy, not up, it's a good idea to keep state as high up in the hierarchy as possible, at least initially. For most app's, the top of the hierarchy is the `<App>` component.
 
-Only class components have state (ignoring the new "hooks" feature for now), that's why the `<App>` component was converted from a function to a class component.
+Only class components have state (ignoring the new "hooks" feature for now).
 
 Let's add some state to the `<App>` component...
 
@@ -73,25 +73,28 @@ When we analyze the state for the game of mastermind, we will find that we're go
 - An array of guess objects, where the last object in the array will be the current guess
 - The secret code
 
-When working with data pertaining to the colors, we will find it far  more efficient and maintainable to work numbers instead of strings to represent the which color has been chosen, selected, etc.
+When working with data pertaining to the colors, we will find it far  more efficient to work with numbers (integers) instead of strings to represent which color has been chosen, selected, etc.
 
 For example, we can use integers in an array to represent the secret code and the player's guesses like this:
 
 ```js
+// Array of color "indexes" can be used for the code & player's guesses
 [3, 0, 2, 2]
 ```
 
 Those numbers would then be used to represent a corresponding color in a colors array:
 
 ```js
+// Array of "colors"
 ['#7CCCE5', '#FDE47F', '#E04644', '#B576AD']
 ```
 
-The selected color would then simply be a simple integer, again, corresponding to the index of the selected color.
+This way, the state "remembering" the selected color would be a simple integer, again, corresponding to the index of the selected color within the colors array.
 
 With that out of the way, let's think about what has to be "remembered" about each guess. Take a look at this object's structure:
 
 ```js
+// Structure of a player's "guess" object
 {
   code: [3, 2, 1, 0],
   score: {
@@ -100,8 +103,11 @@ With that out of the way, let's think about what has to be "remembered" about ea
   }
 }
 ```
+
 The `code` represents the player's "guess".
 The `score` object tracks the number of "perfect" pegs, that is, correct color in the correct position; and the number of "almost" which is a correct color, but in the wrong position.
+
+The above "guess" objects can be remembered by an array in the state. The array would hold one guess object for each guess that's been made, plus the current guess (the last object in the array). 
 
 If evaluating an application's state and data structures seems difficult, that's okay, it takes a bit of experience. Soon enough, you'll be able to recognize scenarios that you've seen before and apply those previous data structures and patterns previously used.
 
@@ -138,17 +144,18 @@ Inside of the `constructor` method, `this` represents the component instance and
 
 > In a future lesson, we'll introduce you to a fresh new syntax we can use to more concisely initialize an instance's properties, but one thing at a time...
 
-To add state to a component, we create a property named `state` and set it to an object with zero or more properties - each property representing a particular piece of state the application needs.
+To add state to a component, we create a property named `state` and set it to an object with zero or more properties - each property representing a particular piece of state the application or component needs.
 
 So far, we've created a `this.state.selColorIdx` property and are temporarily rendering it on the page.
 
 #### Does All Information Belong in State?
 
-**Question: What causes components to re-render?**
-
 So the answer to the question: _Does All Information Belong in State?_ is "no", not if the information never changes or if it does change, you don't want to cause components to re-render.
 
-When you have data that doesn't change, or don't want to re-render if it changes, we can define that data anywhere outside of the class component if the same variable should be accessed by all instances of the component, or as a property separate from `state` on the instance itself if every component should maintain its own copy.
+When you have data that doesn't change, or don't want to re-render if it changes, we can define that data:
+
+1. In a variable outside of the class component (if the same variable should be accessed by all instances of the component), or
+2. As a property separate from `state` on `this` (if every component should maintain its own copy).
 
 As discussed, we intend to use `this.state.selColorIdx` to hold the index of the selected within a `colors` array.
 
@@ -194,7 +201,7 @@ Do not modify state directly like this:
 this.state.selColorIdx = 1;
 ```
 
-**Important:** A component's `setState` method is the only method that can update that component's state. If another component wants to update state up the component hierarchy, it can do so if a method is passed to it via props - we will have a lesson dedicated to this topic as well as handling DOM events, but here's a preview...
+**Important:** A component's `setState` method is the only method that can update that component's state. If another component wants to update state up the component hierarchy, it can do so if a method is passed to it via props - we will have a lesson dedicated to this topic, but here's a preview...
 
 Let's add a temporary button to `<App>` with a click handler that will select one color after the other:
 
@@ -263,7 +270,7 @@ You must use curly braces to pass any value other than a simple string (template
 
 We can now go to  `<ColorPicker>` and work with the array, but there's a better way to check things like props and state - [React Developer Tools](https://chrome.google.com/webstore/detail/react-developer-tools/fmkadmapgofadopljbjfkapdkoienihi?hl=en)
 
-Just like how Chrome's DevTools are invaluable when it comes to troubleshooting the DOM, so is React's Developer Tools when it comes to troubleshooting a React app!
+Just like how Chrome's DevTools are invaluable when it comes to troubleshooting the DOM, so are React's Developer Tools when it comes to troubleshooting a React app!
 
 With the Chrome extension installed you will now see a **React** tab in Chrome's DevTools!
 
@@ -275,14 +282,14 @@ How exciting!
 
 #### Accessing Passed Props
 
-When a Function Component is being rendered, React will pass in props as the first argument to the function like this:
+When a **Function Component** is being rendered, React will pass in props as the first argument to the function like this:
 
 ```js
 const ColorPicker = (props) => (
   ...
 ```
 
-Class components will access props via a property on the instance like this:
+However, a **Class Component** will access props via a property on the instance (`this`) like this:
 
 ```js
 {this.props.myProp}
@@ -307,7 +314,9 @@ Check it out, they won't be pretty (yet), but you'll find a button for each colo
 
 Props are immutable, their values are never to be changed!
 
-Remember, the prop came from a component somewhere up the hierarchy and if the prop's value originated from state, it would be **that** component's responsibility to update its own state. However, a component can certainly pass down via props methods used to update its state - but that's for another day.
+Remember, the prop came from a component somewhere up the hierarchy and if the prop's value originated from state, it would be **that** component's responsibility to update its own state.
+
+However, a component can certainly pass down via props methods that can be used to update its state - but that's for another day.
 
 #### Exercise - Passing Props
 
@@ -343,7 +352,7 @@ When the app loads, the player is going to expect to see an initial guess row in
 
 After the player completes finishes a guess, they will want to see another guess row show up (unless they won of course).
 
-Since we will need to be able to create new guess objects throughout the game play, let's write a method that returns a pristine guess object in **App.js**:
+Since we'll need to be able to create new guess objects throughout the game play, let's write a method whose responsibility is to return a pristine guess object in **App.js**:
 
 ```js
 // Add this method below the constructor method
@@ -436,7 +445,7 @@ We're also assigning using `idx` to assign to `key` to make React happy.
 
 Okay, we should still be seeing two `<GuessRow>` components being rendered.
 
-However, now it has `guess` & `colors` props that are to be used. Here's what **GuessRow.jsx** currently has for code:
+However, now it has `guess` & `colors` props that can be used. Here's what **GuessRow.jsx** currently has for code:
 
 ```js
 const GuessRow = (props) => (
@@ -485,7 +494,7 @@ As you can see, we want the row number to be 1-based.
 
 Check it out in the browser and you will find that the row number is now being displayed.  Although we want the newest row on top, which we'll take care of using styling tomorrow.
 
-Okay, next up is the `<GuessPegs>` component.
+Okay, next up is passing props to the `<GuessPegs>` component.
 
 The following props will need to be passed to it:
 
@@ -599,7 +608,7 @@ const GameBoard = (props) => (
 );
 ```
 
-The `{idx === (props.guesses.length - 1)}` JSX expression will result in the value of `true` or `false` being passed.
+The `{idx === (props.guesses.length - 1)}` JSX expression will result in a value of `true` or `false` being passed.
 
 Now the `<GuessRow>` component has the info necessary to decide which components to render.
 
@@ -638,6 +647,8 @@ import ScoreButton from '../ScoreButton/ScoreButton';
 The look of sweet success:
 
 <img src="https://i.imgur.com/O68DERR.png">
+
+Cool!
 
 Before the lab, let's put the student picker to work...
 
