@@ -86,7 +86,7 @@ Even though, the browser is not issuing an HTTP request, it is firing a `hashcha
 ```js
 window.addEventListener('hashchange', function(e) {
     console.log(window.location);
-};
+});
 ```
 
 Several front-end frameworks have taken advantage of Hash URIs to implement client-side routing. However, most have, or are, moving to using the History API-based routing, due mainly to the fact that the URL's are "prettier" without the hash.
@@ -97,7 +97,7 @@ So, assume a user clicks an **Add Comment** button in a SPA and expects to see t
 
 This is a SPA, so you don't want the button to cause a full-page refresh!
 
-**Discuss with a pair how, in plain language, we can add the new comment to the database and have it appear in the page without the page refreshing?**
+**Discuss with a pair, what steps in plain language, would be necessary to add a new comment to a database and have it appear in a page without the page refreshing?**
 
 **Be prepared to share your ideas in 3 minutes.**
 
@@ -114,7 +114,11 @@ The undisputed champ of client-side rendering today is React...
 - Now being used by big-time companies such as Netflix, Imgur, Airbnb, Walmart, and many more.
 - A separate library, React Native, can be used to develop native iOS and Android mobile apps.
 
-### When to Use React?
+### When Use React?
+
+React is the go to when developing highly dynamic user interfaces.
+
+### Why Use React?
 
 React is the hottest front-end library around for building SPA user interfaces.
 
@@ -138,7 +142,7 @@ The first thing to take note in CodeSandbox's starting React app is that modern 
 
 For example, note the use of `import` at the top of **index.js**.  Similar to how we used `require` in Node, `import` allows us to access the functionality that is exported by other JavaScript files (modules).
 
-Modules were introduced with ES2015 and they're really cool. However, you're probably wondering if they're so cool, why haven't we used them yet. The answer is that their use requires "tooling", or more specifically, "module loader" software - which we will discuss later.
+Modules were introduced with ES2015 and they're really cool. However, you're probably wondering if they're so cool, why haven't we used them yet. The answer is that their use requires "tooling", or more specifically, "module loader" software - which we'll discuss in a bit.
 
 As React developers, we will be using newer features of JavaScript such as the **spread operator**, **destructuring assignment**, etc.
 
@@ -150,7 +154,7 @@ For now, let's briefly go through how this code is resulting in the view we are 
 
 When the app is run, this is what happens:
 
-1. "Tooling" is used to convert that stuff that looks like HTML in the JavaScript into pure JS. That stuff is called JSX and it's a special syntax that we're going to come to appreciate later today.
+1. "Tooling" is used to convert that stuff that looks like HTML in the JavaScript into pure JS - this process is called _transpiling_. That HTML-looking stuff is called JSX and it's a special syntax that we're going to come to appreciate later today.
 2. The `main: src/index.js` entry in **package.json** informs the tooling which JS file is the starting point for figuring out dependencies, module loading and code execution.
 3. The tooling then merges all of the JS modules (files) into a single  file that is loaded and executed by _index.html_.
 
@@ -162,8 +166,8 @@ Let's briefly read through the code in **index.js** and I'll describe how the vi
 
 At this point, the takeaway should be that:
 
-- React apps consist of **components** that we code using JavaScript (and a special syntax known as JSX).
-- The line of code that causes all of the components to initially be rendered is:
+- React apps consist of **components** that we code using JavaScript (and a special syntax known as JSX). You will not be creating any *.html files in a React app!
+- The line of code that causes all of the components to be rendered for the first time is:
 
 	```js
 	ReactDOM.render(<App />, rootElement);
@@ -188,9 +192,9 @@ Let's briefly review some key concepts of React. We'll dig deeper in future less
 - A React app's UI consists of **components**.
 - In React, we build an app's UI by composing built-in and user-defined components.
 - React's built-in components are often referred to as **React Elements** and are used to emit in the HTML page DOM actual elements like `<div>`, `<h1>`, etc.
-- The components we code are going to be used a lot like HTML tags, for example - check out the diagram above for examples.  While you're there, note how some components have other components nested within them.
+- The custom components we code are going to be used a lot like HTML tags. For example, in the diagram above, the UI is being built with tags like `<HomePage>`, `<SearchBar>`, `<EmployeeList>`, etc.
 - Ultimately, our React components must contain React Elements if we want anything to appear on the page.
-- React Elements are often styled and can respond to user interaction.
+- React Elements can be styled using CSS and are the components that we will add event listeners to for responding to user interaction.
 - Components that create the UI are created using 100% JavaScript. There is no HTML markup in React components, just something that looks like it...
 
 #### JSX
