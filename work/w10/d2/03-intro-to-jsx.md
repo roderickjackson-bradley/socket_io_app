@@ -155,7 +155,7 @@ Be sure to create a new React sandbox, then:
 	  display: flex;
 	  justify-content: center;
 	  align-items: center;
-	}`****`
+	}
 	```
 
 3. Let's cleanup the `<App>` component in **index.js** as follows:
@@ -187,7 +187,7 @@ Be sure to create a new React sandbox, then:
 	```
 	Note how a **Function Component** (a component defined as a `function`) accepts "props" as an argument and must return its UI (defined using JSX).
 
-5. Be sure to click the "Save" button. Now let's modify `<App>` to render the new `<Greeter>` component instead of the built-in `<h1>` React element:
+5. Now let's modify `<App>` to render the new `<Greeter>` component instead of the built-in `<h1>` React element:
 
 	```js
 	function App() {
@@ -223,11 +223,11 @@ Besides these rules:
 
 There are a few other syntax rules, etc.:
 
-- There are built-in React components for all of the HTML elements. These components are **always lowercased** - like the `<h1>` component used in the `<Greeter />` component.<br>
+- There are built-in React components (React Elements) that correspond to each HTML element we're familiar with. These components are **always lowercased** - like the `<h1>` component used in the `<Greeter />` component.<br>
 	
 	<details>
 	<summary>These are also called React _________</summary>
-	Elements
+	<p>Elements</p>
 	</details>
 	
 - Our app's user-defined components are **always uppercased** - like the `<Greeter />` component.
@@ -283,7 +283,7 @@ function MyComponent(props) {
 	
 #### Curiosity
 
-We now know that JSX is transpiled into a method call of `React.createElement`, however, we haven't seen what that method call returns.
+We now know that JSX is transpiled into a method call to `React.createElement(...)`, however, we haven't seen what that method call returns.
 
 Let's add this after the imports in **index.js**
 
@@ -294,13 +294,15 @@ console.dir(g);
 
 An object, of course!
 
+React internally uses a JS object to represent each component.
+
 ## Including `props` in JSX
 
 We will soon have a lesson dedicated to learning about `props` and `state` in React, but let's cover a few basics regarding `props`.
 
 The syntax of passing props to a component is much like defining attributes in an HTML element.
 
-Many pre-defined props map to HTML attributes. [These docs](https://facebook.github.io/react/docs/dom-elements.html) list the supported HTML attributes and discuss important differences. For example, we cannot use **class** to assign CSS classes to a built-in HTML component, instead we must use **className** because _class_ is a reserved word in JavaScript.
+Many pre-defined props map to HTML attributes. [These docs](https://facebook.github.io/react/docs/dom-elements.html) list the supported HTML attributes and discuss important differences. For example, we cannot use `class` to assign CSS classes to a built-in HTML component, instead we must use `className` because `class` is a reserved word in JavaScript.
 
 Many props map directly to their HTML attribute counterparts. For example, this is how you could add an `id` to a `<div>`:
 
@@ -309,7 +311,9 @@ Many props map directly to their HTML attribute counterparts. For example, this 
 ```
 Of course, it would make sense to add attributes such as `id` to React Elements only, because they are the only components that end up generating actual DOM elements in the page.
 
-Some props map to HMTL attributes but have a slightly differently implementation, for example, the `style` prop is used to style a component inline, however, it must be passed an object consisting of CSS property/values, not a string like its HTML counterpart.
+Some props map to HTML attributes but have a slightly differently implementation, for example, the `style` prop is used to style a component inline, however, it must be passed an object consisting of CSS property/values, not a string like its HTML counterpart.
+
+However, most of the props we use will be custom props that are unique to the application.
 
 Let's pass a prop named `earthling`to the `<Greeter />` component:
 
@@ -337,7 +341,7 @@ Now let's use the `earthling` prop that was passed:
 </div>
 ```
 
-`props.earthling` IS a JavaScript expression and its result is being embedded in the JSX.
+`props.earthling` is a JavaScript expression and, as you can see, its result is being render in place.
 
 Now let's add a more interesting expression:
 
@@ -382,7 +386,7 @@ Considering that JSX is a JS expression, leads us to the fact that JSX can be:
 - Returned from a function
 - console.log'd out, etc.
 
-For example, here's another way to define a **Class Component** that returns different JSX depending upon the value of `this.props.user`:
+For example, here's a component that returns different JSX depending upon the value of `props.user`:
 
 ```js
 const Greeting = (props) => {
@@ -390,6 +394,10 @@ const Greeting = (props) => {
   return <h1>Hello, Stranger.</h1>;
 } 
 ```
+
+Note that within the function we can write JS code just like in any other function. In the above example we are using `if` and `return` statements.
+
+We just have to be careful not to try to write _JS statements_ within the JSX. 
 
 ## Component Rendering
 
@@ -435,9 +443,9 @@ function Greeter(props) {
 
 The `things` array would more commonly be held in the component's **state** or **props** object, which we'll be covering in a future lesson.
 
-Pretty cool. JSX automatically spreads out the components in an array.
+Pretty cool. React automatically renders arrays of components in JSX expressions (`{listOfThings}`).
 
-Note that because `things.map(...)` results in a value (a new array), it is an expression, therefore, it's actually possible to put it right in the JSX like this:
+Because `things.map(...)` is an expression (that returns a new array), it's possible to put it inline within the JSX like this:
 
 ```js
 function Greeter(props) {
