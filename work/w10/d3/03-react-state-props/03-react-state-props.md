@@ -186,7 +186,7 @@ Okay, your turn to add a couple of more pieces of state to react-mastermind:
 2. `code`: Add a property named `code` to the `state` object. This is the array that will hold four integers (ranging from `0` to `colors.length - 1`). To obtain the value for `code`, call a method named `genCode` that will return the array of four randomly generated numbers. Define `genCode` as a method in the class between the `constructor` & `render` methods.<br>**Hint:** Remember that to invoke a method from another method, it must be accessed via `this`.<br>This single line of code within `genCode` will do the trick:
 
 	```js
-	return new Array(4).fill().map(dummy => Math.floor(Math.random() * 4));
+	return new Array(4).fill().map(() => Math.floor(Math.random() * 4));
 	```
 
 Click the 🌶️ in Slack when finished.
