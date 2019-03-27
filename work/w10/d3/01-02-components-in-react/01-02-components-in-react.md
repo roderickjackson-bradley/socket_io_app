@@ -269,7 +269,7 @@ Let's start defining some components...
 
 #### What Are They?
 
-**Function Components** were introduced in version 0.14 of React (current version is 16.6.0 - yes, they changed their versioning scheme).
+**Function Components** were introduced in version 0.14 of React (current version is 16.8.4 - yes, they changed their versioning scheme).
 
 Function components provide a simpler syntax vs. defining components using classes.
 
@@ -281,11 +281,11 @@ Function components take props as an argument and return the element you want to
 // A function component using an ES2015 (ES6) arrow function:
 const ConcertCard = (props) => {
   return (
-  	<div className='concert-card'>
-  		<h3>{props.concert.title}</h3>
-  		<Performers performers={props.concert.performers} />
-  		<Venue venue={props.concert.venue} />
-  	</div>
+    <div className='concert-card'>
+      <h3>{props.concert.title}</h3>
+      <Performers performers={props.concert.performers} />
+      <Venue venue={props.concert.venue} />
+    </div>
   );
 };
 
@@ -311,17 +311,17 @@ class ConcertCard extends React.Component {
 
 Function components cannot however have their own state and do not implement lifecycle methods (next week).
 
-> Note: The above statement is a now, thanks to the recently released version 16.8.0 of React. React now has support for **Hooks** that allow state, etc. to be implemented in Function Components. We'll look at them down the line.
+> Note: The above statement is now not true thanks to the recently released version 16.8.0 of React. React now has support for **Hooks** that allow state, etc. to be implemented in Function Components.
 
 #### Write Our First Mastermind Component
 
-If we follow the recommended approach above, we should start coding the components higher in the hierarchy and work our way down.
+Following the recommended approach above, we'll start coding the components higher in the hierarchy and work our way down.
 
 The `<GameBoard />` component based on our wireframe is a great place to start - so let's:
 
 1. Create a **components** folder within the **src** folder. All our new components will go inside this new folder.
 2. Create a **GameBoard** folder within the **components** folder. This is a best practice that allows you to organize a component's module file with other files used by that component (primarily CSS files and tests).
-3. Create a **GameBoard.jsx** (GameBoard.js is also okay) module within the **GameBoard** folder.  Note that the name of the module file is always the same as the component, including the upperCamelCasing.
+3. Create a **GameBoard.jsx** (GameBoard.js also works) module within the **GameBoard** folder.  Note that the name of the module file is always the same as the component, including the UpperCamelCasing.
 4. Add the following code to **GameBoard.jsx**:
 
 	```js
@@ -375,8 +375,8 @@ Next, add the **component** class to the `<div>` in the `<GameBoard>` component 
 
 ```js
 const GameBoard = (props) => (
-    <div className='component'>
-    ...
+  <div className='component'>
+  ...
 ```
 
 Now you'll be able to easily identify the component hierarchy as you create the skeleton components we identified earlier.
@@ -389,11 +389,11 @@ Now it's your turn to code another component.
 
 Code the skeleton of the `<ColorPicker>` as a function component, putting it in its own folder, etc., just like `<GameBoard>`.
 
-Normally I encourage you to copy your own code to save time, however, for this exercise you should type everything out.
+Don't copy your other code - for this exercise you should type everything out.
 
 For now, let's not worry about layout.
 
-Don't forget to add the **component** CSS class to the outer React element.
+Don't forget to add the **component** CSS class to the outer React Element.
 
 Add `<ColorPicker>` to `<App>` and the display should look like this:
 
@@ -403,7 +403,7 @@ Add `<ColorPicker>` to `<App>` and the display should look like this:
 
 Both **presentational** and **container** components may be written as JS classes.
 
-However, any component that has its own state or needs to tap into the component's lifecycle hooks/methods (next week), must be defined as a class. This is because classes allow us to define methods, as well as inherit methods such as `setState`, etc.
+However, any component that has its own state or needs to tap into the component's lifecycle methods (next week), must be defined as a class. This is because classes allow us to define and inherit methods such as `setState`, etc.
 
 Let's examine the `<App>` component to see how a class is used to define a component.
 
@@ -411,7 +411,7 @@ Some observations:
 
 1. This is a very simple component that currently does not hold any state, etc.
 2. The only method is `render`. This is the only required method when defining a component using a class.
-3. Often, a class component will have a `constructor` method used to initialize the component's state.
+3. A class component can use a `constructor` method to initialize the component's state.
 4. Because there's no state, there's no other methods defined, such as click event handlers, used to update state.
 5. The first line is using ES2015's `import` statement to import functionality from the `react` module. The `React` object is the _default export_ and `Component` is a class that's exported as a _named export_. Note that a JS module can have only one _default export_ but as many _named exports_ as desired.
 6. Components, whether defined as a class or a function, are usually the default export of the component's module.
@@ -430,11 +430,11 @@ You'll be working with class components this afternoon when you start working wi
 
 ## Lab: Define the Remaining Components for Mastermind
 
-Build out the components for the Mastermind app based on the component **hierarchy** we identified earlier.
+Build out the components for the Mastermind app based on the components identified earlier.
 
 For now, all of the components can be defined as function components.
 
-When completed, the display should look something like this:
+Be sure to render the components in a hierarchy that results in a display looking something like this:
 
 <img src="https://i.imgur.com/gY4ANSw.png">
 
