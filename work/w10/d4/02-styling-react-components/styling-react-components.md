@@ -56,7 +56,7 @@ It's the Mastermind app from where we left off in the _React State and Props_ le
 
 - `<NewGameButton>` now renders a `<button>` instead of a `<div>`.
 
-- A `getWinTries` method has been added to `<App>` and used in its `render` method to render the `<footer>`.
+- A `getWinTries` method has been added to `<App>` and used in its `render` method to render the `<footer>` component's content.
 
 - The `<GuessScore>` component is now being passed the guess object's `score` as a prop. The `score` object in turn is then being used to generate an array of **P**erfect, **A**lmost & **I**ncorrect characters that is then subsequently mapped and displayed using `<div>` components. 
 
@@ -224,7 +224,7 @@ Now it's your turn:
 
 	Use the same flexbox properties as the `<GuessPegs>` component, however, we're going to want 2 rows of 2 scores each. You can easily accomplish this by changing `flex-wrap: nowrap;` to `flex-wrap: wrap;`, then add `width: 10px;`:
 
-	<img src="https://i.imgur.com/pRf8UCX.png>
+	<img src="https://i.imgur.com/pRf8UCX.png">
 
 In a bit, when the `<div>`s for the individual scores are sized and styled, we will come back and further adjust the `width` to ensure they wrap in a 2-by-2 pattern.
 
@@ -330,7 +330,7 @@ That looks better!
 
 2. **What's wrong with the following code:**
 
-	```js
+	```
 	import styles from './SmallComponent.module.css';
 	
 	function SmallComponent(props) {
