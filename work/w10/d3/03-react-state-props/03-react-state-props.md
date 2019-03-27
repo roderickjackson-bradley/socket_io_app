@@ -260,7 +260,7 @@ However, as discussed in the JSX lesson, you must use camelCasing to name your p
 
 ## Passing Props
 
-The first prop we pass in react-mastermind will be the `colors` array to the `<ColorPicker>` component within the `render` method in **App.js**:
+The first prop we'll pass in react-mastermind will be the `colors` array to the `<ColorPicker>` component within the `render` method in **App.js**:
 
 ```js
 <ColorPicker colors={colors}/>
@@ -268,7 +268,7 @@ The first prop we pass in react-mastermind will be the `colors` array to the `<C
 
 You must use curly braces to pass any value other than a simple string (template literals need to be surrounded by curly braces as well).
 
-We can now go to  `<ColorPicker>` and work with the array, but there's a better way to check things like props and state - [React Developer Tools](https://chrome.google.com/webstore/detail/react-developer-tools/fmkadmapgofadopljbjfkapdkoienihi?hl=en)
+We can now go to  `<ColorPicker>` and work with the colors array, but there's a better way to check things like props and state - [React Developer Tools](https://chrome.google.com/webstore/detail/react-developer-tools/fmkadmapgofadopljbjfkapdkoienihi?hl=en)
 
 Just like how Chrome's DevTools are invaluable when it comes to troubleshooting the DOM, so are React's Developer Tools when it comes to troubleshooting a React app!
 
@@ -295,7 +295,7 @@ However, a **Class Component** will access props via a property on the instance 
 {this.props.myProp}
 ```
 
-Let's use the `colors` prop inside of `<ColorPicker>` to render the a button for each of the colors in the array:
+Let's use the `colors` prop inside of `<ColorPicker>` to render a button for each of the colors in the array:
 
 ```js
 const ColorPicker = (props) => (
@@ -312,17 +312,19 @@ Check it out, they won't be pretty (yet), but you'll find a button for each colo
 
 #### Props Cannot be Changed
 
-Props are immutable, their values are never to be changed!
+Props are immutable, their values are never to be changed.
 
 Remember, the prop came from a component somewhere up the hierarchy and if the prop's value originated from state, it would be **that** component's responsibility to update its own state.
 
 However, a component can certainly pass down via props methods that can be used to update its state - but that's for another day.
 
-#### Exercise - Passing Props
+#### Exercise - Passing Props (5 mins)
 
 Your turn to pass some props:
 
 1. The `<ColorPicker>` component will need to know which color is selected, thus, pass the `selColorIdx` state to it as a prop with the same name.
+
+	> Note: The name of the prop can be anything, but it makes sense to name it the same as the state property being passed.
 
 2. The `<GameBoard>` component will need access to both the `colors` array and the `guesses` state. Pass both as props using the same names.
 
@@ -350,7 +352,7 @@ When the app loads, the player is going to expect to see an initial guess row in
 
 <img src="https://i.imgur.com/m5wLwS9.png">
 
-After the player completes finishes a guess, they will want to see another guess row show up (unless they won of course).
+After the player clicks the `<ScoreGuess>` button, they will expect another guess row to appear so that they guess again (unless they won of course).
 
 Since we'll need to be able to create new guess objects throughout the game play, let's write a method whose responsibility is to return a pristine guess object in **App.js**:
 
@@ -384,7 +386,7 @@ React Developer Tools can confirm that `<GameBoard>` is now receiving the `guess
 
 However, during development, we often want to "seed" initial data for testing, styling, etc.
 
-Let's make a couple of changes to temporarily create guess objects with indexes in place of the nulls and put two guess objects in the `guesses` state array instead of just one:
+Let's make a change to temporarily create two guess objects in the `guesses` array instead of one, and with "color" indexes instead of the nulls:
 
 ```js
   this.state = {
@@ -410,7 +412,7 @@ getNewGuess() {
 
 #### Code `<GameBoard>` to Display `<GuessRow>`s
 
-The `<GameBoard>` component currently is rendering two `<GameRow>` components temporarily:
+The `<GameBoard>` component currently is rendering two hard-coded `<GameRow>` components:
 
 ```js
 const GameBoard = (props) => (
@@ -421,7 +423,7 @@ const GameBoard = (props) => (
 );
 ```
 
-However, now that `<GameBoard>` is being passed the actual `guesses` array, we need to refactor to render a `<GuessRow>` for each guess object in the array instead:
+However, now that `<GameBoard>` is being passed the actual `guesses` array, let's refactor to render a `<GuessRow>` for each guess object in the array instead:
 
 ```js
 const GameBoard = (props) => (
@@ -437,9 +439,9 @@ const GameBoard = (props) => (
 );
 ```
 
-We're passing both the `guess` object and the `colors` array as props because the `<GuessRow>` needs access to them to do its job.
+While we're at it, we're passing both the `guess` object and the `colors` array as props because the `<GuessRow>` needs access to them to do its job.
 
-We're also assigning using `idx` to assign to `key` to make React happy. 
+We're also using `idx` to assign to `key` to make React happy. 
 
 > Note: Passing state and props down multiple levels of the component hierarchy is very common in React. However, state management alternatives, such as Redux and React's context, allow for "providing" state to components directly instead. Redux has a lot of set up overhead and is overkill for most apps, however, we'll be taking a look at React's context approach in a future lesson.
 
@@ -459,7 +461,7 @@ const GuessRow = (props) => (
 
 Now let's display an actual number for "Guess Row #".
 
-Problem though, `<GuessRow>` doesn't currently have this information. You might think that we could use the value of the `key` prop, however, `key` is for React's internal use and is not actually passed to the child component as a prop.
+Problem though, `<GuessRow>` doesn't currently have this the "guess row number" information. You might think that we could use the value of the `key` prop, however, `key` is for React's internal use and is not actually passed to the child component as a prop.
 
 We're going to have to pass the value of `idx` as a separate prop instead in **GameBoard.jsx**:
 
@@ -496,7 +498,7 @@ Check it out in the browser and you will find that the row number is now being d
 
 Okay, next up is passing props to the `<GuessPegs>` component.
 
-The following props will need to be passed to it:
+The following props will need to be passed to `<GuessPegs>`:
 
 - `colors`: No big surprise here because those pegs will definitely need to access the actual color values instead of the index numbers.
 - `code`: Each peg's color is dependent upon what color the player has guessed, which is being stored in the guess object's `code` property.
@@ -585,7 +587,7 @@ However, `<GuessScore>` should be displayed for previous guesses only, not the c
 
 We will need to add some conditional logic to `<GuessRow>` to render `<ScoreButton>` for the **current** guess row.
 
-However, currently, there's no way `<GuessRow>` knows if it's the current row or not.
+However, currently, `<GuessRow>` does not have a way of knowing if it's the current row or not.
 
 As you've seen already, we'll need to pass a prop to `<GuessRow>` from its parent component, `<GameBoard>`, to let it know if it's the current row or not.
 
