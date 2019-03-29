@@ -149,7 +149,7 @@ Let's see how...
 
 #### Connecting Handler Code to Events in React
 
-In React, we do not add event listeners using JavaScript's `addEventListener` method. Instead, we use certain props on React elements (`<div>`, `<p>`, etc.) to connect that component's events to a handler (method/function).
+In React, we do not add event listeners using JavaScript's `addEventListener` method. Instead, we use certain props on React Elements (`<div>`, `<p>`, etc.) to connect those components' events to a handler (method/function).
 
 Let's see this by adding an anonymous arrow function as a click handler on the colored circles within the `<ColorPicker>` component:
 
@@ -237,7 +237,7 @@ Within <code>&lt;App /&gt;</code>, of course!
 </p>
 </details>
 
-Start by defining a method in `<App>` that baby-steps by popping up an alert:
+<br><br>Start by defining a method in `<App>` that baby-steps by popping up an alert:
 
 ```js
 handleColorSelection() {
@@ -274,7 +274,7 @@ Now, `<ColorPicker>` will have access to the `handleColorSelection` via `props.h
 
 **Does the name of the prop HAVE to be this?**
 
-Now, inside of `<ColorPicker>` we can replace the `onClick={() => alert('clicked!')}` with `handleColorSelection`:
+Now, inside of `<ColorPicker>` we can replace the `onClick={() => alert('clicked!')}` with `props.handleColorSelection`:
 
 ```js
 const ColorPicker = (props) => (
@@ -310,7 +310,7 @@ handleColorSelection(colorIdx) {
 }
 ```
 
-Currently, it's alerting the event object.
+Currently, it's alerting the React synthetic event object.
 
 Now back to `<ColorPicker>`...
 
@@ -320,7 +320,7 @@ As stated earlier, we must provide a function type, **not invoke** the function.
 onClick={props.handleColorSelection(idx)}
 ```
 
-Writing the above code will actually invoke the method each time `<ColorPicker>` is rendered - resulting in an alerts popping up each time, funny, but not really.
+Writing the above code will unfortunately invoke the method each time `<ColorPicker>` is rendered - resulting in an alerts popping up each time, funny, but not really.
 
 So, what's the solution? Try this on for size:
 
@@ -328,9 +328,11 @@ So, what's the solution? Try this on for size:
 onClick={() => props.handleColorSelection(idx)}
 ```
 
-So far so good!
+Wrap the code inside of a function - nice solution!
 
-Nice solution and testing out seems like things are going to great - except for the value of `this` within the event handler...
+Testing it out shows that `idx` is now being provided to the `handleColorSelection` method!
+
+However, there's a bug...
 
 #### Context Binding
 
@@ -355,7 +357,8 @@ The binding of <code>this</code> is determined by how a function is called. In t
 </p>
 </details>
 
-So, we need to have `this` bound to the `<App />` component where the `setState()` method is.  There are a couple of ways to explicitly set the binding of _regular_ functions by using their `bind`, `call` and `apply` methods.
+
+<br><br>So, we need to have `this` bound to the `<App />` component where the `setState()` method is.  There are a couple of ways to explicitly set the binding of _regular_ functions by using their `bind`, `call` and `apply` methods.
 
 In React, prior to an upcoming JS feature that I'm going to show you next, the most popular way was to use `bind` in the constructor to create a **new** function that has `this` explicitly bound to its first argument:
 
@@ -390,11 +393,11 @@ Here's how property initializer syntax can be used to initialize a `sweet` and a
 
 ```js
 class Candy {
-	constructor(name) {
-		this.name = name;
-	}
-	sweet = true;
-	eat = () => { console.log('Yummy!'); };
+  constructor(name) {
+    this.name = name;
+  }
+  sweet = true;
+  eat = () => { console.log('Yummy!'); };
 }
 ```
 
@@ -402,11 +405,11 @@ The above code internally gets translated into this:
 
 ```js
 class Candy {
-	constructor(name) {
-		this.name = name;
-		this.sweet = true;
-		this.eat = () => { console.log('Yummy!'); };
-	}
+  constructor(name) {
+    this.name = name;
+    this.sweet = true;
+    this.eat = () => { console.log('Yummy!'); };
+  }
 }
 ```
 
@@ -414,10 +417,10 @@ Note that because _class fields_ (as they are also called) are actually being in
 
 Now let's fix the `handleColorSelection` problem using property initializer syntax.
 
-First, remove the explicit binding line of code we just added in the constructor:
+First, remove the explicit binding line of code we just added in the `constructor`:
 
 ```js
-// remove this line of code!
+// remove this line of code from the constructor
 this.handleColorSelection = this.handleColorSelection.bind(this);
 ```
 
@@ -429,7 +432,7 @@ handleColorSelection = (colorIdx) => {
 }
 ```
 
-Now, unlike this version:
+Now, **unlike the following syntax**:
 
 ```js
 handleColorSelection(colorIdx) {
