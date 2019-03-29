@@ -197,7 +197,7 @@ Let's create and import a CSS stylesheet for `<GuessPegs>` so that we can style 
 	```
 	Be sure to include the `.css` file extension!
 
-3. Create a class named **GuessRow** within **GuessRow.css**:
+3. Create a class named `GuessPegs` within the new **GuessPegs.css**:
 
 	```css
 	.GuessPegs {
