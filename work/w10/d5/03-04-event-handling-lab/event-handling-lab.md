@@ -38,11 +38,11 @@ The event handling code in the `handleColorSelection` method we wrote for changi
 
 3. Add an `onClick` event handler for the four `<GuessPeg>` components. Clicking pegs for **only the current guess** row should update the state of the guess object. Remember - baby steps!
 
-  Hints: In `<GuessPegs>`, you can wrap the click handler (originally passed from `<App>`) with an arrow function and include the index of the peg as an arg when passing it to each `<GuessPeg>`. Also, as a best practice, review how to **replace** objects/arrays in state instead of mutating them. In this case, you actually should be creating new versions (copies) of the `state.guesses` array, the current guess object within that array, as well as the `code` array on the current guess object! Yes, a lot of work, but considered the "best practice" of not mutating objects/arrays in state.
+	Hints: In `<GuessPegs>`, you can wrap the click handler (originally passed from `<App>`) with an arrow function and include the index of the peg as an arg when passing it to each `<GuessPeg>`. Also, as a best practice, review how to **replace** objects/arrays in state instead of mutating them. In this case, you actually should be creating new versions (copies) of the `state.guesses` array, the current guess object within that array, as well as the `code` array on the current guess object! Yes, a lot of work, but considered the "best practice" of not mutating objects/arrays in state.
 	
-  After this step is completed, selecting "red" in the color picker, then clicking the second peg should result in the display looking like this:
+	After this step is completed, selecting "red" in the color picker, then clicking the second peg should result in the display looking like this:
 
-  <img src="https://i.imgur.com/loJBeHh.png">
+	<img src="https://i.imgur.com/loJBeHh.png">
   
 4. Score the guess when the Score (checkmark) button is clicked!
 
