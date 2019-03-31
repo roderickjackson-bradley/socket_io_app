@@ -10,7 +10,7 @@ In the lesson earlier you:
 
 1. Learned how to use React Router to perform client-side routing.
  
-2. Refactored the react-mastermind app to render the game at the root route.
+2. Refactored the react-mastermind app to render a `<GamePage>` component at the root route.
 
 3. Added a "Difficulty" `<Link>` to the `<GamePage>` used to navigate to a `<SettingsPage>` component.
 
@@ -18,7 +18,7 @@ In the lesson earlier you:
 
 4. Created a minimal `<SettingsPage>` component that included a "HOME" `<Link>`.
 
-In this lab, you'll continue to have fun building out Mastermind using what you know about components, state, props, styling, methods, event handlers, routing and of course, JavaScript.
+In this lab, you'll continue to have fun building out react-mastermind using what you know about components, state, props, styling, methods, event handlers, routing and of course, JavaScript.
 
 **This lab is not a deliverable**
 
@@ -34,7 +34,7 @@ To get set up for this lesson:
 - Install the Node modules: `$ npm i`
 - Start the React Dev Server: `$ npm start`
 
-Browsing to `localhost:3000` should display the following:
+After the server starts up, you should see the following in the browser at `localhost:3000`:
 
 <img src="https://i.imgur.com/ibMTm9k.png">
 
@@ -66,7 +66,7 @@ As you can see, the settings page allows the player to change the difficulty lev
 	  ...
 	```
 
-5. Changing the structure of `colors` expectedly broke the code because we were used to passing `colors` as an array to `<GamePage>`. Refactor the value that is assigned to the `colors` prop in `<GamePage>` such that the appropriate array in the `colors` variable is passed according to the value of the `difficulty` property in state. With this step complete, the react-mastermind will be working again.
+5. Changing the structure of `colors` expectedly broke the code because we were used to passing `colors` as an array to `<GamePage>`. Refactor the value that is assigned to the `colors` prop in `<GamePage>` such that the appropriate array in the refactored `colors` object is passed according to the value of the `difficulty`  state property. With this step complete, the react-mastermind will be working again.
 
 6. Now comes the "fun" part - building out the `<SettingsPage>` component so that:
 
@@ -74,17 +74,17 @@ As you can see, the settings page allows the player to change the difficulty lev
 
 	- The button to select the difficulty level is disabled for the currently selected difficulty.
 
-	- Clicking one of difficulty buttons updates the `difficulty` state, initializes a new game, and programmatically routes back to the `<GamePage>` page (root route).
+	- Clicking one of difficulty buttons should update the `difficulty` state, initialize a new game, and programmatically route back to the `<GamePage>` page (root route).
 	
 	Hints:
 	
 	- As always, use React Developer Tools to browse components and check/modify state & props.
 	
-	- `<SettingsPage>` is going to need the both the `colors` object and the `difficulty` state property.
+	- `<SettingsPage>` is going to need both the `colors` object and the `difficulty` state property.
 
 	- Since `difficulty` lives in the state of `<App>`, guess where the method to update it will live.
 
-	- You can reuse the `handleNewGameClick` method, passing it down to `<SettingsPage>` used to reset the game after calling the method to update `difficulty`.
+	- You can reuse the `handleNewGameClick` method by passing it down to `<SettingsPage>` calling it to reset the game after you call the method to update the `difficulty`.
 
 	- After updating `difficulty` & invoking `handleNewGameClick`, you can use the technique shown in the _React Router_ lesson to programmatically route to `/`.
 
