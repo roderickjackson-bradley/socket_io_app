@@ -290,11 +290,11 @@ Currently however, the `skill` and `level` properties on `state` are not isolate
 
 Take 5 to 10 minutes to do the following refactor:
 
-1. Move `skill` & `level` properties to a `newSkill` object on `state`. When finished with this step, `state` will have just two top level properties: `skills` & `newSkill`.
+1. Move the `skill` & `level` properties to a `newSkill` object on `state`. When finished with this step, `state` will have just two top level properties: `skills` & `newSkill`.
 
-2. Update the `handleChange` method so that it does not mutate the `newSkill` object when either `skill` or `level` are being changed.
+	> Hint: You will also need to update the `value` props of the inputs.
 
-> Hint: You will need to update the `value` props of the inputs.
+2. Update the `handleChange` method so that it replaces, not mutate, the `newSkill` object when either `skill` or `level` are being changed.
 
 When finished, be sure to test it out by changing both inputs.	
 ## Adding the New Skill to State
@@ -305,9 +305,9 @@ The first thing to realize when it comes to using forms in React is that, we don
 
 Unlike the traditional web apps we've built so far using Express and Django, **thanks to _____**, SPAs don't need forms to send data to the server.
 
-Further, we didn't need to wrap the **skill** or **level** inputs in a `<form>` to be able to add them to the DEV SKILLS list.
+Further, we don't need to wrap the **skill** or **level** inputs in a `<form>` to be able to add them to the DEV SKILLS list.
 
-It's just a matter of updating state by adding the `newSkill` object to the `skills` array - and we don't need a form to do that either. No form or submit button is necessary - we can update state whenever we want to: when the user interacts with the app, when a timer event happens, etc.
+It's just a matter of updating state by adding the `newSkill` object to the `skills` array - and we don't need a form to do that. No form or submit button is necessary - we can update state whenever we want to: when the user interacts with the app, when a timer event happens, etc.
 
 Let's ignore the **[ADD SKILL]** button for a moment, and write the code to add the `newSkill` when the `<h2>DEV SKILLS</h2>` is clicked.
 
@@ -333,9 +333,9 @@ Test it out!
 
 #### Using Forms in React
 
-Although forms are not required for handling input in React, they can provide a benefits such as:
+Although forms are not required for handling input in React, they can provide benefits such as:
 
-- Styling using CSS frameworks that rely on inputs being wrapped in a form.
+- Using CSS frameworks to perform styling on inputs that rely on them being wrapped in a form.
 - Validation
 
 Currently, the `<form>` component is being rendered in the DOM:
@@ -344,9 +344,9 @@ Currently, the `<form>` component is being rendered in the DOM:
 
 Note that unlike forms we've used before, there's no `action` or `method` attributes - nor, should there ever be in a SPA's forms.
 
-However, despite those missing attributes, and the fact that the **[ADD SKILL]** button within the form is not of `type="submit`, the darn form will still send off an HTTP request if we press **[return]** while inputting data or click the button - triggering a full-page refresh!
+However, despite those missing attributes, and despite the fact that the **[ADD SKILL]** button within the form is not of `type="submit`, the darn form will still send off an HTTP request if we press **[return]** while inputting data or click the button - triggering a full-page refresh!
 
-In React, we need to prevent the browser from submitting forms and we do it by **always** using the `onSubmit` prop on `<form>` components:
+In React, we need to prevent the browser from submitting forms and we first do this by **always** using the `onSubmit` prop on `<form>` components:
 
 ```js
 <form onSubmit={this.addSkill}>
@@ -369,7 +369,7 @@ Although the app is working as planned, we're not taking advantage of the form's
 
 As we saw in the lesson on Regular Expressions, we can add a `required` and `pattern` attribute to HTML inputs to validate their data.
 
-Let's prevent the ability to add empty skills by first adding props to the skills input:
+Let's prevent the ability to add empty skills by adding these props to the skills input:
 
 ```js
 <input
@@ -378,7 +378,7 @@ Let's prevent the ability to add empty skills by first adding props to the skill
   onChange={this.handleChange}
   {/* Add these two additional props to set constraints */}
   required
-  pattern="..+"
+  pattern=".{2,}"
 />
 ```
 
@@ -398,7 +398,7 @@ handleChange = e => {
   console.log(e.target.checkValidity());
 ``` 
 
-Testing it out shows that at least two characters need to be entered in the skill input before `true` is logged.
+Testing it shows that at least two characters need to be entered in the skill input before `true` is logged.
 
 Now that we've seen how we can check an individual input's validity, let's see what it takes to check the validity of the entire form...
 
@@ -408,11 +408,11 @@ Unfortunately, the event object's `target` property is not providing us with acc
 
 We could use the `element.closest(selector)` method on the inputs to find the form, however, this is a good time to learn about how React provides access to DOM element by using a [ref](https://reactjs.org/docs/refs-and-the-dom.html).
 
-> Key Point: Although using a ref has a few useful use cases like integrating with third-party DOM libraries, they should be used sparingly and never to bypass React's way of updating the DOM, etc.
+> Key Point: Although using a ref has a few useful use cases like third-party library integration, they should be used sparingly and never to bypass React's way of updating the DOM, etc.
 
 A ref is an object that provides access to a DOM element.
 
-There's no reason to hold a ref in state, so we'll create a ref and store it in a separate property like this:
+There's no reason to hold a ref in state, so we'll create a ref and store it in a separate property on the instance like this:
 
 ```js
 state = {
@@ -426,7 +426,7 @@ state = {
 formRef = React.createRef();
 ```
 
-With the ref created, all that's left is to "link" it to a component by using the `ref` prop:
+With the ref created, all that's left is to "link" it to a component's DOM element by using the `ref` prop:
 
 ```js
 <form ref={this.formRef} onSubmit={this.addSkill}>
@@ -452,7 +452,7 @@ addSkill = e => {
   if (!this.formRef.current.checkValidity()) return;
 ```
 
-#### Disabling the Button if Form is Invalid
+#### Disabling the Button if the Form is Invalid
 
 What if we want the **[ADD SKILL]** button to be disabled depending upon the validity status of the form?
 
@@ -501,6 +501,10 @@ button:disabled {
   background-color: lightgrey;
 }
 ```
+
+<img src="https://i.imgur.com/gYpjVm1.png">
+
+Nice!
 
 ## Essential Questions
 
