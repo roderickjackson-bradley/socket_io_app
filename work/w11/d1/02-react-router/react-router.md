@@ -61,9 +61,9 @@ You know how components render other components in React?
 
 React Router follows this very same approach, we will define `<Route>` components that are either rendered or not based upon the current URL in the address bar.
 
-Then, we can declare which of our "page" components we want rendered when a particular `<Route>` component.
+Then, we can declare which of our "page" components we want rendered when a particular `<Route>` component gets rendered.
 
-In a nutshell, defining routing for a React app using React Router is a matter of declaring a component hierarchy within the top-level `<App>` component.
+In a typical React app, defining routing for a React app using React Router is a matter of declaring a component hierarchy within the top-level `<App>` component.
 
 #### Installing React Router
 
@@ -73,7 +73,7 @@ Since React Router is not part of the React library, it needs to be installed se
 $ npm i react-router-dom
 ```
 
-Not only is it a fairly large Node package, it might have some vulnerability warnings as well. If so, the output says to run the following command to fix those that can be fixed:
+Not only is it a fairly large Node package, npm might list some vulnerability warnings as well. If so, the output says to run the following command to fix those that can be fixed:
 
 ```
 $ npm audit fix
@@ -85,9 +85,9 @@ The top-level component of React Router is the `<BrowserRouter>`.
 
 `<BrowserRouter>` uses the HTML5 History API (`pushState`, `replaceState` and the `popstate` event) to keep the UI in sync with the URL in the address bar.
 
-Since it is a top-level component required for other router-related components to work, a best practice is render `<BrowserRouter>` instead of `<App>` in the entry module - **index.js**.
+Since it is a top-level component required for other router-related components to work, a best practice is to wrap `<App>` with `<BrowserRouter>` in the entry module (**index.js**).
 
-Before we can use `BrowserRouter`, we need to import it. Let's import it toward to the top of **index.js**:
+Before we can use `BrowserRouter`, we need to import it. Let's import it near the top of **index.js**:
 
 ```js
 import React from 'react';
@@ -99,7 +99,7 @@ import * as serviceWorker from './serviceWorker';
 import { BrowserRouter as Router } from 'react-router-dom';
 ```
 
-> Note the use of `as` to declare an _alias_ called `Router`. This allows for us to use shorter names for longer named exports such `BrowserRouter`.
+> Note the use of `as` to declare an _alias_ for `<BrowserRouter>` named `Router`. This allows the use of shorter names for longer named exports such `BrowserRouter`.
 
 Now we can refactor and use `ReactDOM.render` to render `<Router>` which in turn renders `<App>`:
 
@@ -116,9 +116,9 @@ Mastermind should still be running perfectly with the above refactor.
 
 With `<BrowserRouter>` now being rendered, we're free to use the `<Route>` component to define client-side routes.
 
-You can use the `<Route>` component in any component you wish.
+`<Route>` components are commonly used in the `<App>` component to render "page" components.
 
-However, `<Route>` components are commonly used in the `<App>` component to render "page" components.
+However, you can use `<Route>` in any component which allows for complex nested routing scenarios.
 
 Open **App.js** and add the following named import:
 
@@ -128,7 +128,7 @@ import NewGameButton from './components/NewGameButton/NewGameButton';
 import { Route } from 'react-router-dom';
 ```
 
-Now let's add a `<Route>` component to within the `render` method:
+Now let's add a `<Route>` component within the `render` method:
 
 ```js
 render() {
@@ -136,7 +136,7 @@ let winTries = this.getWinTries();
 return (
   <div className="App">
     <header className='App-header-footer'>R E A C T &nbsp;&nbsp;&nbsp;  M A S T E R M I N D</header>
-    <Route component={GameTimer} />
+    <Route component={GameTimer}/>
 ```
 
 The page should now display an extra `<GameTimer>` under the header.
@@ -144,12 +144,12 @@ The page should now display an extra `<GameTimer>` under the header.
 Let's say we only want the extra `<GameTimer>` to show when the URL has a certain path:
 
 ```js
-<Route path='/timer' component={GameTimer} />
+<Route path='/timer' component={GameTimer}/>
 ```
 
 When the page refreshes, the extra `<GameTimer>` is gone.
 
-Now type `localhost:3000/timer` in the address bar and the extra timer is back.
+Now type `localhost:3000/timer` in the address bar and the extra timer is back!
 
 #### Using the `render` Prop on `<Route>`
 
@@ -159,23 +159,23 @@ Instead of using `component` you should use the `render` prop that accepts a fun
 
 ```js
 <Route path='/timer' render={() => (
-  <GameTimer />
-)} />
+  <GameTimer/>
+)}/>
 ```
 
-The function provided to the `render` prop should return the UI just like a `render` method does.
+The function provided to the `render` prop should return the UI just like a typical `render` method does.
 
 Although the syntax is a bit more complex, it allows for the passing of props whereas this was not possible when using `component`:
 
 ```js
 <Route path='/timer' render={(props) => (
-  <GameTimer {...props} />
-)} />
+  <GameTimer {...props}/>
+)}/>
 ```
 
 The `{...props}` is a useful way to pass all key:value pairs in an object as props!
 
-Let's use React Developer Tools to see what props the `<Route>` component automatically passes:
+Let's use React Developer Tools to see what props the `<Route>` component is passing:
 
 <img src="https://i.imgur.com/03IKYlP.png"> 
 
@@ -195,7 +195,7 @@ Separating "page" components in your app that are then rendered by `<Route>` com
 
 In this lesson, we are going to define a root route that renders the game as it currently exists.
 
-As a practice exercise you will define a `/settings` route used to display a settings page.
+As a practice exercise you will define a `/settings` route used to display a "settings" page.
 
 #### Organizing "Page" Components
 
@@ -294,11 +294,11 @@ render() {
 
 Okay, let's copy the entire contents of `<App>`'s `render` method,  paste it in `<GamePage>` and refactor as follows:
 
-1. Delete the `<Route path='/timer'>...` we messed around with.
+1. In `<GamePage>`, delete the `<Route path='/timer'>...` we messed around with.
 
-2. IMPORTANT: Delete the `<GamePage />` unless you want your machine to melt.
+2. IMPORTANT: In `<GamePage>`, delete the `<GamePage />` unless you really like the movie Inception (you may, but your computer doesn't).
 
-3. Delete the `<header>` because that's going to remain in `<App>`.
+3. In `<GamePage>`, delete the `<header>` because that's going to remain in `<App>`.
 
 4. Transfer the following imports from **App.js** to **GamePage.jsx**:
 
@@ -336,7 +336,7 @@ Okay, let's copy the entire contents of `<App>`'s `render` method,  paste it in 
 
 	Note that we are adding an additional `winTries` prop because the footer that uses it has been moved to `<GamePage>`.
 	
-6. Back in **GamePage.jsx** update the two references to the `colors` prop
+6. Back in `<GamePage>`, update the two references to the `colors` prop
 
 	```js
 	colors={colors}
@@ -349,7 +349,7 @@ Okay, let's copy the entire contents of `<App>`'s `render` method,  paste it in 
 	
 7. Remove the `let winTries = this.getWinTries();` line and update the footer in two places to use `props.winTries` instead.
 
-8. Still in **GamePage.jsx**, update the three props that reference `this.state` and the two that reference `this` to be `props` instead.
+8. Still in`<GamePage>`, update the three props that reference `this.state` and the two that reference `this` to be `props` instead.
 
 Here's the refactored **GamePage.jsx**:
 
@@ -397,7 +397,7 @@ Although the app is back to where it was, the classes defined in **App.css** are
 
 ## The `Switch` Component
 
-React Router includes a [`<Switch>`](https://reacttraining.com/react-router/web/api/Switch) component used to render the `<Route>` component that matches the URL.
+React Router includes a [`<Switch>`](https://reacttraining.com/react-router/web/api/Switch) component used to render only the first `<Route>` component that matches the URL.
 
 It's quite common to wrap the `<Route>` components by a `<Switch>` component.
 
@@ -433,9 +433,9 @@ Then use `<Switch>` to wrap the current `<Route>` in the `render` method:
 
 1. Create a `<SettingsPage>` component as a Function Component and be sure to follow the conventions for folders, etc.
 
-2. Code `<SettingsPage>` so that it returns as its UI `<h1>Settings Page</h1>`.
+2. Code `<SettingsPage>` so that it returns `<h1>Settings Page</h1>` as its UI.
 
-3. Add a new `<Route>` below the `<Route>` for the `<GamePage>` component (but stay inside of the `</Switch>`).
+3. Add a new `<Route>` below the existing `<Route>` for the `<GamePage>` component (but stay inside of the `</Switch>`).
 
 4. The new route should have a path of `/settings` and should render the `<SettingsPage>` component.
 
@@ -449,11 +449,11 @@ Then use `<Switch>` to wrap the current `<Route>` in the `render` method:
 
 	<img src="https://i.imgur.com/3AuJrAI.png">
 	
-Click the 🌶 when finished.
+Click the 🌶 in Slack when finished.
 
 ## Adding a `Link` to Change Routes
 
-React Router comes with a [`<Link>`](https://reacttraining.com/react-router/web/api/Link) component that we must use instead of regular `<a>` tags to allow the user to click to go to different routes.
+React Router comes with a [`<Link>`](https://reacttraining.com/react-router/web/api/Link) component that we must use instead of regular `<a>` tags to allow the user to navigate to different routes by clicking.
 
 Using a regular `<a>` tag will result in a full-page refresh.
 
@@ -479,7 +479,7 @@ The `to` prop specifies what URL path to route to if the link is clicked.
 
 It looks good, except we need a little margin between the `<Link>` and `<NewGameButton>`.
 
-**YOU DO: Take a few minutes to create and import a regular CSS file in `<GamePage>`, then add a `GamePage-link-margin` class with a `margin-bottom: 10px;` CSS property.  Finally, add that as an additional class to the `<Link>`.**
+**YOU DO: Take a few minutes to create and import a regular CSS file in `<GamePage>`, then add a `GamePage-link-margin` class with a `margin-bottom: 10px;` CSS declaration.  Finally, add that as an additional class to the `<Link>`.**
 
 When completed, the page should look like this:
 
@@ -521,9 +521,9 @@ As you can see, it uses the same `/:param` syntax that we used in Express.
 
 #### Accessing the Values Corresponding to the URL's Parameters
 
-The `match` prop passed by the `<Route>` components has a `params` property that's an object with a key:value pair for each URL parameter.
+The `match` prop passed by the `<Route>` component has a `params` property that's an object with a key:value pair for each URL parameter.
 
-For example, assuming the route defined above:
+For example, assuming the following route (same as defined above):
 
 ```js
 <Route path="/movies/:id" render={props => <Movie {...props}/>} />
@@ -537,7 +537,7 @@ const Movie = ({match}) => (
 );
 ```
 
-Renders this:
+Rendering this output:
 
 <h1>Movie id is: 123</h1>
 
@@ -547,15 +547,17 @@ Renders this:
 
 **Routing programmatically** is when you change routes in code vs. when a user clicks a link.
 
-For example, a user just added a movie by clicking a button and you submitted the data via AJAX. Now what?
+For example, let's say a user just added a movie by clicking a button and you submitted the data via AJAX. Now what?
 
 In a traditional web app, the server would have responded with a redirect to the index or details page.
 
-That's not going to happen in a SPA. Instead, you've got to change route programmatically (using code) which is done using the `history` prop of the `<Route>` component:
+That's not going to happen in a SPA. Instead, you've got to change the route programmatically (using code) which is done using the `history` prop of the `<Route>` component.
+
+Assuming `history` has been passed as a prop to a Class Component, you would move to the root route like this:
 
 ```js
 // Change to the root route programmatically
-history.push('/');
+this.props.history.push('/');
 ```
 
 Of course, you must ensure that `<Route>`'s `history` prop is passed to any component that needs to route programmatically.
