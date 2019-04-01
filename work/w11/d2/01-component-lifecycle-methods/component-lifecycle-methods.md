@@ -16,7 +16,6 @@
 - Set Up
 - The Lifecycle of Components
 - The Lifecycle Methods
-- Review the Starter Code
 - A Component's Lifecycle
 - Overriding Lifecycle Methods
 - Adding a Game Timer to Mastermind
@@ -43,11 +42,6 @@ There's also a `/settings` route that displays:
 <img src="https://i.imgur.com/YI6qBcX.png">
 
 ## The Lifecycle of Components
-
-#### Quick Review:
-
-- **What method do we use to change a component's state?**
-- **What happens when we invoke the above method?**
 
 #### What are Lifecycle Methods
 
