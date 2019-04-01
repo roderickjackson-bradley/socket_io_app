@@ -179,7 +179,7 @@ The secret, like many things in React is `state`! React, wants the text/value of
 
 React "controlled" inputs have their value assigned to them via the `value` prop.
 
-So, if the `<input>` & `<select>` inputs currently in `<App>` get their values from `state`, we're going to need to add two new properties to `state` dedicate for maintaining the "state" of each:
+So, if the `<input>` & `<select>` inputs currently in `<App>` get their values from `state`, we're going to need to add two new properties to `state` dedicated to maintaining the "state" of each:
 
 ```js
 state = {
