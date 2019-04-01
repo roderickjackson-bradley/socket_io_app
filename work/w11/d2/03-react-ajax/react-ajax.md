@@ -44,7 +44,7 @@ To demonstrate how to make AJAX calls from React, we're going to build an app th
 
 2. Upon loading, uses the [Geolocation API](https://developer.mozilla.org/en-US/docs/Web/API/Geolocation_API) (Web API) to obtain the user's current latitude and longitude GPS coordinates.
 
-3. The coordinates (latitude & longitude) will be passed as props to a custom `<Map>` component responsible for rendering the map referred to in 1. above.
+3. The coordinates (latitude & longitude) will be passed as props to a custom `<Map>` component responsible for rendering the map referred to in step 1 above.
 
 4. Also upon loading, the current coordinates will be used to make a call to the [OpenWeatherMap API](https://openweathermap.org/api) to display the current temperature and the weather condition (as an icon).
 
@@ -60,7 +60,7 @@ Also, take a peek at **index.css** & **App.css** to see how [CSS Custom Properti
 
 If you google how to use this or that library with React, many of the results returned will reference modules and/or React components that can be installed via npm.
 
-However, using third-party libraries without resorting to installing custom modules/components is not difficult.
+However, much of the time, using third-party libraries without resorting to installing custom modules/components is not difficult.
 
 To demonstrate this, we're going to use the Google Maps JavaScript library to load a map of the user's current location.
 
@@ -106,11 +106,11 @@ Take note on how the Google Maps library is being referenced on line 10 (and als
 const map = new window.google.maps.Map(
 ``` 
 
-Normally, as shown in the docs, you would access the global `google` object created by the library directly.  However, due to way the module system works in React, `google` is not in scope and the app will fail to build if try to access `google` directly:
+Normally, as shown in the docs, you would access the global `google` object created by the library directly.  However, due to the way the module system works in React, `google` is not in scope and the app will fail to build if try to access `google` directly:
 
 <img src="https://i.imgur.com/OGdPf7e.png">
 
-The solution is to access `google`, as well as other global variables created by other libraries, such as `socket` or `$`, by prefacing the global variable with the `window` object, which we know to represent the global namespace.
+The solution is to access `google`, as well as other global variables, such as `socket` or `$`, by prefacing the global variable with the `window` object, which we know to represent the global namespace.
 
 ## Accessing the Browser's Current Coordinates
 
@@ -138,6 +138,8 @@ export function getCurrentLatLng() {
 }
 ```
 
+> The above code pattern can basically be used to "promisfy" callback-based asynchronous methods.  However, if the callback has an `err` parameter, be sure to pass that to `reject` function.
+
 Let's see how to use this service to provide the coordinates to the `<Map>` component...
 
 ## Making Asynchronous/AJAX Calls in React
@@ -154,7 +156,7 @@ The answer, as you learned earlier in the Lifecycle lesson, is to put asynchrono
 
 Since obtaining GPS coordinates is an asynchronous operation, we need to make the call to `getCurrentLatLng` from within `componentDidMount`.
 
-First though, we will need to import the `getCurrentLatLng` function being exported from the **geolocation.js** service module in **App.js**:
+First though, we will need to import the `getCurrentLatLng` function that's exported from the **geolocation.js** service module in **App.js**:
 
 ```js
 import { getCurrentLatLng } from '../../services/geolocation';
@@ -173,7 +175,7 @@ class App extends Component {
   }
 ```
 
-The browser may be asking your permission to access you location - better say yes :)
+The browser may be asking your permission to access you location - best grant it for this lesson to work :)
 
 How cool is it that we can declare instance methods in a class to be `async`?!?!
 
@@ -183,7 +185,7 @@ As usual, we're baby stepping our way to glory...
 
 #### Providing the Coordinates to `<Map>`
 
-Now that we have the latitude and longitude, we can add them to `state` so that we can pass them to `<Map>` as props:
+Now that we have the latitude and longitude, we can add them to `state`, then pass them to `<Map>` as props:
 
 ```js
 const {lat, lng} = await getCurrentLatLng();
@@ -267,7 +269,7 @@ Okay, let's implement the following User Story:<br>
 
 #### The OpenWeatherMap API
 
-We'll be using the [OpenWeatherMap API](https://openweathermap.org/) to return JSON weather data.
+We'll be using the [OpenWeatherMap API](https://openweathermap.org/) to return weather data in JSON format.
 
 The API has lots of options, but [here's the link](https://openweathermap.org/current) to the current weather section.
 
@@ -275,7 +277,7 @@ Scroll down to here:
 
 <img src="https://i.imgur.com/frr3qFs.png">
 
-The API requires an API Key to use, however, we'll just borrow this one `d3945aa316355ce92bb8cc10bf63e3da`.
+The API requires an API Key to use, however, you can borrow this one `d3945aa316355ce92bb8cc10bf63e3da`.
 
 According to the docs, to retrieve the current weather data, we can make a call to the following endpoint substituting our desired coordinates:
 
@@ -338,7 +340,7 @@ Putting `fetch` calls in service/utility modules is a best practice - do not lit
 
 This applies to whether you're making calls to the backend of the SPA or third-party APIs.
 
-> Note: Always access third-party data APIs by making requests to the SPAs backend, letting the backend call the API and returning the JSON to the front-end.  This protects API keys.  In this lesson, we didn't have a choice because we don't have a backend. FYI, Google Maps is not a data API, it is a service that must be called from the front-end.
+> Note: You should always access third-party data APIs by making requests to the SPAs backend, letting the backend call the API and returning the JSON to the front-end.  This protects API keys.  In this lesson, we didn't have a choice because we don't have a backend. FYI, Google Maps is not a data API, it is a service that must be called from the front-end.
 
 Using the **geolocation.js** module as an example, create a **weather-api.js** service module that:
 
@@ -354,13 +356,16 @@ Using the **geolocation.js** module as an example, create a **weather-api.js** s
 
 - Before the `this.setState` line in `componentDidMount`, use `getCurWeatherByLatLng` to obtain the data, assigning it to a variable named `weatherData`.
 
-- `console.log(weatherData)` and verify that the console the data is being logged:
+- `console.log(weatherData)` and verify that the data is being logged:
 
 	<img src="https://i.imgur.com/y8JXo71.png">
 	
 #### Add the Weather Data to State
 
-We're going to keep it simple and just show the temperature and an icon for the "conditions".
+We're going to keep it simple and display:
+
+- The current temperature, and
+- An icon for the "conditions"
 
 Looking at the data returned, we see that the temperature can be accessed as `weatherData.main.temp`.
 
@@ -373,7 +378,7 @@ console.log(Math.round(weatherData.main.temp));
 
 Cool.
 
-Now there's the `icon` property whose value is a short string that we can use to build out a URL for an `<img>` element's `src` attribute.
+Now there's the `icon` property whose value is a short string that we can use to build out a URL for use as an `<img>` element's `src` attribute.
 
 **Figure out the data path like we just did for `temp` and I'll call on the first to raise their hand.**
 
@@ -439,7 +444,7 @@ Let's update the `justify-content` property:
 justify-content: space-between;
 ```
 
-All that's left is to style the temp and image a bit by adding this CSS:
+All that's left is to add a touch of CSS to style the temp and image:
 
 ```css
 .App-header div {
@@ -463,7 +468,7 @@ Take a moment to review the following questions:
 
 1. **What JS expression would you use to access the jQuery function in a React app?**
 
-2. **What lifecycle method is typically where we make asynchronous calls from?**.
+2. **What lifecycle method is typically where we make asynchronous calls from?**
 
 3. **Why is the following code not a best practice?**
 
