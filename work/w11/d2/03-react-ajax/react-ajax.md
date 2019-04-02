@@ -148,9 +148,23 @@ You may be wondering why we have a dedicated lesson to cover making AJAX calls f
 
 After all, we've already seen how to use `fetch` to make AJAX calls.
 
-However, if you take a look at a React component, it's not easy to figure out where to put the AJAX code. You can't put it in `render` nor the `constructor` lifecycle methods because if the data comes back before the component's elements are mounted in the DOM, you won't be able to display the returned data.
+#### CORS Restrictions
+
+It's always recommended that you make calls to APIs from your server, not the browser.
+
+Doing so avoids exposing API keys in the browser and avoids the [CORS](https://developer.mozilla.org/en-US/docs/Web/HTTP/CORS) security restrictions that can prevent a browser from being able to access an API if the server does not participate in CORS.
+
+In this lesson, we don't have a backend to act as a "passthrough", so we will be using `fetch` to make calls to an API directly.
+
+To make `fetch` send the correct CORS headers to the server, we need to include an options object with a `mode: "cors"` property like so:
+
+```js
+fetch(someUrl, {mode: "cors"}).then(res => res.json())
+```
 
 #### Adding a `componentDidMount` Method
+
+If you take a look at a React component, it's not easy to figure out where to put the AJAX code. You can't put it in `render` nor the `constructor` lifecycle methods because if the data comes back before the component's elements are mounted in the DOM, you won't be able to display the returned data.
 
 The answer, as you learned earlier in the Lifecycle lesson, is to put asynchronous code, such as making AJAX calls, inside of the `componentDidMount` lifecycle method.
 
@@ -340,8 +354,6 @@ Putting `fetch` calls in service/utility modules is a best practice - do not lit
 
 This applies to whether you're making calls to the backend of the SPA or third-party APIs.
 
-> Note: You should always access third-party data APIs by making requests to the SPAs backend, letting the backend call the API and returning the JSON to the front-end.  This protects API keys.  In this lesson, we didn't have a choice because we don't have a backend. FYI, Google Maps is not a data API, it is a service that must be called from the front-end.
-
 Using the **geolocation.js** module as an example, create a **weather-api.js** service module that:
 
 - Exports, as a named export, a `getCurWeatherByLatLng` function.
@@ -350,6 +362,7 @@ Using the **geolocation.js** module as an example, create a **weather-api.js** s
 
   - Define two parameters: `lat` & `lng`.
   - Use `fetch` to make a call to the same endpoint as above, substituting the values of `lat` and `lng` passed as arguments. Be sure to assign `lng` to the `lon` query param that the API uses.
+  - Be sure to provide the `{mode: 'cors'}` option object as a second argument to `fetch`.
   - Return the result of `fetch(...).then(res => res.json())` so that we can work with the promise that returns the actual data.
 
 - Import the named export , `getCurWeatherByLatLng`, into **App.js**.
@@ -474,7 +487,7 @@ Take a moment to review the following questions:
 
 	```js
 	componentDidMount() {
-	  fetch('https//api.somehost.com/endpoint')
+	  fetch('https//api.somehost.com/endpoint', {mode: 'cors'})
 	    .then(res => res.json())
 	    .then(data => this.setState({ data }));
 	}
