@@ -42,9 +42,13 @@ To get set up for this lesson:
 
 - Hold the starships in state.
 
-- The challenge is to be able to have the `<StarshipPage>` component obtain the specific starship object it needs to render.  One approach would be to pass `<StarshipPage>` a method as a prop that it can call, passing the method an argument identifying which starship object it wants. That argument's value could be a URL parameter in the link that was clicked (see next hint).
+- The challenge is to be able to have the `<StarshipPage>` component obtain the specific starship object it needs to render. Here are a couple of approaches:
 
-- Review the Client-side Routing in React lesson's _Defining Routes with URL Parameters_ section for assistance with how to define routes with parameters used to pass information to components.
+	1. One approach would be to pass `<StarshipPage>` (within `<Route>`) a method as a prop that it can call, passing the method an argument identifying which starship object it wants. That argument's value could come from a URL parameter in the link that was clicked...
+
+		Review the Client-side Routing in React lesson's _Defining Routes with URL Parameters_ section for assistance with how to define routes with parameters used to pass information to components.
+		
+	2. Another approach is to use a slightly more complex syntax that React Router's `<Link>` offers.  This approach relies on assigning an object instead of a string to its `to` prop.  Check the docs [here](https://reacttraining.com/react-router/web/api/Link/to-object) for more details.
 
 ## Deliverable
 
