@@ -21,8 +21,8 @@ In this lab, you'll consume the [Star Wars API](https://swapi.co/) and render it
 To get set up for this lesson:
 
 - `cd` into this lab's folder.
-- Use `create-react-app` to create a React app named `react-blogs`
-- `cd` into `react-blogs` and open VS Code.
+- Use `create-react-app` to create a React app named `react-star-wars`
+- `cd` into `react-star-wars` and open VS Code.
 - Open a terminal in VS Code.
 - Start the React Dev Server.
 
