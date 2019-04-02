@@ -14,7 +14,7 @@ In the lesson earlier you:
 
 In this lab, you'll consume the [Star Wars API](https://swapi.co/) and render it's data.
 
-**This lab is not a deliverable**
+**This lab is a DELIVERABLE**
 
 ## Set Up
 
@@ -43,6 +43,10 @@ To get set up for this lesson:
 - Hold the starships in state and expose them individually via a method that can be passed down via a prop. The method should accept an argument that can be used to identify which starship to return to the caller (`<Starship>`).
 
 - Review the Client-side Routing in React lesson's _Defining Routes with URL Parameters_ section for assistance with how to define routes with parameters used to pass information to components.
+
+## Deliverable
+
+Commit your code and slack the link to this lab in your repo.
 
 ## Bonus
 
