@@ -36,7 +36,7 @@ To get set up for this lesson:
 
 3. Obtain all of the starships from the API and render in `<App>` a clickable `<Link>` (imported from `react-router-dom`) for each starship. The link should be styled to look like a button and contain the text of the starship's name.
 
-4. When a starship `<Link>` is clicked a `<Starship>` component should be rendered that includes the starship's `name`, `model` and a "Return to Starship List" `<Link>` that routes back to the root route that renders `<App>`.
+4. When a starship `<Link>` is clicked a `<StarshipPage>` component should be rendered that displays the starship's `name`, `model` and a "Return to Starship List" `<Link>` that routes back to the root route that renders `<App>`.
 
 ## Hints
 
@@ -50,7 +50,7 @@ Commit your code and slack the link to this lab in your repo.
 
 ## Bonus
 
-- Enhance the `<Starship>` component to render a list of the names of the pilots for that starship.
+- Enhance the `<StarshipPage>` component to render a `<PilotList>` component that lists of the names of the pilots for that starship.
 
 - If the starship has no pilots, display a "No Pilots" message.
 
