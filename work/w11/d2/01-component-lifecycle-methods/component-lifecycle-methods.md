@@ -147,7 +147,7 @@ Selecting a new color in the color selector will trigger an update resulting in 
 
 <img src="https://i.imgur.com/06qGRaE.png">
 
-Note how the `constructor` and `componentDidMount` methods did not run a second time because it had already been mounted to the DOM.
+Note how the `constructor` and `componentDidMount` methods did not run a second time because `<App>` already exists (been mounted) in the DOM.
 
 Instead, just as the diagram shows, the `render` and `componentDidUpdate` methods ran in response to `setState` being called.
 
@@ -179,7 +179,7 @@ The key piece of data that `<GameTimer>` will need to render is _elapsed time_.
 
 At first, it seems like `elapsedTime` is a perfect candidate to be held in the state of  `<GameTimer>` - after all, you always want to lean toward encapsulating related data (state) and behavior together when you can.
 
-However, if we want `<App>` to be able to persist scores one day (later this week), easily reset the timer when it needs to be reset, etc., `<App>` will need to know what the value of `elapsedTime` is.
+However, soon we will want `<App>` to persist scores, easily reset the timer when it needs to be reset, etc., `<App>` will need to know what the value of `elapsedTime`.
 
 Okay, so once again, it makes sense to keep state high up in the component hierarchy, in our case, `<App>`.
 
@@ -191,11 +191,11 @@ But how will `<App>` know when to increment `elapsedTime`? As usual, we'll also 
 
 If `<GameTimer>` had its own state, we would have to define it as a class component - **why?**
 
-But even though `<GameTimer>` doesn't have its own state, it still has to be written as a class-based component because it's going to use a JS timer created using `setInterval`.
+But even though `<GameTimer>` doesn't have its own state, it still has to be written as a class-based component because it's going to use a JavaScript timer created using `setInterval`.
 
-Each JavaScript timer consumes system resources (memory and CPU).
+Each timer consumes system resources (memory and CPU).
 
-Since the `<GameTimer>` component will be using a timer, we want to make sure that it destroys the timer when itself is destroyed. For example, every time the player switches to the set difficulty route, `<GameTimer>` will be destroyed and then a new `<GameTimer>` created when the player returns to the game play route.
+Since the `<GameTimer>` component will be using a timer, we want to make sure that it destroys the timer when itself is destroyed. For example, every time the player switches to the set difficulty route, `<GameTimer>` will be destroyed and then a new `<GameTimer>` created when the player returns to the game play route. BTW, this is another reason for keeping `elapsedTime` higher up in the hierarchy so that it doesn't get reset when the player moves to the settings page and then cancels.
 
 The key to preventing a new timer from being created without the existing timer being "cleared" is to override the `componentDidMount` and `componentWillUnmount` lifecycle methods - again, only possible in class components.
 
