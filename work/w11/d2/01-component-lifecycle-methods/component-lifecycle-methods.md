@@ -115,12 +115,9 @@ Let's override the `componentDidMount` method in **App.js**:
 
 ```js
 class App extends Component {
-  constructor(props) {
-    super(props);
-    this.state = Object.assign(
-      {difficultyLevel: 0, colors: colorTable[0].colors},
-      this.getInitialState()
-    );
+  constructor() {
+    super();
+    this.state = {...this.getInitialState(), difficulty: 'Easy'};
   }
 
   /*---------- Lifecycle Methods ----------*/
