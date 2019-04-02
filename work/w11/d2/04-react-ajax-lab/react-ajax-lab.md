@@ -38,6 +38,8 @@ To get set up for this lesson:
 
 4. When a starship `<Link>` is clicked a `<StarshipPage>` component should be rendered that displays the starship's `name`, `model` and a "Return to Starship List" `<Link>` that routes back to the root route that renders `<App>`.
 
+5. Because the data is being loaded asynchronously, there are times, such as if the user refreshes the page while viewing the `<StarshipPage>`, that the data won't be available to render, in this case, display a "Loading..." message instead.
+
 ## Hints
 
 - Hold the starships in state.
@@ -49,6 +51,8 @@ To get set up for this lesson:
 		Review the Client-side Routing in React lesson's _Defining Routes with URL Parameters_ section for assistance with how to define routes with parameters used to pass information to components.
 		
 	2. Another approach is to use a slightly more complex syntax that React Router's `<Link>` offers.  This approach relies on assigning an object instead of a string to its `to` prop.  Check the docs [here](https://reacttraining.com/react-router/web/api/Link/to-object) for more details.
+
+	3. The third approach would be to use the data service to fetch the specific starship from the `<StarshipPage>` component.  However, this approach is wasteful unless the data resource changes frequently, e.g., you want to display the latest comments.  In this case, a starship's data does not change and you already have the data stored in state, so this is not an efficient approach.
 
 ## Deliverable
 
