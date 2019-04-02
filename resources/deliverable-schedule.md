@@ -21,6 +21,8 @@ It is a requirement to complete at least **80%** of the following to to receive:
 |Wed 3/5|[Python Control Flow Lab](https://git.generalassemb.ly/WDI-CC/WDI-CC-6/blob/master/work/w07/d2/03-04-control-flow-lab/control-flow-lab.md)|
 |Wed 3/11 (due 3/18)|Django Finch Collector Project (duplicate everything done during week 8 building out the Cat Collector App)|
 |Tue 3/26|[React "Floor Plan" Lab](https://git.generalassemb.ly/WDI-CC/WDI-CC-6/blob/master/work/w10/d2/04-react-floorplan-lab.md)|
+|Thu 3/28|[React Styling Lab](https://git.generalassemb.ly/WDI-CC/WDI-CC-6/tree/master/work/w10/d4/03-04-styling-react-lab)|
+|Tue 4/2|["Star Wars" React AJAX Lab](https://trello.com/c/KOk2W4uZ/288-m4-star-wars-react-ajax-lab)|
 
 
 
