@@ -1,16 +1,15 @@
-# WDI Installfest
+# WDI Install Fest
 
 We'll be installing the following tools.
 
-- Slack
-- Homebrew
-- VS Code
-- Git
-- Node
-- PostgreSQL
-- Python
-- Django
-- Zoom
+* Slack
+* Homebrew
+* VS Code
+* Git
+* Node
+* PostgreSQL
+* Python
+* Django
 
 ## Slack
 
@@ -77,9 +76,7 @@ brew install git
 
 [Github](https://github.com/) provides a way to host Git repos in the cloud.  It enables collaboration and is wildly popular.
 
-You should have already opened a personal Github account, however, you need to have a General Assembly Github Enterprise (GHE) account as well.  You can get one by signing up here:  [https://git.generalassemb.ly/](https://git.generalassemb.ly/)
-
-Please slack your instructors your GHE username.
+You should have already opened a personal Github account, however, you need to have a General Assembly Github Enterprise account as well.  You can get one by signing up here:  [https://git.generalassemb.ly/](https://git.generalassemb.ly/)
 
 #### Configuring a Global git ignore
 
@@ -191,6 +188,11 @@ tags
 # Env #
 #######
 .env
+
+# Python #
+#######
+*.pyc
+__pycache__/
 ```
 
 ## Node
@@ -307,9 +309,3 @@ This free "productivity" tool is invaluable when it comes to minimizing the time
 ## Installing Imgur
 
 Create an account on [imgur.com](https://imgur.com/) and install [mac2imgur](https://github.com/mileswd/mac2imgur) to ease uploading screenshots and other images from your computer to your imgur account.
-
-## Installing Zoom
-
-During WDI, you will be connecting to others, including students across campuses & your global instructor, using Zoom video conferencing software.
-
-[Click here to download](https://zoom.us/support/download) then install.

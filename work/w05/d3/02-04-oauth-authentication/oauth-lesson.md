@@ -251,7 +251,6 @@ We will complete these stories today:
 	- I want to add fun facts about myself so that I can amuse others.
 	- I want to be able to delete a fact about myself, in case I embarrass myself.
 	- I want to view the Google avatar instead of the placeholder icon.
-	- I want to be able to designate what cohort I was a part of.
 
 ---
 ## Review the Starter Code
@@ -371,9 +370,10 @@ We will complete these stories today:
 	| Purpose | Method | Path |
 	|---|---|---|
 	| Display all students | `GET` | `/students` |
-	| Create a fact for a student | `POST` | `/students/:id/facts` |
+	| Create a fact for a student | `POST` | `/facts` |
 	| Delete a fact | `DELETE`| `/facts/:id` |
 
+- **Why aren't we using `POST /students/:id/facts` to create a fact?**
 
 ---
 #### Review the Starter Code<br><small>Controller</small>
@@ -996,8 +996,8 @@ passport.use(new GoogleStrategy({
 	router.get('/oauth2callback', passport.authenticate(
 	  'google',
 	  {
-	    successRedirect : '/',
-	    failureRedirect : '/'
+	    successRedirect : '/students',
+	    failureRedirect : '/students'
 	  }
 	));
 	```
@@ -1014,7 +1014,7 @@ passport.use(new GoogleStrategy({
 	// OAuth logout route
 	router.get('/logout', function(req, res){
 	  req.logout();
-	  res.redirect('/');
+	  res.redirect('/students');
 	});
 	```
 	
