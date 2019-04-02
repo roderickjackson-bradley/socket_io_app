@@ -296,8 +296,6 @@ Finally, let's confirm that `elapsedTime` is being incremented by rendering it's
 
 Awesome!
 
-Before we work on starting/stopping the timer, let's make it look like a timer!
-
 #### Formatting and Style `<GameTimer>`
 
 Time to make `<GameTimer>` look like the wireframe.
